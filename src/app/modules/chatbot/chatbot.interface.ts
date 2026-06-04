@@ -17,8 +17,11 @@ export interface CreateChatbotConfigInput {
   botName?: string;
   welcomeMsg?: string;
   systemPrompt?: string;
-  rateLimit?: number;
-  rateLimitWindow?: number;
+
+  // If you need to remove rate limit and use by .env file
+  // so remove rateLimit and rateLimitWindow code
+  // rateLimit?: number;
+  // rateLimitWindow?: number;
 }
 
 export type UpdateChatbotConfigInput = Partial<CreateChatbotConfigInput>;

@@ -3,6 +3,7 @@ import { validateRequest } from "../../middlewares/validateRequest";
 import { ContactValidation } from "./contact.validation";
 import { ContactController } from "./contact.controller";
 import auth, { UserRole } from "../../middlewares/auth";
+import { strictLimiter } from "../../middlewares/rateLimiter";
 
 const router = express.Router();
 
@@ -11,6 +12,7 @@ const router = express.Router();
 // Submit a contact message
 router.post(
   "/",
+  strictLimiter,
   validateRequest(ContactValidation.createContactZodSchema),
   ContactController.createContact,
 );

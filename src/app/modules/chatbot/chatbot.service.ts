@@ -9,6 +9,7 @@ import {
 } from "./chatbot.interface";
 import AppError from "../../errorHelpers/AppError";
 import status from "http-status";
+import { env } from "../../config/env";
 
 // ── Rate Limit Store (in-memory) ──────────────────────────
 // Key: IP address, Value: { count, windowStart }
@@ -273,8 +274,10 @@ const sendMessage = async (payload: SendMessageInput, ipAddress: string) => {
   // 2. Rate limit check
   checkRateLimit(
     ipAddress,
-    chatbotConfig.rateLimit,
-    chatbotConfig.rateLimitWindow,
+    env.CHATBOT.RATE_LIMIT,
+    env.CHATBOT.RATE_LIMIT_WINDOW,
+    // chatbotConfig.rateLimit,
+    // chatbotConfig.rateLimitWindow,
   );
 
   // 3. DB context build
@@ -293,28 +296,35 @@ const sendMessage = async (payload: SendMessageInput, ipAddress: string) => {
       : "",
   ].join("\n");
 
-  // 5. Conversation history এর শেষ ১০টা message fetch (context window)
-  const recentLogs = await prisma.chatbotLog.findMany({
-    where: { sessionId },
-    orderBy: { createdAt: "asc" },
-    take: 10,
-  });
-
-  const history: ConversationMessage[] = recentLogs.map((log) => ({
-    role: log.role === "user" ? "user" : "model",
-    parts: [{ text: log.message }],
-  }));
+  // 5. Conversation history — DISABLED (ChatbotLog model commented out)
+  //    আপাতত prior context ছাড়াই reply দিচ্ছি। চালু করতে চাইলে
+  //    chatbot.prisma এ ChatbotLog uncomment করো ও নিচের block uncomment করো।
+  //
+  // const recentLogs = await prisma.chatbotLog.findMany({
+  //   where: { sessionId },
+  //   orderBy: { createdAt: "asc" },
+  //   take: 10,
+  // });
+  //
+  // const history: ConversationMessage[] = recentLogs.map((log) => ({
+  //   role: log.role === "user" ? "user" : "model",
+  //   parts: [{ text: log.message }],
+  // }));
+  const history: ConversationMessage[] = [];
 
   // 6. AI API call
   const aiResponse = await callAiApi(aiConfig, systemPrompt, history, message);
 
-  // 7. User message + AI response save to DB
-  await prisma.chatbotLog.createMany({
-    data: [
-      { sessionId, role: "user", message, ipAddress },
-      { sessionId, role: "assistant", message: aiResponse, ipAddress },
-    ],
-  });
+  // 7. Save to DB — DISABLED (ChatbotLog model commented out)
+  //    চালু করতে চাইলে ChatbotLog model uncomment + এই block uncomment করো।
+  //
+  // await prisma.chatbotLog.createMany({
+  //   data: [
+  //     { sessionId, role: "user", message, ipAddress },
+  //     { sessionId, role: "assistant", message: aiResponse, ipAddress },
+  //   ],
+  // });
+  void ipAddress; // currently unused — kept for future logging
 
   return {
     reply: aiResponse,
@@ -360,20 +370,23 @@ const getChatbotConfig = async () => {
 };
 
 // ── Chatbot Logs ──────────────────────────────────────────
-
-const getChatbotLogs = async (sessionId?: string) => {
-  const result = await prisma.chatbotLog.findMany({
-    where: { ...(sessionId && { sessionId }) },
-    orderBy: { createdAt: "desc" },
-  });
-  return result;
-};
-
-const deleteChatbotLogs = async (sessionId?: string) => {
-  await prisma.chatbotLog.deleteMany({
-    where: { ...(sessionId && { sessionId }) },
-  });
-};
+// DISABLED — ChatbotLog model আপাতত prisma schema এ comment out করা।
+// চালু করতে চাইলে: schema এ model uncomment → prisma migrate → নিচের
+// function গুলো ও export uncomment + chatbot.route.ts এ route গুলো uncomment।
+//
+// const getChatbotLogs = async (sessionId?: string) => {
+//   const result = await prisma.chatbotLog.findMany({
+//     where: { ...(sessionId && { sessionId }) },
+//     orderBy: { createdAt: "desc" },
+//   });
+//   return result;
+// };
+//
+// const deleteChatbotLogs = async (sessionId?: string) => {
+//   await prisma.chatbotLog.deleteMany({
+//     where: { ...(sessionId && { sessionId }) },
+//   });
+// };
 
 export const ChatbotService = {
   sendMessage,
@@ -381,6 +394,6 @@ export const ChatbotService = {
   getAiProviderConfig,
   upsertChatbotConfig,
   getChatbotConfig,
-  getChatbotLogs,
-  deleteChatbotLogs,
+  // getChatbotLogs,
+  // deleteChatbotLogs,
 };

@@ -31,9 +31,12 @@ model ChatbotConfig {
     // System prompt — DB context এর সাথে combine হবে
     systemPrompt String? @db.Text
 
+    // If you need to remove rate limit and use by .env file
+    // so remove rateLimit and rateLimitWindow code
+
     // Rate limit — dashboard থেকে configure করা যাবে
-    rateLimit       Int @default(10) // per window এ max request
-    rateLimitWindow Int @default(60) // seconds — default 60s
+    // rateLimit       Int @default(10) // per window এ max request
+    // rateLimitWindow Int @default(60) // seconds — default 60s
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
@@ -41,17 +44,22 @@ model ChatbotConfig {
     @@map("chatbot_config")
 }
 
-// Chatbot Conversation Log
-model ChatbotLog {
-    id        String  @id @default(uuid())
-    sessionId String
-    role      String // "user" | "assistant"
-    message   String  @db.Text
-    ipAddress String?
-
-    createdAt DateTime @default(now())
-
-    @@index([sessionId])
-    @@index([createdAt])
-    @@map("chatbot_logs")
-}
+// ─────────────────────────────────────────────────────────────
+// Chatbot Conversation Log — DISABLED
+// আপাতত DB তে log save করা হচ্ছে না (privacy + storage cost কমাতে)।
+// পরে চালু করতে চাইলে: এই block uncomment করো, prisma migrate চালাও,
+// এবং chatbot.service.ts এ logging code uncomment করো।
+// ─────────────────────────────────────────────────────────────
+// model ChatbotLog {
+//     id        String  @id @default(uuid())
+//     sessionId String
+//     role      String // "user" | "assistant"
+//     message   String  @db.Text
+//     ipAddress String?
+//
+//     createdAt DateTime @default(now())
+//
+//     @@index([sessionId])
+//     @@index([createdAt])
+//     @@map("chatbot_logs")
+// }

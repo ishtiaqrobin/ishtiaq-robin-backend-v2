@@ -11,6 +11,7 @@ import { IndexRoutes } from "./app/routes";
 import { SitemapRouter } from "./app/modules/sitemap/sitemap.route";
 import { notFound } from "./app/middlewares/notFound";
 import globalErrorHandler from "./app/middlewares/globalErrorHandler";
+import { globalLimiter, authLimiter } from "./app/middlewares/rateLimiter";
 
 // ── Loggers
 import { successLogger } from "./app/middlewares/logger/success.logger";
@@ -54,10 +55,11 @@ app.use(cookieParser());
 // app.use(pageviewLogger);
 
 // ── Auth Routes (Better Auth — logger-এর পরে রাখতে হবে)
-app.all("/api/auth/*splat", toNodeHandler(auth));
+// Stricter limiter to mitigate brute-force / credential stuffing.
+app.all("/api/auth/*splat", authLimiter, toNodeHandler(auth));
 
-// ── App Routes
-app.use("/api/v1", IndexRoutes);
+// ── App Routes (Global rate limit: 100 req / 15 min / IP)
+app.use("/api/v1", globalLimiter, IndexRoutes);
 
 // ── SEO Routes (sitemap.xml, sitemap.json, robots.txt)
 // Mounted at root so canonical URLs are e.g. https://api.example.com/sitemap.xml

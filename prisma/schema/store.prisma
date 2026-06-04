@@ -1,18 +1,18 @@
 // Digital Product Model
 // Template, boilerplate, UI kit বিক্রির জন্য।
 model Product {
-    id           String        @id @default(uuid())
-    title        String
-    slug         String        @unique
-    description  String        @db.Text
-    thumbnail    String
-    previewUrl   String?       // live demo link
-    price        Decimal       @db.Decimal(10, 2)
-    discountPrice Decimal?     @db.Decimal(10, 2)
-    currency     String        @default("USD")
-    status       ProductStatus @default(DRAFT)
-    isFeatured   Boolean       @default(false)
-    sortOrder    Int           @default(0)
+    id            String        @id @default(uuid())
+    title         String
+    slug          String        @unique
+    description   String        @db.Text
+    thumbnail     String
+    previewUrl    String? // live demo link
+    price         Decimal       @db.Decimal(10, 2)
+    discountPrice Decimal?      @db.Decimal(10, 2)
+    currency      String        @default("USD")
+    status        ProductStatus @default(DRAFT)
+    isFeatured    Boolean       @default(false)
+    sortOrder     Int           @default(0)
 
     // Tech stack tags — ["Next.js", "TailwindCSS"]
     techStack String[]
@@ -20,8 +20,8 @@ model Product {
     // What's included — ["Source code", "Documentation", "Free updates"]
     includes String[]
 
-    images   ProductImage[]
-    orders   Order[]
+    images ProductImage[]
+    orders Order[]
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
@@ -45,22 +45,22 @@ model ProductImage {
 // Order Model
 // Buyer একটা product কিনলে এই record তৈরি হয়।
 model Order {
-    id            String      @id @default(uuid())
-    buyerName     String
-    buyerEmail    String
-    amount        Decimal     @db.Decimal(10, 2)
-    currency      String      @default("USD")
-    status        OrderStatus @default(PENDING)
+    id         String      @id @default(uuid())
+    buyerName  String
+    buyerEmail String
+    amount     Decimal     @db.Decimal(10, 2)
+    currency   String      @default("USD")
+    status     OrderStatus @default(PENDING)
 
     // Payment info
-    paymentMethod   String?   // "stripe", "bkash", "paypal"
-    transactionId   String?
-    paidAt          DateTime?
+    paymentMethod String? // "stripe", "bkash", "paypal"
+    transactionId String?
+    paidAt        DateTime?
 
     // Download
-    downloadToken   String?   @unique // secure one-time token
-    downloadCount   Int       @default(0)
-    downloadExpiry  DateTime?
+    downloadToken  String?   @unique // secure one-time token
+    downloadCount  Int       @default(0)
+    downloadExpiry DateTime?
 
     productId String
     product   Product @relation(fields: [productId], references: [id])

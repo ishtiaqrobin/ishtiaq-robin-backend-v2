@@ -35,9 +35,13 @@ const createChatbotConfigZodSchema = z.object({
   welcomeMsg: optionalText,
   // System prompt is fed to the LLM, not rendered as HTML.
   // Still strip HTML to keep prompts clean & predictable.
+
   systemPrompt: optionalText,
-  rateLimit: z.number().min(1).optional(),
-  rateLimitWindow: z.number().min(1).optional(),
+
+  // If you need to remove rate limit and use by .env file
+  // so remove rateLimit and rateLimitWindow code
+  // rateLimit: z.number().min(1).optional(),
+  // rateLimitWindow: z.number().min(1).optional(),
 });
 
 const updateChatbotConfigZodSchema = createChatbotConfigZodSchema.partial();

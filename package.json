@@ -47,6 +47,7 @@
     "ejs": "^5.0.2",
     "express": "^5.2.1",
     "express-ipinfo": "^1.0.0",
+    "express-rate-limit": "^8.5.2",
     "http-status": "^2.1.0",
     "multer": "^2.1.1",
     "multer-storage-cloudinary": "^4.0.0",
