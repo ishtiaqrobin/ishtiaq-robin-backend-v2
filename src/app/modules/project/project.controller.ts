@@ -4,7 +4,34 @@ import AppError from "../../errorHelpers/AppError";
 import status from "http-status";
 
 // Helper — parse files + tags from multipart request
+// const parseProjectPayload = (req: Request) => {
+//   const payload: any = { ...req.body };
+//   const files = req.files as Record<string, Express.Multer.File[]> | undefined;
+
+//   if (files?.thumbnail?.[0]) {
+//     payload.thumbnail = files.thumbnail[0].path;
+//   }
+
+//   if (files?.images?.length) {
+//     payload.projectImages = files.images.map((file, idx) => ({
+//       url: file.path,
+//       alt: req.body[`alt_${idx}`] || undefined,
+//     }));
+//   }
+
+//   if (payload.tags && typeof payload.tags === "string") {
+//     try {
+//       payload.tags = JSON.parse(payload.tags);
+//     } catch {
+//       payload.tags = payload.tags.split(",").map((t: string) => t.trim());
+//     }
+//   }
+
+//   return payload;
+// };
+
 const parseProjectPayload = (req: Request) => {
+  // Zod validation middleware ইতোমধ্যে types coerce করে দিয়েছে
   const payload: any = { ...req.body };
   const files = req.files as Record<string, Express.Multer.File[]> | undefined;
 
@@ -19,6 +46,8 @@ const parseProjectPayload = (req: Request) => {
     }));
   }
 
+  // tags আর manually parse করতে হবে না — Zod middleware করে দিয়েছে
+  // কিন্তু যদি validation skip হয় সে case-এর জন্য fallback রাখো:
   if (payload.tags && typeof payload.tags === "string") {
     try {
       payload.tags = JSON.parse(payload.tags);

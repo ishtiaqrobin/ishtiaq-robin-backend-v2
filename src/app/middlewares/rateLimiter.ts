@@ -24,7 +24,7 @@ const buildLimitMessage = (message: string) => ({
  */
 export const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // 100 requests
+  max: 10000, // 100 requests
   standardHeaders: true, // `RateLimit-*` headers
   legacyHeaders: false, // disable `X-RateLimit-*`
   message: buildLimitMessage(
@@ -40,7 +40,7 @@ export const globalLimiter = rateLimit({
  */
 export const authLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 20, // 20 requests
+  max: 2000, // 20 requests
   standardHeaders: true,
   legacyHeaders: false,
   message: buildLimitMessage(
@@ -56,7 +56,7 @@ export const authLimiter = rateLimit({
  */
 export const strictLimiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
-  max: 10, // 10 requests
+  max: 1000, // 10 requests
   standardHeaders: true,
   legacyHeaders: false,
   message: buildLimitMessage(

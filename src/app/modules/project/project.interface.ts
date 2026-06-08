@@ -9,7 +9,11 @@ export type CreateProjectInput = {
   isPublished?: boolean;
   sortOrder?: number;
   categoryId: string;
-  projectImages?: Array<{ url: string; alt?: string; sortOrder?: number }>;
+  projectImages?: Array<{
+    url: string;
+    alt?: string;
+    sortOrder?: number;
+  }>;
 };
 
 export type UpdateProjectInput = Partial<CreateProjectInput>;

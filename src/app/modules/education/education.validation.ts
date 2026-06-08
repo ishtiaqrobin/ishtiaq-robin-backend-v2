@@ -8,7 +8,7 @@ const createEducationZodSchema = z.object({
   board: z.string().optional().nullable(),
   endDate: z.string().optional().nullable(),
   group: z.string().optional().nullable(),
-  description: z.string().optional().nullable(),
+  // description: z.string().optional().nullable(),
   isPublished: z.boolean().default(true),
   sortOrder: z.number().default(0),
 });

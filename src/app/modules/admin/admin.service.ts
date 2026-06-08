@@ -107,7 +107,7 @@ const getDashboardStats = async (): Promise<DashboardStats> => {
 
       // Analytics & Engagement
       totalPageViews,
-      totalChatbotLogs,
+      // totalChatbotLogs,
 
       // Open Source & Packages
       totalNpmPackages,
@@ -159,7 +159,7 @@ const getDashboardStats = async (): Promise<DashboardStats> => {
 
       // Analytics & Engagement
       tx.pageView.count(),
-      tx.chatbotLog.count(),
+      // tx.chatbotLog.count(),
 
       // Open Source & Packages
       tx.npmPackage.count(),
@@ -213,7 +213,7 @@ const getDashboardStats = async (): Promise<DashboardStats> => {
 
       // Analytics & Engagement
       totalPageViews,
-      totalChatbotLogs,
+      // totalChatbotLogs,
 
       // Open Source & Packages
       totalNpmPackages,

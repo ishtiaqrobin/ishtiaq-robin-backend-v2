@@ -38,7 +38,7 @@ export interface DashboardStats {
 
   // Analytics & Engagement
   totalPageViews: number;
-  totalChatbotLogs: number;
+  // totalChatbotLogs: number;
 
   // Open Source & Packages
   totalNpmPackages: number;

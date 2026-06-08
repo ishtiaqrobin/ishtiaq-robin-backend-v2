@@ -8,7 +8,8 @@ model Education {
     endDate     DateTime?
     result      String?
     group       String?
-    description String?   @db.Text
+
+    // description String?   @db.Text
     isPublished Boolean   @default(true)
     sortOrder   Int       @default(0)
 

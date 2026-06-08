@@ -7,8 +7,8 @@ const createExperienceZodSchema = z.object({
   endDate: z.string().optional().nullable(),
   location: z.string().optional().nullable(),
   description: z.string("description is required"),
-  // companyUrl: z.string().optional().nullable(),
-  // companyLogo: z.string().optional().nullable(),
+  companyUrl: z.string().optional().nullable(),
+  companyLogo: z.string().optional().nullable(),
   isPublished: z.boolean().default(true),
   sortOrder: z.number().default(0),
 });

@@ -919,12 +919,12 @@ ${log3.fields?.reason}`;
       y.e = getBase10Exponent(xd, e);
       return external ? finalise(y, pr, rm) : y;
     };
-    P.precision = P.sd = function(z13) {
+    P.precision = P.sd = function(z24) {
       var k, x = this;
-      if (z13 !== void 0 && z13 !== !!z13 && z13 !== 1 && z13 !== 0) throw Error(invalidArgument + z13);
+      if (z24 !== void 0 && z24 !== !!z24 && z24 !== 1 && z24 !== 0) throw Error(invalidArgument + z24);
       if (x.d) {
         k = getPrecision(x.d);
-        if (z13 && x.e + 1 > k) k = x.e + 1;
+        if (z24 && x.e + 1 > k) k = x.e + 1;
       } else {
         k = NaN;
       }
@@ -6037,7 +6037,7 @@ Note that ${s.bold("include")} statements only accept relation fields.`, a;
           }
           case "sum": {
             let o = await Promise.all(t.args.map((s) => this.interpretNode(s, r, n, i).then((a) => a.value)));
-            return { value: o.length > 0 ? o.reduce((s, a) => z13(s) + z13(a)) : 0 };
+            return { value: o.length > 0 ? o.reduce((s, a) => z24(s) + z24(a)) : 0 };
           }
           case "execute": {
             let o = Hn(t.args, n, i, this.#u()), s = 0;
@@ -6163,7 +6163,7 @@ Note that ${s.bold("include")} statements only accept relation fields.`, a;
     function Wn(e) {
       return Array.isArray(e) ? e : [e];
     }
-    function z13(e) {
+    function z24(e) {
       if (typeof e == "number") return e;
       if (typeof e == "string") return Number(e);
       throw new Error(`Expected number, got ${typeof e}`);
@@ -6205,13 +6205,13 @@ Note that ${s.bold("include")} statements only accept relation fields.`, a;
         case "set":
           return H(e.value, r, n);
         case "add":
-          return z13(t) + z13(H(e.value, r, n));
+          return z24(t) + z24(H(e.value, r, n));
         case "subtract":
-          return z13(t) - z13(H(e.value, r, n));
+          return z24(t) - z24(H(e.value, r, n));
         case "multiply":
-          return z13(t) * z13(H(e.value, r, n));
+          return z24(t) * z24(H(e.value, r, n));
         case "divide": {
-          let i = z13(t), o = z13(H(e.value, r, n));
+          let i = z24(t), o = z24(H(e.value, r, n));
           return o === 0 ? null : i / o;
         }
         default:
@@ -7822,7 +7822,7 @@ var require_query_compiler_bg = __commonJS({
     };
     var B = (e) => O(h({}, "__esModule", { value: true }), e);
     var xe = {};
-    D(xe, { QueryCompiler: () => F, __wbg_Error_e83987f665cf5504: () => q, __wbg_Number_bb48ca12f395cd08: () => C, __wbg_String_8f0eb39a4a4c2f66: () => k, __wbg___wbindgen_boolean_get_6d5a1ee65bab5f68: () => W, __wbg___wbindgen_debug_string_df47ffb5e35e6763: () => V, __wbg___wbindgen_in_bb933bd9e1b3bc0f: () => z13, __wbg___wbindgen_is_object_c818261d21f283a4: () => L, __wbg___wbindgen_is_string_fbb76cb2940daafd: () => P, __wbg___wbindgen_is_undefined_2d472862bd29a478: () => Q, __wbg___wbindgen_jsval_loose_eq_b664b38a2f582147: () => Y, __wbg___wbindgen_number_get_a20bf9b85341449d: () => G, __wbg___wbindgen_string_get_e4f06c90489ad01b: () => J, __wbg___wbindgen_throw_b855445ff6a94295: () => X, __wbg_entries_e171b586f8f6bdbf: () => H, __wbg_getTime_14776bfb48a1bff9: () => K, __wbg_get_7bed016f185add81: () => Z, __wbg_get_with_ref_key_1dc361bd10053bfe: () => v, __wbg_instanceof_ArrayBuffer_70beb1189ca63b38: () => ee, __wbg_instanceof_Uint8Array_20c8e73002f7af98: () => te, __wbg_isSafeInteger_d216eda7911dde36: () => ne, __wbg_length_69bca3cb64fc8748: () => re, __wbg_length_cdd215e10d9dd507: () => _e, __wbg_new_0_f9740686d739025c: () => oe, __wbg_new_1acc0b6eea89d040: () => ce, __wbg_new_5a79be3ab53b8aa5: () => ie, __wbg_new_68651c719dcda04e: () => se, __wbg_new_e17d9f43105b08be: () => ue, __wbg_prototypesetcall_2a6620b6922694b2: () => fe, __wbg_set_3f1d0b984ed272ed: () => be, __wbg_set_907fb406c34a251d: () => de, __wbg_set_c213c871859d6500: () => ae, __wbg_set_message_82ae475bb413aa5c: () => ge, __wbg_set_wasm: () => N, __wbindgen_cast_2241b6af4c4b2941: () => le, __wbindgen_cast_4625c577ab2ec9ee: () => we, __wbindgen_cast_9ae0607507abb057: () => pe, __wbindgen_cast_d6cd19b81560fd6e: () => ye, __wbindgen_init_externref_table: () => me });
+    D(xe, { QueryCompiler: () => F, __wbg_Error_e83987f665cf5504: () => q, __wbg_Number_bb48ca12f395cd08: () => C, __wbg_String_8f0eb39a4a4c2f66: () => k, __wbg___wbindgen_boolean_get_6d5a1ee65bab5f68: () => W, __wbg___wbindgen_debug_string_df47ffb5e35e6763: () => V, __wbg___wbindgen_in_bb933bd9e1b3bc0f: () => z24, __wbg___wbindgen_is_object_c818261d21f283a4: () => L, __wbg___wbindgen_is_string_fbb76cb2940daafd: () => P, __wbg___wbindgen_is_undefined_2d472862bd29a478: () => Q, __wbg___wbindgen_jsval_loose_eq_b664b38a2f582147: () => Y, __wbg___wbindgen_number_get_a20bf9b85341449d: () => G, __wbg___wbindgen_string_get_e4f06c90489ad01b: () => J, __wbg___wbindgen_throw_b855445ff6a94295: () => X, __wbg_entries_e171b586f8f6bdbf: () => H, __wbg_getTime_14776bfb48a1bff9: () => K, __wbg_get_7bed016f185add81: () => Z, __wbg_get_with_ref_key_1dc361bd10053bfe: () => v, __wbg_instanceof_ArrayBuffer_70beb1189ca63b38: () => ee, __wbg_instanceof_Uint8Array_20c8e73002f7af98: () => te, __wbg_isSafeInteger_d216eda7911dde36: () => ne, __wbg_length_69bca3cb64fc8748: () => re, __wbg_length_cdd215e10d9dd507: () => _e, __wbg_new_0_f9740686d739025c: () => oe, __wbg_new_1acc0b6eea89d040: () => ce, __wbg_new_5a79be3ab53b8aa5: () => ie, __wbg_new_68651c719dcda04e: () => se, __wbg_new_e17d9f43105b08be: () => ue, __wbg_prototypesetcall_2a6620b6922694b2: () => fe, __wbg_set_3f1d0b984ed272ed: () => be, __wbg_set_907fb406c34a251d: () => de, __wbg_set_c213c871859d6500: () => ae, __wbg_set_message_82ae475bb413aa5c: () => ge, __wbg_set_wasm: () => N, __wbindgen_cast_2241b6af4c4b2941: () => le, __wbindgen_cast_4625c577ab2ec9ee: () => we, __wbindgen_cast_9ae0607507abb057: () => pe, __wbindgen_cast_d6cd19b81560fd6e: () => ye, __wbindgen_init_externref_table: () => me });
     module.exports = B(xe);
     var A = () => {
     };
@@ -7963,7 +7963,7 @@ ${e.stack}` : _;
       const n = I(t), _ = l(n, o.__wbindgen_malloc, o.__wbindgen_realloc), r = f;
       u().setInt32(e + 4 * 1, r, true), u().setInt32(e + 4 * 0, _, true);
     }
-    function z13(e, t) {
+    function z24(e, t) {
       return e in t;
     }
     function L(e) {
@@ -8156,6 +8156,11 @@ var require_prisma = __commonJS({
       id: "id",
       heroImg: "heroImg",
       aboutMeImg: "aboutMeImg",
+      title: "title",
+      subtitle: "subtitle",
+      description: "description",
+      resumeUrl: "resumeUrl",
+      resumeDownloadCount: "resumeDownloadCount",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8163,6 +8168,47 @@ var require_prisma = __commonJS({
       id: "id",
       userId: "userId",
       bio: "bio",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.PageViewScalarFieldEnum = {
+      id: "id",
+      page: "page",
+      userAgent: "userAgent",
+      ipAddress: "ipAddress",
+      country: "country",
+      city: "city",
+      referrer: "referrer",
+      createdAt: "createdAt"
+    };
+    exports.Prisma.ResumeDownloadLogScalarFieldEnum = {
+      id: "id",
+      ipAddress: "ipAddress",
+      country: "country",
+      userAgent: "userAgent",
+      createdAt: "createdAt"
+    };
+    exports.Prisma.AppointmentSlotScalarFieldEnum = {
+      id: "id",
+      dayOfWeek: "dayOfWeek",
+      startTime: "startTime",
+      endTime: "endTime",
+      isAvailable: "isAvailable",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.AppointmentScalarFieldEnum = {
+      id: "id",
+      name: "name",
+      email: "email",
+      phone: "phone",
+      topic: "topic",
+      message: "message",
+      date: "date",
+      status: "status",
+      meetLink: "meetLink",
+      adminNote: "adminNote",
+      slotId: "slotId",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8219,10 +8265,80 @@ var require_prisma = __commonJS({
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
+    exports.Prisma.BlogScalarFieldEnum = {
+      id: "id",
+      title: "title",
+      slug: "slug",
+      excerpt: "excerpt",
+      content: "content",
+      thumbnail: "thumbnail",
+      status: "status",
+      isFeatured: "isFeatured",
+      publishedAt: "publishedAt",
+      metaTitle: "metaTitle",
+      metaDescription: "metaDescription",
+      viewCount: "viewCount",
+      likeCount: "likeCount",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.BlogTagScalarFieldEnum = {
+      id: "id",
+      name: "name",
+      slug: "slug",
+      createdAt: "createdAt"
+    };
+    exports.Prisma.BlogCommentScalarFieldEnum = {
+      id: "id",
+      name: "name",
+      email: "email",
+      comment: "comment",
+      isApproved: "isApproved",
+      ipAddress: "ipAddress",
+      blogId: "blogId",
+      parentId: "parentId",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
     exports.Prisma.CategoryScalarFieldEnum = {
       id: "id",
       name: "name",
       isPublished: "isPublished",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.CertificateScalarFieldEnum = {
+      id: "id",
+      title: "title",
+      issuer: "issuer",
+      issuedDate: "issuedDate",
+      expiryDate: "expiryDate",
+      credentialId: "credentialId",
+      credentialUrl: "credentialUrl",
+      imageUrl: "imageUrl",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.AiProviderConfigScalarFieldEnum = {
+      id: "id",
+      provider: "provider",
+      apiKey: "apiKey",
+      model: "model",
+      endpoint: "endpoint",
+      maxTokens: "maxTokens",
+      temperature: "temperature",
+      isEnabled: "isEnabled",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.ChatbotConfigScalarFieldEnum = {
+      id: "id",
+      isEnabled: "isEnabled",
+      botName: "botName",
+      welcomeMsg: "welcomeMsg",
+      systemPrompt: "systemPrompt",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8232,6 +8348,9 @@ var require_prisma = __commonJS({
       email: "email",
       subject: "subject",
       message: "message",
+      status: "status",
+      adminNote: "adminNote",
+      ipAddress: "ipAddress",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8244,6 +8363,8 @@ var require_prisma = __commonJS({
       endDate: "endDate",
       result: "result",
       group: "group",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8255,6 +8376,10 @@ var require_prisma = __commonJS({
       endDate: "endDate",
       location: "location",
       description: "description",
+      companyUrl: "companyUrl",
+      companyLogo: "companyLogo",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8263,7 +8388,59 @@ var require_prisma = __commonJS({
       image: "image",
       title: "title",
       description: "description",
-      isPublish: "isPublish",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.GitHubStatsCacheScalarFieldEnum = {
+      id: "id",
+      username: "username",
+      publicRepos: "publicRepos",
+      followers: "followers",
+      following: "following",
+      totalStars: "totalStars",
+      totalForks: "totalForks",
+      totalCommits: "totalCommits",
+      contributionGraph: "contributionGraph",
+      topLanguages: "topLanguages",
+      lastSyncedAt: "lastSyncedAt",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.OpenSourceContributionScalarFieldEnum = {
+      id: "id",
+      repoName: "repoName",
+      repoUrl: "repoUrl",
+      description: "description",
+      prUrl: "prUrl",
+      issueUrl: "issueUrl",
+      mergedAt: "mergedAt",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.TranslationScalarFieldEnum = {
+      id: "id",
+      key: "key",
+      locale: "locale",
+      value: "value",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.NpmPackageScalarFieldEnum = {
+      id: "id",
+      name: "name",
+      description: "description",
+      npmUrl: "npmUrl",
+      githubUrl: "githubUrl",
+      weeklyDownloads: "weeklyDownloads",
+      totalDownloads: "totalDownloads",
+      version: "version",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
+      lastSyncedAt: "lastSyncedAt",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8277,33 +8454,70 @@ var require_prisma = __commonJS({
       tags: "tags",
       isFeatured: "isFeatured",
       isPublished: "isPublished",
+      sortOrder: "sortOrder",
       categoryId: "categoryId",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
+    };
+    exports.Prisma.ProjectImageScalarFieldEnum = {
+      id: "id",
+      url: "url",
+      alt: "alt",
+      sortOrder: "sortOrder",
+      projectId: "projectId",
+      createdAt: "createdAt"
     };
     exports.Prisma.ReviewScalarFieldEnum = {
       id: "id",
       userId: "userId",
       rating: "rating",
       comment: "comment",
+      isApproved: "isApproved",
+      isPinned: "isPinned",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
+    };
+    exports.Prisma.RssConfigScalarFieldEnum = {
+      id: "id",
+      isEnabled: "isEnabled",
+      title: "title",
+      description: "description",
+      feedUrl: "feedUrl",
+      language: "language",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.RssSubscriberScalarFieldEnum = {
+      id: "id",
+      email: "email",
+      isVerified: "isVerified",
+      verifyToken: "verifyToken",
+      unsubscribeToken: "unsubscribeToken",
+      subscribedAt: "subscribedAt",
+      unsubscribedAt: "unsubscribedAt"
     };
     exports.Prisma.ServiceScalarFieldEnum = {
       id: "id",
       name: "name",
       icon: "icon",
       description: "description",
-      isPublish: "isPublish",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
     exports.Prisma.SettingsScalarFieldEnum = {
       id: "id",
+      siteTitle: "siteTitle",
+      tagline: "tagline",
+      logoUrl: "logoUrl",
+      faviconUrl: "faviconUrl",
       linkedinUrl: "linkedinUrl",
       githubUrl: "githubUrl",
       facebookUrl: "facebookUrl",
       instagramUrl: "instagramUrl",
+      twitterUrl: "twitterUrl",
+      youtubeUrl: "youtubeUrl",
       resumeLink: "resumeLink",
       contactEmail: "contactEmail",
       contactPhone: "contactPhone",
@@ -8311,6 +8525,8 @@ var require_prisma = __commonJS({
       address: "address",
       availability: "availability",
       experience: "experience",
+      metaDescription: "metaDescription",
+      metaKeywords: "metaKeywords",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8319,6 +8535,7 @@ var require_prisma = __commonJS({
       name: "name",
       level: "level",
       icon: "icon",
+      sortOrder: "sortOrder",
       categoryId: "categoryId",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
@@ -8332,10 +8549,68 @@ var require_prisma = __commonJS({
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
+    exports.Prisma.ProductScalarFieldEnum = {
+      id: "id",
+      title: "title",
+      slug: "slug",
+      description: "description",
+      thumbnail: "thumbnail",
+      previewUrl: "previewUrl",
+      price: "price",
+      discountPrice: "discountPrice",
+      currency: "currency",
+      status: "status",
+      isFeatured: "isFeatured",
+      sortOrder: "sortOrder",
+      techStack: "techStack",
+      includes: "includes",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.ProductImageScalarFieldEnum = {
+      id: "id",
+      url: "url",
+      alt: "alt",
+      sortOrder: "sortOrder",
+      productId: "productId"
+    };
+    exports.Prisma.OrderScalarFieldEnum = {
+      id: "id",
+      buyerName: "buyerName",
+      buyerEmail: "buyerEmail",
+      amount: "amount",
+      currency: "currency",
+      status: "status",
+      paymentMethod: "paymentMethod",
+      transactionId: "transactionId",
+      paidAt: "paidAt",
+      downloadToken: "downloadToken",
+      downloadCount: "downloadCount",
+      downloadExpiry: "downloadExpiry",
+      productId: "productId",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
+    exports.Prisma.TimelineScalarFieldEnum = {
+      id: "id",
+      title: "title",
+      description: "description",
+      date: "date",
+      icon: "icon",
+      color: "color",
+      url: "url",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
+      createdAt: "createdAt",
+      updatedAt: "updatedAt"
+    };
     exports.Prisma.VideoScalarFieldEnum = {
       id: "id",
+      title: "title",
+      description: "description",
       videoUrl: "videoUrl",
-      isPublish: "isPublish",
+      isPublished: "isPublished",
+      sortOrder: "sortOrder",
       createdAt: "createdAt",
       updatedAt: "updatedAt"
     };
@@ -8369,24 +8644,81 @@ var require_prisma = __commonJS({
       BLOCKED: "BLOCKED",
       DELETED: "DELETED"
     };
+    exports.SkillLevel = exports.$Enums.SkillLevel = {
+      EXPERT: "EXPERT",
+      INTERMEDIATE: "INTERMEDIATE",
+      LEARNING: "LEARNING",
+      RECENTLY_LEARNED: "RECENTLY_LEARNED"
+    };
+    exports.ContactStatus = exports.$Enums.ContactStatus = {
+      UNREAD: "UNREAD",
+      READ: "READ",
+      REPLIED: "REPLIED",
+      ARCHIVED: "ARCHIVED"
+    };
+    exports.BlogStatus = exports.$Enums.BlogStatus = {
+      DRAFT: "DRAFT",
+      PUBLISHED: "PUBLISHED",
+      ARCHIVED: "ARCHIVED"
+    };
+    exports.AppointmentStatus = exports.$Enums.AppointmentStatus = {
+      PENDING: "PENDING",
+      CONFIRMED: "CONFIRMED",
+      CANCELLED: "CANCELLED",
+      COMPLETED: "COMPLETED"
+    };
+    exports.ProductStatus = exports.$Enums.ProductStatus = {
+      DRAFT: "DRAFT",
+      PUBLISHED: "PUBLISHED",
+      OUT_OF_STOCK: "OUT_OF_STOCK",
+      ARCHIVED: "ARCHIVED"
+    };
+    exports.OrderStatus = exports.$Enums.OrderStatus = {
+      PENDING: "PENDING",
+      PAID: "PAID",
+      DELIVERED: "DELIVERED",
+      REFUNDED: "REFUNDED",
+      CANCELLED: "CANCELLED"
+    };
     exports.Prisma.ModelName = {
       About: "About",
       AdminProfile: "AdminProfile",
+      PageView: "PageView",
+      ResumeDownloadLog: "ResumeDownloadLog",
+      AppointmentSlot: "AppointmentSlot",
+      Appointment: "Appointment",
       User: "User",
       Session: "Session",
       Account: "Account",
       Verification: "Verification",
+      Blog: "Blog",
+      BlogTag: "BlogTag",
+      BlogComment: "BlogComment",
       Category: "Category",
+      Certificate: "Certificate",
+      AiProviderConfig: "AiProviderConfig",
+      ChatbotConfig: "ChatbotConfig",
       Contact: "Contact",
       Education: "Education",
       Experience: "Experience",
       Gallery: "Gallery",
+      GitHubStatsCache: "GitHubStatsCache",
+      OpenSourceContribution: "OpenSourceContribution",
+      Translation: "Translation",
+      NpmPackage: "NpmPackage",
       Project: "Project",
+      ProjectImage: "ProjectImage",
       Review: "Review",
+      RssConfig: "RssConfig",
+      RssSubscriber: "RssSubscriber",
       Service: "Service",
       Settings: "Settings",
       Skill: "Skill",
       Stats: "Stats",
+      Product: "Product",
+      ProductImage: "ProductImage",
+      Order: "Order",
+      Timeline: "Timeline",
       Video: "Video"
     };
     var config = {
@@ -8394,9 +8726,886 @@ var require_prisma = __commonJS({
       "clientVersion": "7.2.0",
       "engineVersion": "0c8ef2ce45c83248ab3df073180d5eda9e8be7a3",
       "activeProvider": "postgresql",
-      "inlineSchema": 'model About {\n  id         String   @id @default(uuid())\n  heroImg    String?\n  aboutMeImg String?\n  createdAt  DateTime @default(now())\n  updatedAt  DateTime @updatedAt\n\n  @@map("about")\n}\n\n// AdminProfile Model\nmodel AdminProfile {\n  id        String   @id @default(uuid())\n  userId    String   @unique\n  bio       String?  @db.Text\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  // Relations\n  user   User    @relation(fields: [userId], references: [id], onDelete: Cascade)\n  skills Skill[]\n\n  @@map("admin_profile")\n}\n\n// User Model\nmodel User {\n  id                 String     @id @default(uuid())\n  email              String     @unique\n  emailVerified      Boolean    @default(false)\n  name               String\n  image              String?\n  phone              String?\n  password           String?\n  role               Role       @default(USER)\n  status             UserStatus @default(ACTIVE)\n  needPasswordChange Boolean    @default(false)\n  isDeleted          Boolean    @default(false)\n  deletedAt          DateTime?\n  isActive           Boolean    @default(true)\n  isBanned           Boolean    @default(false)\n  isReviewed         Boolean    @default(false)\n  reviewId           String?    @unique\n  createdAt          DateTime   @default(now())\n  updatedAt          DateTime   @updatedAt\n\n  // Better Auth Relations\n  sessions Session[]\n  accounts Account[]\n  reviews  Review[]\n\n  // App Relations\n  adminProfile AdminProfile?\n\n  @@map("users")\n}\n\n// Session Model - Required by Better Auth\nmodel Session {\n  id        String   @id\n  expiresAt DateTime\n  token     String   @unique\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n  ipAddress String?\n  userAgent String?\n  userId    String\n\n  // Relations\n  user User @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@map("sessions")\n}\n\n// Account Model - Required by Better Auth\nmodel Account {\n  id                    String    @id\n  accountId             String\n  providerId            String\n  userId                String\n  accessToken           String?\n  refreshToken          String?\n  idToken               String?\n  accessTokenExpiresAt  DateTime?\n  refreshTokenExpiresAt DateTime?\n  scope                 String?\n  password              String?\n  createdAt             DateTime  @default(now())\n  updatedAt             DateTime  @updatedAt\n\n  // Relations\n  user User @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@map("accounts")\n}\n\n// Verification Model - Required by Better Auth\nmodel Verification {\n  id         String    @id\n  identifier String\n  value      String\n  expiresAt  DateTime\n  createdAt  DateTime? @default(now())\n  updatedAt  DateTime? @updatedAt\n\n  @@map("verifications")\n}\n\n// Category Model\nmodel Category {\n  id          String  @id @default(uuid())\n  name        String  @unique\n  isPublished Boolean @default(true)\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  projects Project[]\n  skills   Skill[]\n\n  @@map("categories")\n}\n\nmodel Contact {\n  id        String   @id @default(uuid())\n  name      String\n  email     String\n  subject   String\n  message   String?\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@map("contact")\n}\n\nmodel Education {\n  id          String    @id @default(uuid())\n  degree      String\n  institution String\n  board       String?\n  startDate   DateTime\n  endDate     DateTime?\n  result      String?\n  group       String?\n  // grade       String?\n  // description String    @db.Text\n  createdAt   DateTime  @default(now())\n  updatedAt   DateTime  @updatedAt\n\n  @@map("educations")\n}\n\n// Role Enum\nenum Role {\n  USER\n  ADMIN\n}\n\n// User Status Enum\nenum UserStatus {\n  ACTIVE\n  BLOCKED\n  DELETED\n}\n\n// Experience Model\nmodel Experience {\n  id          String    @id @default(uuid())\n  company     String\n  title       String\n  startDate   DateTime\n  endDate     DateTime?\n  location    String?\n  description String?   @db.Text\n  createdAt   DateTime  @default(now())\n  updatedAt   DateTime  @updatedAt\n\n  @@map("experiences")\n}\n\nmodel Gallery {\n  id          String  @id @default(uuid())\n  image       String\n  title       String?\n  description String?\n\n  isPublish Boolean  @default(true)\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@map("galleries")\n}\n\n// Project Model\nmodel Project {\n  id          String @id @default(uuid())\n  title       String\n  description String @db.Text\n  thumbnail   String\n\n  liveUrl   String?\n  githubUrl String?\n\n  tags        String[]\n  isFeatured  Boolean  @default(false)\n  isPublished Boolean  @default(true)\n  categoryId  String\n  category    Category @relation(fields: [categoryId], references: [id])\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@map("projects")\n}\n\n// Review Model\nmodel Review {\n  id        String   @id @default(uuid())\n  userId    String   @unique\n  rating    Int\n  comment   String?  @db.Text\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  // Relations\n  user User @relation(fields: [userId], references: [id], onDelete: Cascade)\n\n  @@map("reviews")\n}\n\ngenerator client {\n  provider = "prisma-client-js"\n  output   = "../../src/generated/prisma"\n}\n\ndatasource db {\n  provider = "postgresql"\n}\n\nmodel Service {\n  id          String   @id @default(uuid())\n  name        String\n  // icon        String?\n  icon        Json? // { name, library, color, bgColor }\n  description String?\n  isPublish   Boolean  @default(true)\n  createdAt   DateTime @default(now())\n  updatedAt   DateTime @updatedAt\n\n  @@map("services")\n}\n\nmodel Settings {\n  id String @id @default(uuid())\n\n  // Social Links\n  linkedinUrl  String?\n  githubUrl    String?\n  facebookUrl  String?\n  instagramUrl String?\n\n  resumeLink     String?\n  contactEmail   String?\n  contactPhone   String?\n  whatsappNumber String?\n\n  address      String?\n  availability String?\n  experience   String?\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@map("settings")\n}\n\n// Skill Model\nmodel Skill {\n  id    String @id @default(uuid())\n  name  String @unique\n  level String // {Expert, Recently Learned, Learning}\n\n  icon       Json? // { name, library, color}\n  categoryId String\n  category   Category @relation(fields: [categoryId], references: [id])\n\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  // Relations\n  skill AdminProfile[]\n\n  @@map("skills")\n}\n\nmodel Stats {\n  id           String   @id @default(uuid())\n  experience   Int?     @default(0)\n  projects     Int?     @default(0)\n  happyClients Int?     @default(0)\n  successRate  Int?     @default(0)\n  createdAt    DateTime @default(now())\n  updatedAt    DateTime @updatedAt\n\n  @@map("stats")\n}\n\nmodel Video {\n  id        String   @id @default(uuid())\n  videoUrl  String\n  isPublish Boolean  @default(true)\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  @@map("videos")\n}\n'
+      "inlineSchema": `// About Model \u2014 SINGLETON
+// id = 'singleton' fixed\u0964 upsert({ where: { id: 'singleton' }, ... }) \u09AC\u09CD\u09AF\u09AC\u09B9\u09BE\u09B0 \u0995\u09B0\u09A4\u09C7 \u09B9\u09AC\u09C7\u0964
+model About {
+  id         String  @id @default("singleton")
+  heroImg    String?
+  aboutMeImg String?
+
+  title       String?
+  subtitle    String?
+  description String? @db.Text
+  resumeUrl   String?
+
+  // Resume download tracking
+  resumeDownloadCount Int @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("about")
+}
+
+// AdminProfile Model
+// Single admin \u09B9\u0993\u09AF\u09BC\u09BE\u09AF\u09BC \u098F\u099F\u09BE User \u098F\u09B0 \u09B8\u09BE\u09A5\u09C7 1-to-1 relation\u0964
+// Skill \u098F\u09B0 \u09B8\u09BE\u09A5\u09C7 \u0995\u09CB\u09A8\u09CB relation \u09A8\u09C7\u0987 \u2014 Skill \u09B8\u09B0\u09BE\u09B8\u09B0\u09BF Category \u098F\u09B0 under \u098F \u09A5\u09BE\u0995\u09C7\u0964
+model AdminProfile {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  bio       String?  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("admin_profile")
+}
+
+// Page View Model
+// \u09AA\u09CD\u09B0\u09A4\u09BF\u099F\u09BE page visit track \u0995\u09B0\u09C7\u0964 Dashboard-\u098F visitor stats \u09A6\u09C7\u0996\u09BE\u09AC\u09C7\u0964
+model PageView {
+  id        String   @id @default(uuid())
+  page      String // "/", "/projects", "/blog/my-post"
+  userAgent String?
+  ipAddress String?
+  country   String?
+  city      String?
+  referrer  String? // \u0995\u09CB\u09A5\u09BE \u09A5\u09C7\u0995\u09C7 \u098F\u09B2\u09CB (google, facebook, direct)
+  createdAt DateTime @default(now())
+
+  @@index([page])
+  @@index([createdAt])
+  @@map("page_views")
+}
+
+// Resume Download Log
+// About singleton \u098F\u09B0 resumeDownloadCount \u098F\u09B0 \u09B8\u09BE\u09A5\u09C7 \u098F\u099F\u09BE detail log\u0964
+model ResumeDownloadLog {
+  id        String   @id @default(uuid())
+  ipAddress String?
+  country   String?
+  userAgent String?
+  createdAt DateTime @default(now())
+
+  @@map("resume_download_logs")
+}
+
+// Appointment Slot Model
+// Admin dashboard \u09A5\u09C7\u0995\u09C7 available time slots define \u0995\u09B0\u09AC\u09C7\u0964
+model AppointmentSlot {
+  id          String  @id @default(uuid())
+  dayOfWeek   Int // 0=Sunday, 1=Monday ... 6=Saturday
+  startTime   String // "10:00"
+  endTime     String // "11:00"
+  isAvailable Boolean @default(true)
+
+  appointments Appointment[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("appointment_slots")
+}
+
+// Appointment Model
+// Visitor \u098F\u0995\u099F\u09BE slot book \u0995\u09B0\u09AC\u09C7\u0964
+model Appointment {
+  id        String            @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  topic     String // "Project discussion", "Consultation"
+  message   String?           @db.Text
+  date      DateTime // \u09A8\u09BF\u09B0\u09CD\u09A6\u09BF\u09B7\u09CD\u099F \u09A6\u09BF\u09A8
+  status    AppointmentStatus @default(PENDING)
+  meetLink  String? // Google Meet / Zoom link (admin add \u0995\u09B0\u09AC\u09C7 confirm \u098F\u09B0 \u09AA\u09B0)
+  adminNote String?           @db.Text
+
+  slotId String
+  slot   AppointmentSlot @relation(fields: [slotId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("appointments")
+}
+
+// User Model
+model User {
+  id                 String     @id @default(uuid())
+  email              String     @unique
+  emailVerified      Boolean    @default(false)
+  name               String
+  image              String?
+  phone              String?
+  password           String?
+  role               Role       @default(USER)
+  status             UserStatus @default(ACTIVE)
+  needPasswordChange Boolean    @default(false)
+  isDeleted          Boolean    @default(false)
+  deletedAt          DateTime?
+  isActive           Boolean    @default(true)
+  isBanned           Boolean    @default(false)
+  isReviewed         Boolean    @default(false)
+  reviewId           String?    @unique
+  createdAt          DateTime   @default(now())
+  updatedAt          DateTime   @updatedAt
+
+  // Better Auth Relations
+  sessions Session[]
+  accounts Account[]
+
+  // App Relations
+  adminProfile AdminProfile?
+  reviews      Review[]
+
+  @@map("users")
+}
+
+// Session Model - Required by Better Auth
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+// Account Model - Required by Better Auth
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("accounts")
+}
+
+// Verification Model - Required by Better Auth
+model Verification {
+  id         String    @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
+
+  @@map("verifications")
+}
+
+// Blog Post Model
+model Blog {
+  id          String     @id @default(uuid())
+  title       String
+  slug        String     @unique // URL-friendly: "my-first-post"
+  excerpt     String?    @db.Text // Short preview text
+  content     String     @db.Text // Full post content (Markdown / HTML)
+  thumbnail   String?
+  status      BlogStatus @default(DRAFT)
+  isFeatured  Boolean    @default(false)
+  publishedAt DateTime? // null \u09B9\u09B2\u09C7 draft \u09B9\u09BF\u09B8\u09C7\u09AC\u09C7 \u09A5\u09BE\u0995\u09AC\u09C7
+
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+
+  // Stats
+  viewCount Int @default(0)
+  likeCount Int @default(0)
+
+  // Relations
+  tags     BlogTag[]
+  comments BlogComment[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("blogs")
+}
+
+// Blog Tag Model
+model BlogTag {
+  id   String @id @default(uuid())
+  name String @unique
+  slug String @unique
+
+  blogs Blog[]
+
+  createdAt DateTime @default(now())
+
+  @@map("blog_tags")
+}
+
+// Blog Comment Model (public users comment \u0995\u09B0\u09A4\u09C7 \u09AA\u09BE\u09B0\u09AC\u09C7)
+model BlogComment {
+  id      String @id @default(uuid())
+  name    String // commenter name (guest \u09B9\u09B2\u09C7)
+  email   String // commenter email
+  comment String @db.Text
+
+  isApproved Boolean @default(false) // Admin approve \u0995\u09B0\u09BE\u09B0 \u0986\u0997\u09C7 \u09A6\u09C7\u0996\u09BE\u09AC\u09C7 \u09A8\u09BE
+  ipAddress  String? // spam prevention
+
+  blogId String
+  blog   Blog   @relation(fields: [blogId], references: [id], onDelete: Cascade)
+
+  // Reply support (nested comment, 1 level)
+  parentId String?
+  parent   BlogComment?  @relation("CommentReplies", fields: [parentId], references: [id])
+  replies  BlogComment[] @relation("CommentReplies")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("blog_comments")
+}
+
+// Category Model
+model Category {
+  id          String  @id @default(uuid())
+  name        String  @unique
+  isPublished Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  projects Project[]
+  skills   Skill[]
+
+  @@map("categories")
+}
+
+// Certificate Model
+model Certificate {
+  id            String    @id @default(uuid())
+  title         String
+  issuer        String
+  issuedDate    DateTime
+  expiryDate    DateTime?
+  credentialId  String?
+  credentialUrl String?
+  imageUrl      String?
+  isPublished   Boolean   @default(true)
+  sortOrder     Int       @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("certificates")
+}
+
+// AI Provider Config \u2014 SINGLETON
+// Dashboard \u09A5\u09C7\u0995\u09C7 \u09AF\u09C7\u0995\u09CB\u09A8\u09CB \u09B8\u09AE\u09AF\u09BC provider, model, endpoint change \u0995\u09B0\u09BE \u09AF\u09BE\u09AC\u09C7\u0964
+// id = 'singleton' fixed\u0964 upsert \u09AC\u09CD\u09AF\u09AC\u09B9\u09BE\u09B0 \u0995\u09B0\u09A4\u09C7 \u09B9\u09AC\u09C7\u0964
+model AiProviderConfig {
+  id String @id @default("singleton")
+
+  provider    String  @default("gemini") // "gemini" | "openai" | "anthropic" | "custom"
+  apiKey      String  @db.Text // dashboard \u09A5\u09C7\u0995\u09C7 update \u0995\u09B0\u09BE \u09AF\u09BE\u09AC\u09C7
+  model       String  @default("gemini-2.0-flash") // e.g. "gpt-4o", "claude-3-5-haiku"
+  endpoint    String? // custom \u09B9\u09B2\u09C7 \u098F\u0996\u09BE\u09A8\u09C7 \u09A6\u09BE\u0993, \u09A8\u09BE \u09B9\u09B2\u09C7 provider default
+  maxTokens   Int     @default(1000)
+  temperature Float   @default(0.7) // 0.0 = focused, 1.0 = creative
+  isEnabled   Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("ai_provider_config")
+}
+
+// Chatbot Config \u2014 SINGLETON
+// Chatbot \u098F\u09B0 behavior \u0993 rate limit configure \u0995\u09B0\u09BE\u09B0 \u099C\u09A8\u09CD\u09AF\u0964
+// id = 'singleton' fixed\u0964 upsert \u09AC\u09CD\u09AF\u09AC\u09B9\u09BE\u09B0 \u0995\u09B0\u09A4\u09C7 \u09B9\u09AC\u09C7\u0964
+model ChatbotConfig {
+  id String @id @default("singleton")
+
+  isEnabled  Boolean @default(true)
+  botName    String  @default("Ishtiaq's Assistant")
+  welcomeMsg String?
+
+  // System prompt \u2014 DB context \u098F\u09B0 \u09B8\u09BE\u09A5\u09C7 combine \u09B9\u09AC\u09C7
+  systemPrompt String? @db.Text
+
+  // If you need to remove rate limit and use by .env file
+  // so remove rateLimit and rateLimitWindow code
+
+  // Rate limit \u2014 dashboard \u09A5\u09C7\u0995\u09C7 configure \u0995\u09B0\u09BE \u09AF\u09BE\u09AC\u09C7
+  // rateLimit       Int @default(10) // per window \u098F max request
+  // rateLimitWindow Int @default(60) // seconds \u2014 default 60s
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("chatbot_config")
+}
+
+// \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+// Chatbot Conversation Log \u2014 DISABLED
+// \u0986\u09AA\u09BE\u09A4\u09A4 DB \u09A4\u09C7 log save \u0995\u09B0\u09BE \u09B9\u099A\u09CD\u099B\u09C7 \u09A8\u09BE (privacy + storage cost \u0995\u09AE\u09BE\u09A4\u09C7)\u0964
+// \u09AA\u09B0\u09C7 \u099A\u09BE\u09B2\u09C1 \u0995\u09B0\u09A4\u09C7 \u099A\u09BE\u0987\u09B2\u09C7: \u098F\u0987 block uncomment \u0995\u09B0\u09CB, prisma migrate \u099A\u09BE\u09B2\u09BE\u0993,
+// \u098F\u09AC\u0982 chatbot.service.ts \u098F logging code uncomment \u0995\u09B0\u09CB\u0964
+// \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+// model ChatbotLog {
+//     id        String  @id @default(uuid())
+//     sessionId String
+//     role      String // "user" | "assistant"
+//     message   String  @db.Text
+//     ipAddress String?
+//
+//     createdAt DateTime @default(now())
+//
+//     @@index([sessionId])
+//     @@index([createdAt])
+//     @@map("chatbot_logs")
+// }
+
+// Contact Model
+model Contact {
+  id      String  @id @default(uuid())
+  name    String
+  email   String
+  subject String
+  message String? @db.Text
+
+  status    ContactStatus @default(UNREAD)
+  // Admin reply (optional \u2014 dashboard \u09A5\u09C7\u0995\u09C7 \u09B8\u09B0\u09BE\u09B8\u09B0\u09BF reply \u0995\u09B0\u09BE\u09B0 \u099C\u09A8\u09CD\u09AF)
+  adminNote String?       @db.Text
+
+  // IP tracking (spam prevention)
+  ipAddress String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("contacts")
+}
+
+// Education Model
+model Education {
+  id          String    @id @default(uuid())
+  degree      String
+  institution String
+  board       String?
+  startDate   DateTime
+  endDate     DateTime?
+  result      String?
+  group       String?
+
+  // description String?   @db.Text
+  isPublished Boolean @default(true)
+  sortOrder   Int     @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("educations")
+}
+
+// Role Enum
+enum Role {
+  USER
+  ADMIN
+}
+
+// User Status Enum
+enum UserStatus {
+  ACTIVE
+  BLOCKED
+  DELETED
+}
+
+// Skill Level Enum
+enum SkillLevel {
+  EXPERT
+  INTERMEDIATE
+  LEARNING
+  RECENTLY_LEARNED
+}
+
+// Contact Status Enum
+enum ContactStatus {
+  UNREAD
+  READ
+  REPLIED
+  ARCHIVED
+}
+
+// Blog Status Enum
+enum BlogStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+// Appointment Status Enum
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+}
+
+// Product Status Enum
+enum ProductStatus {
+  DRAFT
+  PUBLISHED
+  OUT_OF_STOCK
+  ARCHIVED
+}
+
+// Order Status Enum
+enum OrderStatus {
+  PENDING
+  PAID
+  DELIVERED
+  REFUNDED
+  CANCELLED
+}
+
+// Experience Model
+model Experience {
+  id          String    @id @default(uuid())
+  company     String
+  title       String
+  startDate   DateTime
+  endDate     DateTime? // null = currently working
+  location    String?
+  description String?   @db.Text
+
+  companyUrl  String?
+  companyLogo String?
+
+  isPublished Boolean @default(true)
+  sortOrder   Int     @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("experiences")
+}
+
+// Gallery Model
+model Gallery {
+  id          String  @id @default(uuid())
+  image       String?
+  title       String?
+  description String? @db.Text
+  isPublished Boolean @default(true) // fixed: was isPublish
+  sortOrder   Int     @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("galleries")
+}
+
+// GitHub Stats Cache Model \u2014 SINGLETON
+// GitHub API \u09A5\u09C7\u0995\u09C7 fetch \u0995\u09B0\u09BE data cache \u0995\u09B0\u09C7 \u09B0\u09BE\u0996\u09BE \u09B9\u09AF\u09BC\u0964
+// \u09AA\u09CD\u09B0\u09A4\u09BF \u0995\u09AF\u09BC\u09C7\u0995 \u0998\u09A3\u09CD\u099F\u09BE\u09AF\u09BC \u098F\u0995\u09AC\u09BE\u09B0 background job update \u0995\u09B0\u09AC\u09C7\u0964
+// id = 'singleton' fixed\u0964
+model GitHubStatsCache {
+  id String @id @default("singleton")
+
+  username     String?
+  publicRepos  Int     @default(0)
+  followers    Int     @default(0)
+  following    Int     @default(0)
+  totalStars   Int     @default(0)
+  totalForks   Int     @default(0)
+  totalCommits Int     @default(0)
+
+  // Contribution graph raw JSON (GitHub API response)
+  contributionGraph Json?
+
+  // Top languages JSON \u2014 [{ name: "TypeScript", percentage: 45 }, ...]
+  topLanguages Json?
+
+  lastSyncedAt DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@map("github_stats_cache")
+}
+
+// Open Source Contribution Model
+// manually add \u0995\u09B0\u09BE \u09AF\u09BE\u09AC\u09C7 admin dashboard \u09A5\u09C7\u0995\u09C7\u0964
+model OpenSourceContribution {
+  id          String    @id @default(uuid())
+  repoName    String // "vercel/next.js"
+  repoUrl     String
+  description String?   @db.Text
+  prUrl       String? // merged PR link
+  issueUrl    String?
+  mergedAt    DateTime?
+  isPublished Boolean   @default(true)
+  sortOrder   Int       @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("open_source_contributions")
+}
+
+// Translation Model
+// Multi-language support (EN + BN) \u098F\u09B0 \u099C\u09A8\u09CD\u09AF\u0964
+// key = "hero.title", locale = "bn", value = "\u0986\u09AE\u09BF \u0987\u09B6\u09A4\u09BF\u09AF\u09BC\u09BE\u0995 \u09B0\u09AC\u09BF\u09A8"
+model Translation {
+  id     String @id @default(uuid())
+  key    String // "hero.title", "about.bio", "nav.home"
+  locale String // "en", "bn"
+  value  String @db.Text
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([key, locale]) // \u098F\u0995\u0987 key \u098F\u09B0 \u099C\u09A8\u09CD\u09AF \u098F\u0995\u099F\u09BE\u0987 locale \u09A5\u09BE\u0995\u09AC\u09C7
+  @@index([locale])
+  @@map("translations")
+}
+
+// NPM Package Model
+// Published npm packages showcase \u0995\u09B0\u09BE\u09B0 \u099C\u09A8\u09CD\u09AF\u0964
+model NpmPackage {
+  id              String  @id @default(uuid())
+  name            String  @unique // "@ishtiaqrobin/ui-kit"
+  description     String? @db.Text
+  npmUrl          String
+  githubUrl       String?
+  weeklyDownloads Int     @default(0) // npm API \u09A5\u09C7\u0995\u09C7 sync \u09B9\u09AC\u09C7
+  totalDownloads  Int     @default(0)
+  version         String? // latest version
+  isPublished     Boolean @default(true)
+  sortOrder       Int     @default(0)
+
+  lastSyncedAt DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@map("npm_packages")
+}
+
+// Project Model
+model Project {
+  id          String  @id @default(uuid())
+  title       String
+  description String  @db.Text
+  thumbnail   String?
+
+  liveUrl   String?
+  githubUrl String?
+
+  tags        String[]
+  isFeatured  Boolean  @default(false)
+  isPublished Boolean  @default(true)
+  sortOrder   Int      @default(0) // Admin dashboard-\u098F drag-to-reorder \u098F\u09B0 \u099C\u09A8\u09CD\u09AF
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  // Multiple screenshots support
+  images ProjectImage[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("projects")
+}
+
+// Project Image Model (multiple screenshots per project)
+model ProjectImage {
+  id        String  @id @default(uuid())
+  url       String
+  alt       String?
+  sortOrder Int     @default(0)
+
+  projectId String
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@map("project_images")
+}
+
+// Review Model
+// \u098F\u0995\u099C\u09A8 user \u098F\u0995\u099F\u09BE\u0987 review \u09A6\u09BF\u09A4\u09C7 \u09AA\u09BE\u09B0\u09AC\u09C7 (userId @unique)
+model Review {
+  id         String  @id @default(uuid())
+  userId     String  @unique
+  rating     Int // 1\u20135
+  comment    String  @db.Text
+  isApproved Boolean @default(false) // Admin approve \u0995\u09B0\u09BE\u09B0 \u0986\u0997\u09C7 public-\u098F \u09A6\u09C7\u0996\u09BE\u09AC\u09C7 \u09A8\u09BE
+  isPinned   Boolean @default(false) // Featured review
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("reviews")
+}
+
+// RSS Feed Config \u2014 SINGLETON
+// Blog subscriber \u098F\u09B0 \u099C\u09A8\u09CD\u09AF RSS feed settings\u0964
+// id = 'singleton' fixed\u0964
+model RssConfig {
+  id          String  @id @default("singleton")
+  isEnabled   Boolean @default(true)
+  title       String? // "Ishtiaq Robin's Blog"
+  description String?
+  feedUrl     String? // "https://ishtiaq-robin.vercel.app/rss.xml"
+  language    String  @default("en")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("rss_config")
+}
+
+// RSS Subscriber Model
+// Email \u09A6\u09BF\u09AF\u09BC\u09C7 subscribe \u0995\u09B0\u09BE users\u0964
+model RssSubscriber {
+  id               String    @id @default(uuid())
+  email            String    @unique
+  isVerified       Boolean   @default(false)
+  verifyToken      String?   @unique
+  unsubscribeToken String    @unique @default(uuid())
+  subscribedAt     DateTime  @default(now())
+  unsubscribedAt   DateTime?
+
+  @@map("rss_subscribers")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// Service Model
+model Service {
+  id          String  @id @default(uuid())
+  name        String
+  icon        Json? // { name, library, color, bgColor }
+  description String? @db.Text
+  isPublished Boolean @default(true) // fixed: was isPublish
+  sortOrder   Int     @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("services")
+}
+
+// Settings Model \u2014 SINGLETON
+// \u09B8\u09AC\u09B8\u09AE\u09AF\u09BC \u098F\u0995\u099F\u09BE\u0987 row \u09A5\u09BE\u0995\u09AC\u09C7\u0964 id = 'singleton' fixed\u0964
+// Service layer-\u098F upsert({ where: { id: 'singleton' }, ... }) \u09AC\u09CD\u09AF\u09AC\u09B9\u09BE\u09B0 \u0995\u09B0\u09A4\u09C7 \u09B9\u09AC\u09C7\u0964
+model Settings {
+  id String @id @default("singleton")
+
+  // Site identity
+  siteTitle  String?
+  tagline    String?
+  logoUrl    String?
+  faviconUrl String?
+
+  // Social Links
+  linkedinUrl  String?
+  githubUrl    String?
+  facebookUrl  String?
+  instagramUrl String?
+  twitterUrl   String?
+  youtubeUrl   String?
+
+  // Contact info
+  resumeLink     String?
+  contactEmail   String?
+  contactPhone   String?
+  whatsappNumber String?
+  address        String?
+
+  // Availability & meta
+  availability String?
+  experience   String?
+
+  // SEO
+  metaDescription String?
+  metaKeywords    String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("settings")
+}
+
+// Skill Model
+model Skill {
+  id    String     @id @default(uuid())
+  name  String     @unique
+  level SkillLevel @default(LEARNING)
+
+  icon      Json? // { name, library, color }
+  sortOrder Int   @default(0)
+
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("skills")
+}
+
+// Stats Model \u2014 SINGLETON
+// \u09B8\u09AC\u09B8\u09AE\u09AF\u09BC \u098F\u0995\u099F\u09BE\u0987 row \u09A5\u09BE\u0995\u09AC\u09C7\u0964 id = 'singleton' fixed\u0964
+// Service layer-\u098F upsert({ where: { id: 'singleton' }, ... }) \u09AC\u09CD\u09AF\u09AC\u09B9\u09BE\u09B0 \u0995\u09B0\u09A4\u09C7 \u09B9\u09AC\u09C7\u0964
+model Stats {
+  id           String @id @default("singleton")
+  experience   Int    @default(0)
+  projects     Int    @default(0)
+  happyClients Int    @default(0)
+  successRate  Int    @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("stats")
+}
+
+// Digital Product Model
+// Template, boilerplate, UI kit \u09AC\u09BF\u0995\u09CD\u09B0\u09BF\u09B0 \u099C\u09A8\u09CD\u09AF\u0964
+model Product {
+  id            String        @id @default(uuid())
+  title         String
+  slug          String        @unique
+  description   String        @db.Text
+  thumbnail     String
+  previewUrl    String? // live demo link
+  price         Decimal       @db.Decimal(10, 2)
+  discountPrice Decimal?      @db.Decimal(10, 2)
+  currency      String        @default("USD")
+  status        ProductStatus @default(DRAFT)
+  isFeatured    Boolean       @default(false)
+  sortOrder     Int           @default(0)
+
+  // Tech stack tags \u2014 ["Next.js", "TailwindCSS"]
+  techStack String[]
+
+  // What's included \u2014 ["Source code", "Documentation", "Free updates"]
+  includes String[]
+
+  images ProductImage[]
+  orders Order[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("products")
+}
+
+// Product Image Model
+model ProductImage {
+  id        String  @id @default(uuid())
+  url       String
+  alt       String?
+  sortOrder Int     @default(0)
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@map("product_images")
+}
+
+// Order Model
+// Buyer \u098F\u0995\u099F\u09BE product \u0995\u09BF\u09A8\u09B2\u09C7 \u098F\u0987 record \u09A4\u09C8\u09B0\u09BF \u09B9\u09AF\u09BC\u0964
+model Order {
+  id         String      @id @default(uuid())
+  buyerName  String
+  buyerEmail String
+  amount     Decimal     @db.Decimal(10, 2)
+  currency   String      @default("USD")
+  status     OrderStatus @default(PENDING)
+
+  // Payment info
+  paymentMethod String? // "stripe", "bkash", "paypal"
+  transactionId String?
+  paidAt        DateTime?
+
+  // Download
+  downloadToken  String?   @unique // secure one-time token
+  downloadCount  Int       @default(0)
+  downloadExpiry DateTime?
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("orders")
+}
+
+// Timeline / Career Highlight Model
+// Career-\u098F\u09B0 major milestones chronologically \u09A6\u09C7\u0996\u09BE\u09A8\u09CB\u09B0 \u099C\u09A8\u09CD\u09AF\u0964
+// Experience \u0993 Education \u09A5\u09C7\u0995\u09C7 \u0986\u09B2\u09BE\u09A6\u09BE \u2014 \u098F\u099F\u09BE custom highlight\u0964
+model Timeline {
+  id          String   @id @default(uuid())
+  title       String // "Launched Ezbitly SaaS"
+  description String?  @db.Text
+  date        DateTime
+  icon        String? // icon name \u2014 "rocket", "briefcase", "graduation-cap"
+  color       String? // badge color \u2014 "blue", "green", "amber"
+  url         String? // related link (optional)
+  isPublished Boolean  @default(true)
+  sortOrder   Int      @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("timelines")
+}
+
+// Video Model (YouTube embed \u09AC\u09BE external video URL)
+model Video {
+  id          String  @id @default(uuid())
+  title       String?
+  description String? @db.Text
+  videoUrl    String // YouTube embed URL or direct video URL
+  // thumbnail   String? // Custom thumbnail (optional, YouTube auto-thumbnail \u0993 \u09B9\u09AF\u09BC)
+  isPublished Boolean @default(true)
+  sortOrder   Int     @default(0)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("videos")
+}
+`
     };
-    config.runtimeDataModel = JSON.parse('{"models":{"About":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"heroImg","kind":"scalar","type":"String"},{"name":"aboutMeImg","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"about"},"AdminProfile":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"bio","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"user","kind":"object","type":"User","relationName":"AdminProfileToUser"},{"name":"skills","kind":"object","type":"Skill","relationName":"AdminProfileToSkill"}],"dbName":"admin_profile"},"User":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"emailVerified","kind":"scalar","type":"Boolean"},{"name":"name","kind":"scalar","type":"String"},{"name":"image","kind":"scalar","type":"String"},{"name":"phone","kind":"scalar","type":"String"},{"name":"password","kind":"scalar","type":"String"},{"name":"role","kind":"enum","type":"Role"},{"name":"status","kind":"enum","type":"UserStatus"},{"name":"needPasswordChange","kind":"scalar","type":"Boolean"},{"name":"isDeleted","kind":"scalar","type":"Boolean"},{"name":"deletedAt","kind":"scalar","type":"DateTime"},{"name":"isActive","kind":"scalar","type":"Boolean"},{"name":"isBanned","kind":"scalar","type":"Boolean"},{"name":"isReviewed","kind":"scalar","type":"Boolean"},{"name":"reviewId","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"sessions","kind":"object","type":"Session","relationName":"SessionToUser"},{"name":"accounts","kind":"object","type":"Account","relationName":"AccountToUser"},{"name":"reviews","kind":"object","type":"Review","relationName":"ReviewToUser"},{"name":"adminProfile","kind":"object","type":"AdminProfile","relationName":"AdminProfileToUser"}],"dbName":"users"},"Session":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"expiresAt","kind":"scalar","type":"DateTime"},{"name":"token","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"ipAddress","kind":"scalar","type":"String"},{"name":"userAgent","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"user","kind":"object","type":"User","relationName":"SessionToUser"}],"dbName":"sessions"},"Account":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"accountId","kind":"scalar","type":"String"},{"name":"providerId","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"accessToken","kind":"scalar","type":"String"},{"name":"refreshToken","kind":"scalar","type":"String"},{"name":"idToken","kind":"scalar","type":"String"},{"name":"accessTokenExpiresAt","kind":"scalar","type":"DateTime"},{"name":"refreshTokenExpiresAt","kind":"scalar","type":"DateTime"},{"name":"scope","kind":"scalar","type":"String"},{"name":"password","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"user","kind":"object","type":"User","relationName":"AccountToUser"}],"dbName":"accounts"},"Verification":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"identifier","kind":"scalar","type":"String"},{"name":"value","kind":"scalar","type":"String"},{"name":"expiresAt","kind":"scalar","type":"DateTime"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"verifications"},"Category":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"projects","kind":"object","type":"Project","relationName":"CategoryToProject"},{"name":"skills","kind":"object","type":"Skill","relationName":"CategoryToSkill"}],"dbName":"categories"},"Contact":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"subject","kind":"scalar","type":"String"},{"name":"message","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"contact"},"Education":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"degree","kind":"scalar","type":"String"},{"name":"institution","kind":"scalar","type":"String"},{"name":"board","kind":"scalar","type":"String"},{"name":"startDate","kind":"scalar","type":"DateTime"},{"name":"endDate","kind":"scalar","type":"DateTime"},{"name":"result","kind":"scalar","type":"String"},{"name":"group","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"educations"},"Experience":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"company","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"startDate","kind":"scalar","type":"DateTime"},{"name":"endDate","kind":"scalar","type":"DateTime"},{"name":"location","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"experiences"},"Gallery":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"image","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"isPublish","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"galleries"},"Project":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"thumbnail","kind":"scalar","type":"String"},{"name":"liveUrl","kind":"scalar","type":"String"},{"name":"githubUrl","kind":"scalar","type":"String"},{"name":"tags","kind":"scalar","type":"String"},{"name":"isFeatured","kind":"scalar","type":"Boolean"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"categoryId","kind":"scalar","type":"String"},{"name":"category","kind":"object","type":"Category","relationName":"CategoryToProject"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"projects"},"Review":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"rating","kind":"scalar","type":"Int"},{"name":"comment","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"user","kind":"object","type":"User","relationName":"ReviewToUser"}],"dbName":"reviews"},"Service":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"icon","kind":"scalar","type":"Json"},{"name":"description","kind":"scalar","type":"String"},{"name":"isPublish","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"services"},"Settings":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"linkedinUrl","kind":"scalar","type":"String"},{"name":"githubUrl","kind":"scalar","type":"String"},{"name":"facebookUrl","kind":"scalar","type":"String"},{"name":"instagramUrl","kind":"scalar","type":"String"},{"name":"resumeLink","kind":"scalar","type":"String"},{"name":"contactEmail","kind":"scalar","type":"String"},{"name":"contactPhone","kind":"scalar","type":"String"},{"name":"whatsappNumber","kind":"scalar","type":"String"},{"name":"address","kind":"scalar","type":"String"},{"name":"availability","kind":"scalar","type":"String"},{"name":"experience","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"settings"},"Skill":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"level","kind":"scalar","type":"String"},{"name":"icon","kind":"scalar","type":"Json"},{"name":"categoryId","kind":"scalar","type":"String"},{"name":"category","kind":"object","type":"Category","relationName":"CategoryToSkill"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"skill","kind":"object","type":"AdminProfile","relationName":"AdminProfileToSkill"}],"dbName":"skills"},"Stats":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"experience","kind":"scalar","type":"Int"},{"name":"projects","kind":"scalar","type":"Int"},{"name":"happyClients","kind":"scalar","type":"Int"},{"name":"successRate","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"stats"},"Video":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"videoUrl","kind":"scalar","type":"String"},{"name":"isPublish","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"videos"}},"enums":{},"types":{}}');
+    config.runtimeDataModel = JSON.parse('{"models":{"About":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"heroImg","kind":"scalar","type":"String"},{"name":"aboutMeImg","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"subtitle","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"resumeUrl","kind":"scalar","type":"String"},{"name":"resumeDownloadCount","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"about"},"AdminProfile":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"bio","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"user","kind":"object","type":"User","relationName":"AdminProfileToUser"}],"dbName":"admin_profile"},"PageView":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"page","kind":"scalar","type":"String"},{"name":"userAgent","kind":"scalar","type":"String"},{"name":"ipAddress","kind":"scalar","type":"String"},{"name":"country","kind":"scalar","type":"String"},{"name":"city","kind":"scalar","type":"String"},{"name":"referrer","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"}],"dbName":"page_views"},"ResumeDownloadLog":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"ipAddress","kind":"scalar","type":"String"},{"name":"country","kind":"scalar","type":"String"},{"name":"userAgent","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"}],"dbName":"resume_download_logs"},"AppointmentSlot":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"dayOfWeek","kind":"scalar","type":"Int"},{"name":"startTime","kind":"scalar","type":"String"},{"name":"endTime","kind":"scalar","type":"String"},{"name":"isAvailable","kind":"scalar","type":"Boolean"},{"name":"appointments","kind":"object","type":"Appointment","relationName":"AppointmentToAppointmentSlot"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"appointment_slots"},"Appointment":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"phone","kind":"scalar","type":"String"},{"name":"topic","kind":"scalar","type":"String"},{"name":"message","kind":"scalar","type":"String"},{"name":"date","kind":"scalar","type":"DateTime"},{"name":"status","kind":"enum","type":"AppointmentStatus"},{"name":"meetLink","kind":"scalar","type":"String"},{"name":"adminNote","kind":"scalar","type":"String"},{"name":"slotId","kind":"scalar","type":"String"},{"name":"slot","kind":"object","type":"AppointmentSlot","relationName":"AppointmentToAppointmentSlot"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"appointments"},"User":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"emailVerified","kind":"scalar","type":"Boolean"},{"name":"name","kind":"scalar","type":"String"},{"name":"image","kind":"scalar","type":"String"},{"name":"phone","kind":"scalar","type":"String"},{"name":"password","kind":"scalar","type":"String"},{"name":"role","kind":"enum","type":"Role"},{"name":"status","kind":"enum","type":"UserStatus"},{"name":"needPasswordChange","kind":"scalar","type":"Boolean"},{"name":"isDeleted","kind":"scalar","type":"Boolean"},{"name":"deletedAt","kind":"scalar","type":"DateTime"},{"name":"isActive","kind":"scalar","type":"Boolean"},{"name":"isBanned","kind":"scalar","type":"Boolean"},{"name":"isReviewed","kind":"scalar","type":"Boolean"},{"name":"reviewId","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"sessions","kind":"object","type":"Session","relationName":"SessionToUser"},{"name":"accounts","kind":"object","type":"Account","relationName":"AccountToUser"},{"name":"adminProfile","kind":"object","type":"AdminProfile","relationName":"AdminProfileToUser"},{"name":"reviews","kind":"object","type":"Review","relationName":"ReviewToUser"}],"dbName":"users"},"Session":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"expiresAt","kind":"scalar","type":"DateTime"},{"name":"token","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"ipAddress","kind":"scalar","type":"String"},{"name":"userAgent","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"user","kind":"object","type":"User","relationName":"SessionToUser"}],"dbName":"sessions"},"Account":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"accountId","kind":"scalar","type":"String"},{"name":"providerId","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"accessToken","kind":"scalar","type":"String"},{"name":"refreshToken","kind":"scalar","type":"String"},{"name":"idToken","kind":"scalar","type":"String"},{"name":"accessTokenExpiresAt","kind":"scalar","type":"DateTime"},{"name":"refreshTokenExpiresAt","kind":"scalar","type":"DateTime"},{"name":"scope","kind":"scalar","type":"String"},{"name":"password","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"user","kind":"object","type":"User","relationName":"AccountToUser"}],"dbName":"accounts"},"Verification":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"identifier","kind":"scalar","type":"String"},{"name":"value","kind":"scalar","type":"String"},{"name":"expiresAt","kind":"scalar","type":"DateTime"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"verifications"},"Blog":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"slug","kind":"scalar","type":"String"},{"name":"excerpt","kind":"scalar","type":"String"},{"name":"content","kind":"scalar","type":"String"},{"name":"thumbnail","kind":"scalar","type":"String"},{"name":"status","kind":"enum","type":"BlogStatus"},{"name":"isFeatured","kind":"scalar","type":"Boolean"},{"name":"publishedAt","kind":"scalar","type":"DateTime"},{"name":"metaTitle","kind":"scalar","type":"String"},{"name":"metaDescription","kind":"scalar","type":"String"},{"name":"viewCount","kind":"scalar","type":"Int"},{"name":"likeCount","kind":"scalar","type":"Int"},{"name":"tags","kind":"object","type":"BlogTag","relationName":"BlogToBlogTag"},{"name":"comments","kind":"object","type":"BlogComment","relationName":"BlogToBlogComment"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"blogs"},"BlogTag":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"slug","kind":"scalar","type":"String"},{"name":"blogs","kind":"object","type":"Blog","relationName":"BlogToBlogTag"},{"name":"createdAt","kind":"scalar","type":"DateTime"}],"dbName":"blog_tags"},"BlogComment":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"comment","kind":"scalar","type":"String"},{"name":"isApproved","kind":"scalar","type":"Boolean"},{"name":"ipAddress","kind":"scalar","type":"String"},{"name":"blogId","kind":"scalar","type":"String"},{"name":"blog","kind":"object","type":"Blog","relationName":"BlogToBlogComment"},{"name":"parentId","kind":"scalar","type":"String"},{"name":"parent","kind":"object","type":"BlogComment","relationName":"CommentReplies"},{"name":"replies","kind":"object","type":"BlogComment","relationName":"CommentReplies"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"blog_comments"},"Category":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"projects","kind":"object","type":"Project","relationName":"CategoryToProject"},{"name":"skills","kind":"object","type":"Skill","relationName":"CategoryToSkill"}],"dbName":"categories"},"Certificate":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"issuer","kind":"scalar","type":"String"},{"name":"issuedDate","kind":"scalar","type":"DateTime"},{"name":"expiryDate","kind":"scalar","type":"DateTime"},{"name":"credentialId","kind":"scalar","type":"String"},{"name":"credentialUrl","kind":"scalar","type":"String"},{"name":"imageUrl","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"certificates"},"AiProviderConfig":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"provider","kind":"scalar","type":"String"},{"name":"apiKey","kind":"scalar","type":"String"},{"name":"model","kind":"scalar","type":"String"},{"name":"endpoint","kind":"scalar","type":"String"},{"name":"maxTokens","kind":"scalar","type":"Int"},{"name":"temperature","kind":"scalar","type":"Float"},{"name":"isEnabled","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"ai_provider_config"},"ChatbotConfig":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"isEnabled","kind":"scalar","type":"Boolean"},{"name":"botName","kind":"scalar","type":"String"},{"name":"welcomeMsg","kind":"scalar","type":"String"},{"name":"systemPrompt","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"chatbot_config"},"Contact":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"subject","kind":"scalar","type":"String"},{"name":"message","kind":"scalar","type":"String"},{"name":"status","kind":"enum","type":"ContactStatus"},{"name":"adminNote","kind":"scalar","type":"String"},{"name":"ipAddress","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"contacts"},"Education":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"degree","kind":"scalar","type":"String"},{"name":"institution","kind":"scalar","type":"String"},{"name":"board","kind":"scalar","type":"String"},{"name":"startDate","kind":"scalar","type":"DateTime"},{"name":"endDate","kind":"scalar","type":"DateTime"},{"name":"result","kind":"scalar","type":"String"},{"name":"group","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"educations"},"Experience":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"company","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"startDate","kind":"scalar","type":"DateTime"},{"name":"endDate","kind":"scalar","type":"DateTime"},{"name":"location","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"companyUrl","kind":"scalar","type":"String"},{"name":"companyLogo","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"experiences"},"Gallery":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"image","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"galleries"},"GitHubStatsCache":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"username","kind":"scalar","type":"String"},{"name":"publicRepos","kind":"scalar","type":"Int"},{"name":"followers","kind":"scalar","type":"Int"},{"name":"following","kind":"scalar","type":"Int"},{"name":"totalStars","kind":"scalar","type":"Int"},{"name":"totalForks","kind":"scalar","type":"Int"},{"name":"totalCommits","kind":"scalar","type":"Int"},{"name":"contributionGraph","kind":"scalar","type":"Json"},{"name":"topLanguages","kind":"scalar","type":"Json"},{"name":"lastSyncedAt","kind":"scalar","type":"DateTime"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"github_stats_cache"},"OpenSourceContribution":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"repoName","kind":"scalar","type":"String"},{"name":"repoUrl","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"prUrl","kind":"scalar","type":"String"},{"name":"issueUrl","kind":"scalar","type":"String"},{"name":"mergedAt","kind":"scalar","type":"DateTime"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"open_source_contributions"},"Translation":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"key","kind":"scalar","type":"String"},{"name":"locale","kind":"scalar","type":"String"},{"name":"value","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"translations"},"NpmPackage":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"npmUrl","kind":"scalar","type":"String"},{"name":"githubUrl","kind":"scalar","type":"String"},{"name":"weeklyDownloads","kind":"scalar","type":"Int"},{"name":"totalDownloads","kind":"scalar","type":"Int"},{"name":"version","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"lastSyncedAt","kind":"scalar","type":"DateTime"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"npm_packages"},"Project":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"thumbnail","kind":"scalar","type":"String"},{"name":"liveUrl","kind":"scalar","type":"String"},{"name":"githubUrl","kind":"scalar","type":"String"},{"name":"tags","kind":"scalar","type":"String"},{"name":"isFeatured","kind":"scalar","type":"Boolean"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"categoryId","kind":"scalar","type":"String"},{"name":"category","kind":"object","type":"Category","relationName":"CategoryToProject"},{"name":"images","kind":"object","type":"ProjectImage","relationName":"ProjectToProjectImage"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"projects"},"ProjectImage":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"url","kind":"scalar","type":"String"},{"name":"alt","kind":"scalar","type":"String"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"projectId","kind":"scalar","type":"String"},{"name":"project","kind":"object","type":"Project","relationName":"ProjectToProjectImage"},{"name":"createdAt","kind":"scalar","type":"DateTime"}],"dbName":"project_images"},"Review":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"userId","kind":"scalar","type":"String"},{"name":"rating","kind":"scalar","type":"Int"},{"name":"comment","kind":"scalar","type":"String"},{"name":"isApproved","kind":"scalar","type":"Boolean"},{"name":"isPinned","kind":"scalar","type":"Boolean"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"},{"name":"user","kind":"object","type":"User","relationName":"ReviewToUser"}],"dbName":"reviews"},"RssConfig":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"isEnabled","kind":"scalar","type":"Boolean"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"feedUrl","kind":"scalar","type":"String"},{"name":"language","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"rss_config"},"RssSubscriber":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"email","kind":"scalar","type":"String"},{"name":"isVerified","kind":"scalar","type":"Boolean"},{"name":"verifyToken","kind":"scalar","type":"String"},{"name":"unsubscribeToken","kind":"scalar","type":"String"},{"name":"subscribedAt","kind":"scalar","type":"DateTime"},{"name":"unsubscribedAt","kind":"scalar","type":"DateTime"}],"dbName":"rss_subscribers"},"Service":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"icon","kind":"scalar","type":"Json"},{"name":"description","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"services"},"Settings":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"siteTitle","kind":"scalar","type":"String"},{"name":"tagline","kind":"scalar","type":"String"},{"name":"logoUrl","kind":"scalar","type":"String"},{"name":"faviconUrl","kind":"scalar","type":"String"},{"name":"linkedinUrl","kind":"scalar","type":"String"},{"name":"githubUrl","kind":"scalar","type":"String"},{"name":"facebookUrl","kind":"scalar","type":"String"},{"name":"instagramUrl","kind":"scalar","type":"String"},{"name":"twitterUrl","kind":"scalar","type":"String"},{"name":"youtubeUrl","kind":"scalar","type":"String"},{"name":"resumeLink","kind":"scalar","type":"String"},{"name":"contactEmail","kind":"scalar","type":"String"},{"name":"contactPhone","kind":"scalar","type":"String"},{"name":"whatsappNumber","kind":"scalar","type":"String"},{"name":"address","kind":"scalar","type":"String"},{"name":"availability","kind":"scalar","type":"String"},{"name":"experience","kind":"scalar","type":"String"},{"name":"metaDescription","kind":"scalar","type":"String"},{"name":"metaKeywords","kind":"scalar","type":"String"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"settings"},"Skill":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"name","kind":"scalar","type":"String"},{"name":"level","kind":"enum","type":"SkillLevel"},{"name":"icon","kind":"scalar","type":"Json"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"categoryId","kind":"scalar","type":"String"},{"name":"category","kind":"object","type":"Category","relationName":"CategoryToSkill"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"skills"},"Stats":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"experience","kind":"scalar","type":"Int"},{"name":"projects","kind":"scalar","type":"Int"},{"name":"happyClients","kind":"scalar","type":"Int"},{"name":"successRate","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"stats"},"Product":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"slug","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"thumbnail","kind":"scalar","type":"String"},{"name":"previewUrl","kind":"scalar","type":"String"},{"name":"price","kind":"scalar","type":"Decimal"},{"name":"discountPrice","kind":"scalar","type":"Decimal"},{"name":"currency","kind":"scalar","type":"String"},{"name":"status","kind":"enum","type":"ProductStatus"},{"name":"isFeatured","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"techStack","kind":"scalar","type":"String"},{"name":"includes","kind":"scalar","type":"String"},{"name":"images","kind":"object","type":"ProductImage","relationName":"ProductToProductImage"},{"name":"orders","kind":"object","type":"Order","relationName":"OrderToProduct"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"products"},"ProductImage":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"url","kind":"scalar","type":"String"},{"name":"alt","kind":"scalar","type":"String"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"productId","kind":"scalar","type":"String"},{"name":"product","kind":"object","type":"Product","relationName":"ProductToProductImage"}],"dbName":"product_images"},"Order":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"buyerName","kind":"scalar","type":"String"},{"name":"buyerEmail","kind":"scalar","type":"String"},{"name":"amount","kind":"scalar","type":"Decimal"},{"name":"currency","kind":"scalar","type":"String"},{"name":"status","kind":"enum","type":"OrderStatus"},{"name":"paymentMethod","kind":"scalar","type":"String"},{"name":"transactionId","kind":"scalar","type":"String"},{"name":"paidAt","kind":"scalar","type":"DateTime"},{"name":"downloadToken","kind":"scalar","type":"String"},{"name":"downloadCount","kind":"scalar","type":"Int"},{"name":"downloadExpiry","kind":"scalar","type":"DateTime"},{"name":"productId","kind":"scalar","type":"String"},{"name":"product","kind":"object","type":"Product","relationName":"OrderToProduct"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"orders"},"Timeline":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"date","kind":"scalar","type":"DateTime"},{"name":"icon","kind":"scalar","type":"String"},{"name":"color","kind":"scalar","type":"String"},{"name":"url","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"timelines"},"Video":{"fields":[{"name":"id","kind":"scalar","type":"String"},{"name":"title","kind":"scalar","type":"String"},{"name":"description","kind":"scalar","type":"String"},{"name":"videoUrl","kind":"scalar","type":"String"},{"name":"isPublished","kind":"scalar","type":"Boolean"},{"name":"sortOrder","kind":"scalar","type":"Int"},{"name":"createdAt","kind":"scalar","type":"DateTime"},{"name":"updatedAt","kind":"scalar","type":"DateTime"}],"dbName":"videos"}},"enums":{},"types":{}}');
     defineDmmfProperty2(exports.Prisma, config.runtimeDataModel);
     config.compilerWasm = {
       getRuntime: async () => require_query_compiler_bg(),
@@ -8427,7 +9636,7 @@ init_esm_shims();
 
 // src/app.ts
 init_esm_shims();
-import express16 from "express";
+import express29 from "express";
 import { toNodeHandler } from "better-auth/node";
 
 // src/app/lib/auth.ts
@@ -8451,9 +9660,14 @@ import dotenv from "dotenv";
 init_esm_shims();
 var AppError = class extends Error {
   statusCode;
-  constructor(statusCode, message, stack = "") {
+  errorSources;
+  isOperational;
+  constructor(statusCode, message, errorSources, stack = "") {
     super(message);
     this.statusCode = statusCode;
+    this.errorSources = errorSources;
+    this.isOperational = true;
+    this.name = this.constructor.name;
     if (stack) {
       this.stack = stack;
     } else {
@@ -8488,7 +9702,8 @@ var loadEnvVariables = () => {
     "EMAIL_SENDER_SMTP_FROM",
     "CLOUDINARY_CLOUD_NAME",
     "CLOUDINARY_API_KEY",
-    "CLOUDINARY_API_SECRET"
+    "CLOUDINARY_API_SECRET",
+    "IPINFO_TOKEN"
   ];
   requireEnvVariable.forEach((variable) => {
     if (!process.env[variable]) {
@@ -8523,6 +9738,12 @@ var loadEnvVariables = () => {
       CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
       API_KEY: process.env.CLOUDINARY_API_KEY,
       API_SECRET: process.env.CLOUDINARY_API_SECRET
+    },
+    IPINFO_TOKEN: process.env.IPINFO_TOKEN,
+    CHATBOT: {
+      // .env এ না থাকলে safe defaults — 10 req per 60s
+      RATE_LIMIT: Number(process.env.CHATBOT_RATE_LIMIT) || 10,
+      RATE_LIMIT_WINDOW: Number(process.env.CHATBOT_RATE_LIMIT_WINDOW) || 60
     }
   };
 };
@@ -8759,228 +9980,12 @@ var auth = betterAuth({
 
 // src/app.ts
 import cors from "cors";
-
-// src/app/middlewares/notFound.ts
-init_esm_shims();
-function notFound(req, res) {
-  res.status(404).json({
-    success: false,
-    message: "Route Not Found",
-    path: req.originalUrl,
-    date: Date()
-  });
-}
-
-// src/app/middlewares/globalErrorHandler.ts
-init_esm_shims();
-import status6 from "http-status";
-import z from "zod";
-
-// src/app/config/cloudinary.config.ts
-init_esm_shims();
-import { v2 as cloudinary } from "cloudinary";
-import status3 from "http-status";
-cloudinary.config({
-  cloud_name: env.CLOUDINARY.CLOUD_NAME,
-  api_key: env.CLOUDINARY.API_KEY,
-  api_secret: env.CLOUDINARY.API_SECRET
-});
-var deleteFileFromCloudinary = async (url) => {
-  try {
-    const regex = /\/v\d+\/(.+?)(?:\.[a-zA-Z0-9]+)+$/;
-    const match = url.match(regex);
-    if (match && match[1]) {
-      const publicId = match[1];
-      await cloudinary.uploader.destroy(publicId, {
-        resource_type: "image"
-      });
-      console.log(`File ${publicId} deleted from Cloudinary.`);
-    }
-  } catch (error) {
-    console.log("Error deleting file from Cloudinary:", error);
-    throw new AppError_default(
-      status3.INTERNAL_SERVER_ERROR,
-      "Failed to delete file from Cloudinary"
-    );
-  }
-};
-var cloudinaryUpload = cloudinary;
-
-// src/app/errorHelpers/handleZodError.ts
-init_esm_shims();
-import status4 from "http-status";
-var handleZodError = (err) => {
-  const statusCode = status4.BAD_REQUEST;
-  const message = "Zod Validation Error";
-  const errorSources = [];
-  err.issues.forEach((issue) => {
-    errorSources.push({
-      path: issue.path.join(" => "),
-      message: issue.message
-    });
-  });
-  return {
-    statusCode,
-    success: false,
-    message,
-    errorSources,
-    error: err
-  };
-};
-
-// src/app/errorHelpers/handlePrismaError.ts
-init_esm_shims();
-import status5 from "http-status";
-var handlePrismaKnownRequestError = (err) => {
-  let statusCode = status5.BAD_REQUEST;
-  let message = "Prisma Known Request Error";
-  let errorSources = [];
-  if (err.code === "P2002") {
-    statusCode = status5.CONFLICT;
-    const target = err.meta?.target;
-    message = `Duplicate value for ${target?.join(", ") || "field"}. This value already exists.`;
-    errorSources = [
-      {
-        path: target?.join(", ") || "",
-        message: `${target?.join(", ") || "Field"} already exists`
-      }
-    ];
-  } else if (err.code === "P2025") {
-    statusCode = status5.NOT_FOUND;
-    message = "Record Not Found";
-    errorSources = [
-      {
-        path: "",
-        message: err.meta?.cause || "Record not found"
-      }
-    ];
-  } else if (err.code === "P2003") {
-    statusCode = status5.BAD_REQUEST;
-    message = "Foreign Key Constraint Error";
-    errorSources = [
-      {
-        path: "",
-        message: "A related record was not found or is still connected"
-      }
-    ];
-  } else {
-    message = err.message;
-    errorSources = [
-      {
-        path: "",
-        message: err.message
-      }
-    ];
-  }
-  return {
-    statusCode,
-    success: false,
-    message,
-    errorSources,
-    error: err
-  };
-};
-var handlePrismaValidationError = (err) => {
-  const statusCode = status5.BAD_REQUEST;
-  const message = "Prisma Validation Error";
-  const errorSources = [
-    {
-      path: "",
-      message: err.message
-    }
-  ];
-  return {
-    statusCode,
-    success: false,
-    message,
-    errorSources,
-    error: err
-  };
-};
-
-// src/app/middlewares/globalErrorHandler.ts
-var import_prisma4 = __toESM(require_prisma(), 1);
-import multer from "multer";
-var globalErrorHandler = async (err, req, res, next) => {
-  if (env.NODE_ENV === "development") {
-    console.log("Error from Global Error Handler: ", err);
-  }
-  if (req.file) {
-    await deleteFileFromCloudinary(req.file.path);
-  }
-  if (req.files && Array.isArray(req.files) && req.files.length > 0) {
-    const imageUrls = req.files.map((file) => file.path);
-    await Promise.all(imageUrls.map((url) => deleteFileFromCloudinary(url)));
-  }
-  let errorSources = [];
-  let statusCode = status6.INTERNAL_SERVER_ERROR;
-  let message = "Internal Server Error";
-  let stack = void 0;
-  if (err instanceof z.ZodError) {
-    const simplifiedError = handleZodError(err);
-    statusCode = simplifiedError.statusCode;
-    message = simplifiedError.message;
-    errorSources = simplifiedError.errorSources || [];
-    stack = err.stack;
-  } else if (err instanceof import_prisma4.Prisma.PrismaClientKnownRequestError) {
-    const simplifiedError = handlePrismaKnownRequestError(err);
-    statusCode = simplifiedError.statusCode;
-    message = simplifiedError.message;
-    errorSources = simplifiedError.errorSources || [];
-    stack = err.stack;
-  } else if (err instanceof import_prisma4.Prisma.PrismaClientValidationError) {
-    const simplifiedError = handlePrismaValidationError(err);
-    statusCode = simplifiedError.statusCode;
-    message = simplifiedError.message;
-    errorSources = simplifiedError.errorSources || [];
-    stack = err.stack;
-  } else if (err instanceof AppError_default) {
-    statusCode = err.statusCode;
-    message = err.message;
-    stack = err.stack;
-    errorSources = [
-      {
-        path: "",
-        message: err.message
-      }
-    ];
-  } else if (err instanceof multer.MulterError) {
-    statusCode = status6.BAD_REQUEST;
-    if (err.code === "LIMIT_FILE_SIZE") {
-      message = "File too large. Maximum allowed size is 5MB.";
-    } else {
-      message = err.message || "File upload error";
-    }
-    stack = err.stack;
-    errorSources = [{ path: err.field || "file", message }];
-  } else if (err instanceof Error) {
-    statusCode = status6.INTERNAL_SERVER_ERROR;
-    message = err.message;
-    stack = err.stack;
-    errorSources = [
-      {
-        path: "",
-        message: err.message
-      }
-    ];
-  }
-  const errorResponse = {
-    success: false,
-    message,
-    errorSources,
-    stack: env.NODE_ENV === "development" ? err.stack : void 0,
-    error: env.NODE_ENV === "development" ? err : void 0
-  };
-  res.status(statusCode).json(errorResponse);
-};
-var globalErrorHandler_default = globalErrorHandler;
-
-// src/app.ts
 import cookieParser from "cookie-parser";
+import path3 from "path";
 
 // src/app/routes/index.ts
 init_esm_shims();
-import { Router as Router15 } from "express";
+import { Router as Router26 } from "express";
 
 // src/app/modules/auth/auth.route.ts
 init_esm_shims();
@@ -9014,15 +10019,15 @@ var sendResponse = (res, responseData) => {
 
 // src/app/modules/auth/auth.service.ts
 init_esm_shims();
-import status7 from "http-status";
-var import_prisma6 = __toESM(require_prisma(), 1);
+import status3 from "http-status";
+var import_prisma5 = __toESM(require_prisma(), 1);
 var registerUser = async (payload) => {
   const { name, email, password } = payload;
   const data = await auth.api.signUpEmail({
     body: { name, email, password }
   });
   if (!data.user) {
-    throw new AppError_default(status7.BAD_REQUEST, "Failed to register user");
+    throw new AppError_default(status3.BAD_REQUEST, "Failed to register user");
   }
   return data;
 };
@@ -9032,7 +10037,7 @@ var loginUser = async (payload) => {
     body: { email, password }
   });
   if (data.user.isBanned) {
-    throw new AppError_default(status7.FORBIDDEN, "Your account has been banned");
+    throw new AppError_default(status3.FORBIDDEN, "Your account has been banned");
   }
   return data;
 };
@@ -9057,7 +10062,7 @@ var changePassword = async (payload, headers) => {
   } catch (error) {
     console.error("Change Password API Error details:", error.body || error);
     throw new AppError_default(
-      status7.BAD_REQUEST,
+      status3.BAD_REQUEST,
       error.body?.message || "Failed to change password"
     );
   }
@@ -9071,7 +10076,7 @@ var logoutUser = async (headers) => {
   } catch (error) {
     console.error("SignOut API Error details:", error.body || error);
     throw new AppError_default(
-      status7.BAD_REQUEST,
+      status3.BAD_REQUEST,
       error.body?.message || "Failed to logout"
     );
   }
@@ -9098,13 +10103,13 @@ var forgetPassword = async (email) => {
     }
   });
   if (!isUserExits) {
-    throw new AppError_default(status7.NOT_FOUND, "User not found");
+    throw new AppError_default(status3.NOT_FOUND, "User not found");
   }
   if (!isUserExits.emailVerified) {
-    throw new AppError_default(status7.FORBIDDEN, "Email not verified");
+    throw new AppError_default(status3.FORBIDDEN, "Email not verified");
   }
   if (isUserExits.isBanned) {
-    throw new AppError_default(status7.FORBIDDEN, "Your account has been banned");
+    throw new AppError_default(status3.FORBIDDEN, "Your account has been banned");
   }
   await auth.api.forgetPasswordEmailOTP({
     body: {
@@ -9119,13 +10124,13 @@ var resetPassword = async (email, otp, newPassword) => {
     }
   });
   if (!isUserExits) {
-    throw new AppError_default(status7.NOT_FOUND, "User not found");
+    throw new AppError_default(status3.NOT_FOUND, "User not found");
   }
   if (!isUserExits.emailVerified) {
-    throw new AppError_default(status7.FORBIDDEN, "Email not verified");
+    throw new AppError_default(status3.FORBIDDEN, "Email not verified");
   }
-  if (isUserExits.isDeleted || isUserExits.status === import_prisma6.UserStatus.DELETED) {
-    throw new AppError_default(status7.NOT_FOUND, "User not found");
+  if (isUserExits.isDeleted || isUserExits.status === import_prisma5.UserStatus.DELETED) {
+    throw new AppError_default(status3.NOT_FOUND, "User not found");
   }
   await auth.api.resetPasswordEmailOTP({
     body: {
@@ -9161,7 +10166,7 @@ var AuthService = {
 };
 
 // src/app/modules/auth/auth.controller.ts
-import status8 from "http-status";
+import status4 from "http-status";
 var registerUser2 = catchAsync(async (req, res) => {
   const result = await AuthService.registerUser(req.body);
   res.cookie("better-auth.session_token", result.token, {
@@ -9171,7 +10176,7 @@ var registerUser2 = catchAsync(async (req, res) => {
     path: "/"
   });
   sendResponse(res, {
-    statusCode: status8.CREATED,
+    statusCode: status4.CREATED,
     success: true,
     message: "User registered successfully",
     data: result.user
@@ -9186,7 +10191,7 @@ var loginUser2 = catchAsync(async (req, res) => {
     path: "/"
   });
   sendResponse(res, {
-    statusCode: status8.OK,
+    statusCode: status4.OK,
     success: true,
     message: "User logged in successfully",
     data: result.user
@@ -9206,7 +10211,7 @@ var changePassword2 = catchAsync(async (req, res) => {
   }
   const result = await AuthService.changePassword(payload, headers);
   sendResponse(res, {
-    statusCode: status8.OK,
+    statusCode: status4.OK,
     success: true,
     message: "Password changed successfully",
     data: result
@@ -9225,7 +10230,7 @@ var logoutUser2 = catchAsync(async (req, res) => {
   }
   const result = await AuthService.logoutUser(headers);
   sendResponse(res, {
-    statusCode: status8.OK,
+    statusCode: status4.OK,
     success: true,
     message: "Logged out successfully",
     data: result
@@ -9235,7 +10240,7 @@ var verifyEmail2 = catchAsync(async (req, res) => {
   const { email, otp } = req.body;
   await AuthService.verifyEmail(email, otp);
   sendResponse(res, {
-    statusCode: status8.OK,
+    statusCode: status4.OK,
     success: true,
     message: "Email verified successfully",
     data: null
@@ -9244,7 +10249,7 @@ var verifyEmail2 = catchAsync(async (req, res) => {
 var forgetPassword2 = catchAsync(async (req, res) => {
   await AuthService.forgetPassword(req.body.email);
   sendResponse(res, {
-    statusCode: status8.OK,
+    statusCode: status4.OK,
     success: true,
     message: "Password reset OTP sent to email",
     data: null
@@ -9254,7 +10259,7 @@ var resetPassword2 = catchAsync(async (req, res) => {
   const { email, otp, newPassword } = req.body;
   await AuthService.resetPassword(email, otp, newPassword);
   sendResponse(res, {
-    statusCode: status8.OK,
+    statusCode: status4.OK,
     success: true,
     message: "Password reset successfully",
     data: null
@@ -9440,58 +10445,13 @@ var UserController = {
   updateProfile
 };
 
-// src/app/config/multer.config.ts
-init_esm_shims();
-import multer2 from "multer";
-import { CloudinaryStorage } from "multer-storage-cloudinary";
-var storage = new CloudinaryStorage({
-  cloudinary: cloudinaryUpload,
-  params: async (req, file) => {
-    const originalName = file.originalname;
-    const extension = originalName.split(".").pop()?.toLowerCase();
-    const fileNameWithoutExtension = originalName.split(".").slice(0, -1).join(".").toLowerCase().replace(/\s+/g, "-").replace(/[^a-zA-Z0-9\-]/g, "");
-    const uniqueName = Math.random().toString(36).substring(2) + "-" + Date.now() + "-" + fileNameWithoutExtension;
-    const folder = extension === "pdf" ? "pdfs" : "images";
-    return {
-      folder: `ishtiaq-robin/${folder}`,
-      public_id: uniqueName,
-      resource_type: "auto"
-    };
-  }
-});
-var fileSizeLimitBytes = 5 * 1024 * 1024;
-var fileFilter = (_req, file, cb) => {
-  const allowedMimeTypes = [
-    "image/jpeg",
-    "image/png",
-    "image/gif",
-    "image/webp",
-    "image/svg+xml",
-    "application/pdf"
-  ];
-  if (allowedMimeTypes.includes(file.mimetype)) {
-    cb(null, true);
-  } else {
-    cb(
-      new Error(
-        "Invalid file type. Only images (JPEG, PNG, GIF, WebP, SVG) and PDFs are allowed."
-      )
-    );
-  }
-};
-var multerUpload = multer2({
-  storage,
-  limits: { fileSize: fileSizeLimitBytes },
-  fileFilter
-});
-
 // src/app/modules/user/user.route.ts
 var router2 = express.Router();
 router2.get("/me", auth_default("USER" /* USER */, "ADMIN" /* ADMIN */), UserController.getMe);
 router2.put(
   "/profile",
   auth_default("USER" /* USER */, "ADMIN" /* ADMIN */),
-  multerUpload.single("image"),
+  // multerUpload.single("image"),
   UserController.updateProfile
 );
 var UserRouter = router2;
@@ -9559,48 +10519,138 @@ var unbanUser = async (userId) => {
 var getDashboardStats = async () => {
   return await prisma.$transaction(async (tx) => {
     const [
+      // Users
+      grandTotalUsers,
       totalUsers,
       totalAdmins,
-      totalProject,
-      totalSkills,
-      totalCertificate,
-      totalCategories,
       totalVerifiedUsers,
       totalUnverifiedUsers,
+      // Core Portfolio
+      totalProjects,
+      totalSkills,
+      totalCategories,
       totalServices,
+      totalExperiences,
+      totalEducations,
+      totalCertificates,
       totalReviews,
-      totalExperience,
+      totalGallery,
       totalVideos,
-      totalGallery
+      totalTimelines,
+      // Blog
+      totalBlogs,
+      totalPublishedBlogs,
+      totalDraftBlogs,
+      totalBlogTags,
+      totalBlogComments,
+      // Contacts & Appointments
+      totalContacts,
+      totalUnreadContacts,
+      totalAppointments,
+      totalPendingAppointments,
+      // Store
+      totalProducts,
+      totalOrders,
+      totalPaidOrders,
+      // Analytics & Engagement
+      totalPageViews,
+      // totalChatbotLogs,
+      // Open Source & Packages
+      totalNpmPackages,
+      totalOpenSourceContributions,
+      // RSS
+      totalRssSubscribers,
+      // Translations
+      totalTranslations
     ] = await Promise.all([
+      // Users
+      tx.user.count(),
       tx.user.count({ where: { role: "USER" } }),
       tx.user.count({ where: { role: "ADMIN" } }),
-      tx.project.count(),
-      tx.skill.count(),
-      tx.education.count(),
-      tx.category.count(),
       tx.user.count({ where: { emailVerified: true } }),
       tx.user.count({ where: { emailVerified: false } }),
+      // Core Portfolio
+      tx.project.count(),
+      tx.skill.count(),
+      tx.category.count(),
       tx.service.count(),
-      tx.review.count(),
       tx.experience.count(),
+      tx.education.count(),
+      tx.certificate.count(),
+      tx.review.count(),
+      tx.gallery.count(),
       tx.video.count(),
-      tx.gallery.count()
+      tx.timeline.count(),
+      // Blog
+      tx.blog.count(),
+      tx.blog.count({ where: { status: "PUBLISHED" } }),
+      tx.blog.count({ where: { status: "DRAFT" } }),
+      tx.blogTag.count(),
+      tx.blogComment.count(),
+      // Contacts & Appointments
+      tx.contact.count(),
+      tx.contact.count({ where: { status: "UNREAD" } }),
+      tx.appointment.count(),
+      tx.appointment.count({ where: { status: "PENDING" } }),
+      // Store
+      tx.product.count(),
+      tx.order.count(),
+      tx.order.count({ where: { status: "PAID" } }),
+      // Analytics & Engagement
+      tx.pageView.count(),
+      // tx.chatbotLog.count(),
+      // Open Source & Packages
+      tx.npmPackage.count(),
+      tx.openSourceContribution.count(),
+      // RSS
+      tx.rssSubscriber.count(),
+      // Translations
+      tx.translation.count()
     ]);
     return {
+      // Users
+      grandTotalUsers,
       totalUsers,
       totalAdmins,
-      totalProject,
-      totalSkills,
-      totalCertificate,
-      totalCategories,
       totalVerifiedUsers,
       totalUnverifiedUsers,
+      // Core Portfolio
+      totalProjects,
+      totalSkills,
+      totalCategories,
       totalServices,
+      totalExperiences,
+      totalEducations,
+      totalCertificates,
       totalReviews,
-      totalExperience,
+      totalGallery,
       totalVideos,
-      totalGallery
+      totalTimelines,
+      // Blog
+      totalBlogs,
+      totalPublishedBlogs,
+      totalDraftBlogs,
+      totalBlogTags,
+      totalBlogComments,
+      // Contacts & Appointments
+      totalContacts,
+      totalUnreadContacts,
+      totalAppointments,
+      totalPendingAppointments,
+      // Store
+      totalProducts,
+      totalOrders,
+      totalPaidOrders,
+      // Analytics & Engagement
+      totalPageViews,
+      // totalChatbotLogs,
+      // Open Source & Packages
+      totalNpmPackages,
+      totalOpenSourceContributions,
+      // RSS
+      totalRssSubscribers,
+      // Translations
+      totalTranslations
     };
   });
 };
@@ -9751,9 +10801,22 @@ var updateReview = async (id, user, payload) => {
   if (user.role !== "ADMIN" && existingReview.userId !== user.id) {
     throw new Error("You do not have permission to update this review");
   }
+  const data = user.role === "ADMIN" ? payload : {
+    ...payload.rating !== void 0 ? { rating: payload.rating } : {},
+    ...payload.comment !== void 0 ? { comment: payload.comment } : {}
+  };
   const result = await prisma.review.update({
     where: { id },
-    data: payload
+    data,
+    include: {
+      user: {
+        select: {
+          id: true,
+          name: true,
+          image: true
+        }
+      }
+    }
   });
   return result;
 };
@@ -9784,6 +10847,7 @@ var deleteReview = async (id, user) => {
 };
 var getAllReviews = async (limit = 10) => {
   const result = await prisma.review.findMany({
+    where: { isApproved: true },
     take: limit,
     include: {
       user: {
@@ -9794,9 +10858,44 @@ var getAllReviews = async (limit = 10) => {
         }
       }
     },
-    orderBy: {
-      createdAt: "desc"
-    }
+    orderBy: [{ isPinned: "desc" }, { createdAt: "desc" }]
+  });
+  return result;
+};
+var getAllReviewsAdmin = async () => {
+  const result = await prisma.review.findMany({
+    include: {
+      user: {
+        select: {
+          id: true,
+          name: true,
+          image: true
+        }
+      }
+    },
+    orderBy: [{ isPinned: "desc" }, { createdAt: "desc" }]
+  });
+  return result;
+};
+var approveReview = async (id) => {
+  const existingReview = await prisma.review.findUnique({ where: { id } });
+  if (!existingReview) {
+    throw new Error("Review not found");
+  }
+  const result = await prisma.review.update({
+    where: { id },
+    data: { isApproved: !existingReview.isApproved }
+  });
+  return result;
+};
+var pinReview = async (id) => {
+  const existingReview = await prisma.review.findUnique({ where: { id } });
+  if (!existingReview) {
+    throw new Error("Review not found");
+  }
+  const result = await prisma.review.update({
+    where: { id },
+    data: { isPinned: !existingReview.isPinned }
   });
   return result;
 };
@@ -9812,9 +10911,7 @@ var getMyReviews = async (userId) => {
         }
       }
     },
-    orderBy: {
-      createdAt: "desc"
-    }
+    orderBy: { createdAt: "desc" }
   });
   return result;
 };
@@ -9823,6 +10920,9 @@ var ReviewService = {
   updateReview,
   deleteReview,
   getAllReviews,
+  getAllReviewsAdmin,
+  approveReview,
+  pinReview,
   getMyReviews
 };
 
@@ -9903,6 +11003,44 @@ var getAllReviews2 = async (req, res, next) => {
     next(err);
   }
 };
+var getAllReviewsAdmin2 = async (req, res, next) => {
+  try {
+    const result = await ReviewService.getAllReviewsAdmin();
+    res.status(200).json({
+      success: true,
+      message: "All reviews retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var approveReview2 = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await ReviewService.approveReview(id);
+    res.status(200).json({
+      success: true,
+      message: `Review ${result.isApproved ? "approved" : "unapproved"} successfully`,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var pinReview2 = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await ReviewService.pinReview(id);
+    res.status(200).json({
+      success: true,
+      message: `Review ${result.isPinned ? "pinned" : "unpinned"} successfully`,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 var getMyReviews2 = async (req, res, next) => {
   try {
     const userId = req.user?.id;
@@ -9927,6 +11065,9 @@ var ReviewController = {
   updateReview: updateReview2,
   deleteReview: deleteReview2,
   getAllReviews: getAllReviews2,
+  getAllReviewsAdmin: getAllReviewsAdmin2,
+  approveReview: approveReview2,
+  pinReview: pinReview2,
   getMyReviews: getMyReviews2
 };
 
@@ -9948,32 +11089,41 @@ var validateRequest = (zodSchema) => {
 
 // src/app/modules/review/review.validation.ts
 init_esm_shims();
-import { z as z2 } from "zod";
-var createReviewZodSchema = z2.object({
-  rating: z2.number("rating is required").min(1).max(5),
-  comment: z2.string().optional()
+import { z } from "zod";
+var createReviewZodSchema = z.object({
+  rating: z.number("rating is required").min(1).max(5),
+  comment: z.string("comment is required").min(2).max(200)
 });
-var updateReviewZodSchema = z2.object({
-  rating: z2.number().min(1).max(5).optional(),
-  comment: z2.string().optional()
+var updateReviewZodSchema = z.object({
+  rating: z.number().min(1).max(5).optional(),
+  comment: z.string().min(2).max(200).optional()
+});
+var adminUpdateReviewZodSchema = z.object({
+  rating: z.number().min(1).max(5).optional(),
+  comment: z.string().min(2).max(200).optional(),
+  isApproved: z.boolean().optional(),
+  isPinned: z.boolean().optional()
 });
 var ReviewValidation = {
   createReviewZodSchema,
-  updateReviewZodSchema
+  updateReviewZodSchema,
+  adminUpdateReviewZodSchema
 };
 
 // src/app/modules/review/review.route.ts
 var router4 = express3.Router();
+router4.get("/", ReviewController.getAllReviews);
 router4.post(
   "/",
   auth_default("USER" /* USER */),
   validateRequest(ReviewValidation.createReviewZodSchema),
   ReviewController.createReview
 );
+router4.get("/me", auth_default("USER" /* USER */), ReviewController.getMyReviews);
 router4.put(
   "/:id",
   auth_default("USER" /* USER */, "ADMIN" /* ADMIN */),
-  validateRequest(ReviewValidation.updateReviewZodSchema),
+  validateRequest(ReviewValidation.adminUpdateReviewZodSchema),
   ReviewController.updateReview
 );
 router4.delete(
@@ -9981,8 +11131,13 @@ router4.delete(
   auth_default("USER" /* USER */, "ADMIN" /* ADMIN */),
   ReviewController.deleteReview
 );
-router4.get("/", ReviewController.getAllReviews);
-router4.get("/me", auth_default("USER" /* USER */), ReviewController.getMyReviews);
+router4.get("/admin", auth_default("ADMIN" /* ADMIN */), ReviewController.getAllReviewsAdmin);
+router4.patch(
+  "/:id/approve",
+  auth_default("ADMIN" /* ADMIN */),
+  ReviewController.approveReview
+);
+router4.patch("/:id/pin", auth_default("ADMIN" /* ADMIN */), ReviewController.pinReview);
 var ReviewRouter = router4;
 
 // src/app/modules/category/category.route.ts
@@ -10091,14 +11246,14 @@ var CategoryController = {
 
 // src/app/modules/category/category.validation.ts
 init_esm_shims();
-import { z as z3 } from "zod";
-var createCategoryZodSchema = z3.object({
-  name: z3.string("Name is required"),
-  isPublished: z3.boolean().optional().default(true)
+import { z as z2 } from "zod";
+var createCategoryZodSchema = z2.object({
+  name: z2.string("Name is required"),
+  isPublished: z2.boolean().optional().default(true)
 });
-var updateCategoryZodSchema = z3.object({
-  name: z3.string("Name is required").optional(),
-  isPublished: z3.boolean().optional()
+var updateCategoryZodSchema = z2.object({
+  name: z2.string("Name is required").optional(),
+  isPublished: z2.boolean().optional()
 });
 var CategoryValidation = {
   createCategoryZodSchema,
@@ -10136,20 +11291,20 @@ init_esm_shims();
 
 // src/app/modules/setting/setting.service.ts
 init_esm_shims();
+var SINGLETON_ID = "singleton";
 var getSettings = async () => {
-  let settings = await prisma.settings.findFirst();
-  if (!settings) {
-    settings = await prisma.settings.create({
-      data: {}
-    });
-  }
+  const settings = await prisma.settings.upsert({
+    where: { id: SINGLETON_ID },
+    update: {},
+    create: { id: SINGLETON_ID }
+  });
   return settings;
 };
 var updateSettings = async (payload) => {
-  const currentSettings = await getSettings();
-  const result = await prisma.settings.update({
-    where: { id: currentSettings.id },
-    data: payload
+  const result = await prisma.settings.upsert({
+    where: { id: SINGLETON_ID },
+    update: payload,
+    create: { id: SINGLETON_ID, ...payload }
   });
   return result;
 };
@@ -10159,28 +11314,28 @@ var SettingService = {
 };
 
 // src/app/modules/setting/setting.controller.ts
-import status9 from "http-status";
-var updateSettings2 = catchAsync(async (req, res) => {
-  const result = await SettingService.updateSettings(req.body);
-  sendResponse(res, {
-    statusCode: status9.OK,
-    success: true,
-    message: "Settings updated successfully",
-    data: result
-  });
-});
+import status5 from "http-status";
 var getSettings2 = catchAsync(async (req, res) => {
   const result = await SettingService.getSettings();
   sendResponse(res, {
-    statusCode: status9.OK,
+    statusCode: status5.OK,
     success: true,
     message: "Settings retrieved successfully",
     data: result
   });
 });
+var updateSettings2 = catchAsync(async (req, res) => {
+  const result = await SettingService.updateSettings(req.body);
+  sendResponse(res, {
+    statusCode: status5.OK,
+    success: true,
+    message: "Settings updated successfully",
+    data: result
+  });
+});
 var SettingController = {
-  updateSettings: updateSettings2,
-  getSettings: getSettings2
+  getSettings: getSettings2,
+  updateSettings: updateSettings2
 };
 
 // src/app/modules/setting/setting.route.ts
@@ -10198,227 +11353,62 @@ init_esm_shims();
 
 // src/app/modules/stats/stats.service.ts
 init_esm_shims();
-var createPublicStats = async (payload) => {
-  return await updatePublicStats(payload);
+var SINGLETON_ID2 = "singleton";
+var getPublicStats = async () => {
+  const stats = await prisma.stats.upsert({
+    where: { id: SINGLETON_ID2 },
+    update: {},
+    create: { id: SINGLETON_ID2 }
+  });
+  return stats;
 };
 var updatePublicStats = async (payload) => {
-  const existingStat = await prisma.stats.findFirst();
-  if (existingStat) {
-    const result = await prisma.stats.update({
-      where: { id: existingStat.id },
-      data: payload
-    });
-    return result;
-  } else {
-    const result = await prisma.stats.create({
-      data: payload
-    });
-    return result;
-  }
-};
-var getPublicStats = async () => {
-  const result = await prisma.stats.findFirst();
+  const result = await prisma.stats.upsert({
+    where: { id: SINGLETON_ID2 },
+    update: payload,
+    create: { id: SINGLETON_ID2, ...payload }
+  });
   return result;
 };
 var StatsService = {
-  createPublicStats,
-  updatePublicStats,
-  getPublicStats
+  getPublicStats,
+  updatePublicStats
 };
 
 // src/app/modules/stats/stats.controller.ts
-import status10 from "http-status";
-var createPublicStats2 = catchAsync(async (req, res) => {
-  const result = await StatsService.createPublicStats(req.body);
+import status6 from "http-status";
+var getPublicStats2 = catchAsync(async (req, res) => {
+  const result = await StatsService.getPublicStats();
   sendResponse(res, {
-    statusCode: status10.OK,
+    statusCode: status6.OK,
     success: true,
-    message: "Public stats created successfully",
+    message: "Public statistics retrieved successfully",
     data: result
   });
 });
 var updatePublicStats2 = catchAsync(async (req, res) => {
   const result = await StatsService.updatePublicStats(req.body);
   sendResponse(res, {
-    statusCode: status10.OK,
+    statusCode: status6.OK,
     success: true,
     message: "Public stats updated successfully",
     data: result
   });
 });
-var getPublicStats2 = catchAsync(async (req, res) => {
-  const result = await StatsService.getPublicStats();
-  sendResponse(res, {
-    statusCode: status10.OK,
-    success: true,
-    message: "Public statistics retrieved successfully",
-    data: result
-  });
-});
 var StatsController = {
-  createPublicStats: createPublicStats2,
   updatePublicStats: updatePublicStats2,
   getPublicStats: getPublicStats2
 };
 
 // src/app/modules/stats/stats.route.ts
 var router7 = express6.Router();
-router7.post("/", auth_default("ADMIN" /* ADMIN */), StatsController.createPublicStats);
-router7.put("/", auth_default("ADMIN" /* ADMIN */), StatsController.updatePublicStats);
+router7.patch("/", auth_default("ADMIN" /* ADMIN */), StatsController.updatePublicStats);
 router7.get("/", StatsController.getPublicStats);
 var StatsRouter = router7;
 
-// src/app/modules/about/about.route.ts
-init_esm_shims();
-import express7 from "express";
-
-// src/app/modules/about/about.controller.ts
-init_esm_shims();
-
-// src/app/modules/about/about.service.ts
-init_esm_shims();
-var createAbout = async (payload) => {
-  const result = await prisma.about.create({
-    data: payload
-  });
-  return result;
-};
-var getAbouts = async () => {
-  const result = await prisma.about.findMany();
-  return result;
-};
-var updateAbout = async (id, payload) => {
-  const result = await prisma.about.update({
-    where: { id },
-    data: payload
-  });
-  return result;
-};
-var deleteAbout = async (id) => {
-  const result = await prisma.about.delete({
-    where: { id }
-  });
-  return result;
-};
-var AboutService = {
-  createAbout,
-  getAbouts,
-  updateAbout,
-  deleteAbout
-};
-
-// src/app/modules/about/about.controller.ts
-var extractFilePaths = (req) => {
-  const files = req.files;
-  const paths = {};
-  if (files?.heroImg?.[0]) paths.heroImg = files.heroImg[0].path;
-  if (files?.aboutMeImg?.[0]) paths.aboutMeImg = files.aboutMeImg[0].path;
-  return paths;
-};
-var createAbout2 = async (req, res, next) => {
-  try {
-    const payload = { ...req.body, ...extractFilePaths(req) };
-    const result = await AboutService.createAbout(payload);
-    res.status(201).json({
-      success: true,
-      message: "About created successfully",
-      data: result
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-var getAbouts2 = async (req, res, next) => {
-  try {
-    const result = await AboutService.getAbouts();
-    res.status(200).json({
-      success: true,
-      message: "Retrieved all abouts successfully",
-      data: result
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-var updateAbout2 = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const payload = { ...req.body, ...extractFilePaths(req) };
-    const result = await AboutService.updateAbout(id, payload);
-    res.status(200).json({
-      success: true,
-      message: "About updated successfully",
-      data: result
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-var deleteAbout2 = async (req, res, next) => {
-  try {
-    const { id } = req.params;
-    const result = await AboutService.deleteAbout(id);
-    res.status(200).json({
-      success: true,
-      message: "About deleted successfully",
-      data: result
-    });
-  } catch (err) {
-    next(err);
-  }
-};
-var AboutController = {
-  createAbout: createAbout2,
-  getAbouts: getAbouts2,
-  updateAbout: updateAbout2,
-  deleteAbout: deleteAbout2
-};
-
-// src/app/modules/about/about.validation.ts
-init_esm_shims();
-import { z as z4 } from "zod";
-var createAboutZodSchema = z4.object({
-  heroImg: z4.string().optional().nullable(),
-  aboutMeImg: z4.string().optional().nullable()
-});
-var updateAboutZodSchema = z4.object({
-  heroImg: z4.string().optional().nullable(),
-  aboutMeImg: z4.string().optional().nullable()
-});
-var AboutValidation = {
-  createAboutZodSchema,
-  updateAboutZodSchema
-};
-
-// src/app/modules/about/about.route.ts
-var router8 = express7.Router();
-router8.get("/", AboutController.getAbouts);
-router8.post(
-  "/",
-  auth_default("ADMIN" /* ADMIN */),
-  multerUpload.fields([
-    { name: "heroImg", maxCount: 1 },
-    { name: "aboutMeImg", maxCount: 1 }
-  ]),
-  validateRequest(AboutValidation.createAboutZodSchema),
-  AboutController.createAbout
-);
-router8.put(
-  "/:id",
-  auth_default("ADMIN" /* ADMIN */),
-  multerUpload.fields([
-    { name: "heroImg", maxCount: 1 },
-    { name: "aboutMeImg", maxCount: 1 }
-  ]),
-  validateRequest(AboutValidation.updateAboutZodSchema),
-  AboutController.updateAbout
-);
-router8.delete("/:id", auth_default("ADMIN" /* ADMIN */), AboutController.deleteAbout);
-var AboutRouter = router8;
-
 // src/app/modules/skill/skill.route.ts
 init_esm_shims();
-import express8 from "express";
+import express7 from "express";
 
 // src/app/modules/skill/skill.controller.ts
 init_esm_shims();
@@ -10522,26 +11512,29 @@ var SkillController = {
 
 // src/app/modules/skill/skill.validation.ts
 init_esm_shims();
-import { z as z5 } from "zod";
-var createSkillZodSchema = z5.object({
-  name: z5.string("name is required"),
-  level: z5.enum(["Expert", "Recently Learned", "Learning"]),
-  icon: z5.object({
-    name: z5.string(),
-    library: z5.string(),
-    color: z5.string()
+var import_prisma13 = __toESM(require_prisma(), 1);
+import { z as z3 } from "zod";
+var createSkillZodSchema = z3.object({
+  name: z3.string("name is required"),
+  level: z3.enum(import_prisma13.SkillLevel, "Invalid skill level"),
+  icon: z3.object({
+    name: z3.string(),
+    library: z3.string(),
+    color: z3.string()
   }).optional(),
-  categoryId: z5.string("categoryId is required")
+  categoryId: z3.string("categoryId is required"),
+  sortOrder: z3.number().default(0)
 });
-var updateSkillZodSchema = z5.object({
-  name: z5.string().optional(),
-  level: z5.string().optional(),
-  icon: z5.object({
-    name: z5.string().optional(),
-    library: z5.string().optional(),
-    color: z5.string().optional()
+var updateSkillZodSchema = z3.object({
+  name: z3.string().optional(),
+  level: z3.enum(import_prisma13.SkillLevel, "Invalid skill level").optional(),
+  icon: z3.object({
+    name: z3.string().optional(),
+    library: z3.string().optional(),
+    color: z3.string().optional()
   }).optional(),
-  categoryId: z5.string().optional()
+  categoryId: z3.string().optional(),
+  sortOrder: z3.number().optional()
 });
 var SkillValidation = {
   createSkillZodSchema,
@@ -10549,30 +11542,30 @@ var SkillValidation = {
 };
 
 // src/app/modules/skill/skill.route.ts
-var router9 = express8.Router();
-router9.get("/", SkillController.getSkills);
-router9.post(
+var router8 = express7.Router();
+router8.get("/", SkillController.getSkills);
+router8.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(SkillValidation.createSkillZodSchema),
   SkillController.createSkill
 );
-router9.put(
+router8.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(SkillValidation.updateSkillZodSchema),
   SkillController.updateSkill
 );
-router9.delete(
+router8.delete(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   SkillController.deleteSkill
 );
-var SkillRouter = router9;
+var SkillRouter = router8;
 
 // src/app/modules/service/service.route.ts
 init_esm_shims();
-import express9 from "express";
+import express8 from "express";
 
 // src/app/modules/service/service.controller.ts
 init_esm_shims();
@@ -10585,8 +11578,15 @@ var createService = async (payload) => {
   });
   return result;
 };
-var getServices = async () => {
-  const result = await prisma.service.findMany();
+var getServices = async (isPublished) => {
+  const result = await prisma.service.findMany({
+    where: {
+      ...isPublished !== void 0 && { isPublished }
+    },
+    orderBy: {
+      sortOrder: "asc"
+    }
+  });
   return result;
 };
 var updateService = async (id, payload) => {
@@ -10624,7 +11624,9 @@ var createService2 = async (req, res, next) => {
 };
 var getServices2 = async (req, res, next) => {
   try {
-    const result = await ServiceService.getServices();
+    const { isPublished } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const result = await ServiceService.getServices(publishedFilter);
     res.status(200).json({
       success: true,
       message: "Retrieved all services successfully",
@@ -10669,107 +11671,207 @@ var ServiceController = {
 
 // src/app/modules/service/service.validation.ts
 init_esm_shims();
-import { z as z6 } from "zod";
-var createServiceZodSchema = z6.object({
-  name: z6.string("name is required"),
-  icon: z6.object({
-    name: z6.string(),
-    library: z6.string(),
-    color: z6.string()
+import { z as z4 } from "zod";
+var createServiceZodSchema = z4.object({
+  name: z4.string("name is required"),
+  icon: z4.object({
+    name: z4.string(),
+    library: z4.string(),
+    color: z4.string(),
+    bgColor: z4.string()
   }).optional(),
-  description: z6.string().optional(),
-  isPublish: z6.boolean().optional()
+  description: z4.string().optional(),
+  isPublished: z4.boolean().default(true),
+  sortOrder: z4.number().default(0)
 });
-var updateServiceZodSchema = z6.object({
-  name: z6.string().optional(),
-  icon: z6.object({
-    name: z6.string().optional(),
-    library: z6.string().optional(),
-    color: z6.string().optional()
-  }).optional(),
-  description: z6.string().optional(),
-  isPublish: z6.boolean().optional()
-});
+var updateServiceZodSchema = createServiceZodSchema.partial();
 var ServiceValidation = {
   createServiceZodSchema,
   updateServiceZodSchema
 };
 
 // src/app/modules/service/service.route.ts
-var router10 = express9.Router();
-router10.get("/", ServiceController.getServices);
-router10.post(
+var router9 = express8.Router();
+router9.get("/", ServiceController.getServices);
+router9.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(ServiceValidation.createServiceZodSchema),
   ServiceController.createService
 );
-router10.put(
+router9.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(ServiceValidation.updateServiceZodSchema),
   ServiceController.updateService
 );
-router10.delete(
-  "/:id",
-  auth_default("ADMIN" /* ADMIN */),
-  ServiceController.deleteService
-);
-var ServiceRouter = router10;
+router9.delete("/:id", auth_default("ADMIN" /* ADMIN */), ServiceController.deleteService);
+var ServiceRouter = router9;
 
 // src/app/modules/project/project.route.ts
 init_esm_shims();
-import express10 from "express";
+import express9 from "express";
 
 // src/app/modules/project/project.controller.ts
 init_esm_shims();
 
 // src/app/modules/project/project.service.ts
 init_esm_shims();
+
+// src/app/config/cloudinary.config.ts
+init_esm_shims();
+import { v2 as cloudinary } from "cloudinary";
+import status7 from "http-status";
+cloudinary.config({
+  cloud_name: env.CLOUDINARY.CLOUD_NAME,
+  api_key: env.CLOUDINARY.API_KEY,
+  api_secret: env.CLOUDINARY.API_SECRET
+});
+var deleteFileFromCloudinary = async (imageUrl) => {
+  try {
+    const regex = /\/v\d+\/(.+?)(?:\.[a-zA-Z0-9]+)+$/;
+    const match = imageUrl.match(regex);
+    if (!match?.[1]) return;
+    await cloudinary.uploader.destroy(match[1], { resource_type: "image" });
+  } catch (error) {
+    throw new AppError_default(
+      status7.INTERNAL_SERVER_ERROR,
+      "Failed to delete file from Cloudinary"
+    );
+  }
+};
+var cloudinaryUpload = cloudinary;
+
+// src/app/modules/project/project.service.ts
+import status8 from "http-status";
+var projectInclude = {
+  category: true,
+  images: { orderBy: { sortOrder: "asc" } }
+};
 var createProject = async (payload) => {
+  const { projectImages, ...projectData } = payload;
   const result = await prisma.project.create({
-    data: payload
+    data: {
+      ...projectData,
+      ...projectImages?.length && {
+        images: {
+          create: projectImages.map((img, idx) => ({
+            url: img.url,
+            alt: img.alt || null,
+            sortOrder: img.sortOrder ?? idx
+          }))
+        }
+      }
+    },
+    include: projectInclude
   });
   return result;
 };
-var getProjects = async (categoryId) => {
-  const where = categoryId ? { categoryId } : {};
+var getProjects = async (categoryId, isPublished, isFeatured) => {
   const result = await prisma.project.findMany({
-    where,
-    include: {
-      category: true
+    where: {
+      ...categoryId && { categoryId },
+      ...isPublished !== void 0 && { isPublished },
+      ...isFeatured !== void 0 && { isFeatured }
+    },
+    include: projectInclude,
+    orderBy: {
+      sortOrder: "asc"
     }
   });
   return result;
 };
+var getProjectById = async (id) => {
+  const result = await prisma.project.findUnique({
+    where: { id },
+    include: projectInclude
+  });
+  if (!result) {
+    throw new AppError_default(status8.NOT_FOUND, "Project not found");
+  }
+  return result;
+};
 var updateProject = async (id, payload) => {
+  const current = await prisma.project.findUnique({
+    where: { id },
+    include: { images: true }
+  });
+  if (!current) {
+    throw new AppError_default(status8.NOT_FOUND, "Project not found");
+  }
+  if (payload.thumbnail && current.thumbnail && payload.thumbnail !== current.thumbnail) {
+    await deleteFileFromCloudinary(current.thumbnail);
+  }
+  const { projectImages, ...updateData } = payload;
   const result = await prisma.project.update({
     where: { id },
-    data: payload
+    data: {
+      ...updateData,
+      // Replace all images if new ones are provided
+      ...projectImages?.length && {
+        images: {
+          deleteMany: {},
+          create: projectImages.map((img, idx) => ({
+            url: img.url,
+            alt: img.alt || null,
+            sortOrder: img.sortOrder ?? idx
+          }))
+        }
+      }
+    },
+    include: projectInclude
   });
   return result;
 };
 var deleteProject = async (id) => {
-  const result = await prisma.project.delete({
-    where: { id }
+  const current = await prisma.project.findUnique({
+    where: { id },
+    include: { images: true }
   });
-  return result;
+  if (!current) {
+    throw new AppError_default(status8.NOT_FOUND, "Project not found");
+  }
+  const urlsToDelete = [
+    current.thumbnail,
+    ...current.images.map((img) => img.url)
+  ].filter(Boolean);
+  await Promise.all(urlsToDelete.map(deleteFileFromCloudinary));
+  await prisma.project.delete({ where: { id } });
 };
 var ProjectService = {
   createProject,
   getProjects,
+  getProjectById,
   updateProject,
   deleteProject
 };
 
 // src/app/modules/project/project.controller.ts
+import status9 from "http-status";
+var parseProjectPayload = (req) => {
+  const payload = { ...req.body };
+  const files = req.files;
+  if (files?.thumbnail?.[0]) {
+    payload.thumbnail = files.thumbnail[0].path;
+  }
+  if (files?.images?.length) {
+    payload.projectImages = files.images.map((file, idx) => ({
+      url: file.path,
+      alt: req.body[`alt_${idx}`] || void 0
+    }));
+  }
+  if (payload.tags && typeof payload.tags === "string") {
+    try {
+      payload.tags = JSON.parse(payload.tags);
+    } catch {
+      payload.tags = payload.tags.split(",").map((t) => t.trim());
+    }
+  }
+  return payload;
+};
 var createProject2 = async (req, res, next) => {
   try {
-    const payload = { ...req.body };
-    if (req.file) {
-      payload.thumbnail = req.file.path;
-    }
-    const result = await ProjectService.createProject(payload);
+    const result = await ProjectService.createProject(parseProjectPayload(req));
     res.status(201).json({
       success: true,
       message: "Project created successfully",
@@ -10781,8 +11883,14 @@ var createProject2 = async (req, res, next) => {
 };
 var getProjects2 = async (req, res, next) => {
   try {
-    const { categoryId } = req.query;
-    const result = await ProjectService.getProjects(categoryId);
+    const { categoryId, isPublished, isFeatured } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const isFeaturedFilter = isFeatured === "true" ? true : isFeatured === "false" ? false : void 0;
+    const result = await ProjectService.getProjects(
+      categoryId,
+      publishedFilter,
+      isFeaturedFilter
+    );
     res.status(200).json({
       success: true,
       message: "Retrieved all projects successfully",
@@ -10792,14 +11900,29 @@ var getProjects2 = async (req, res, next) => {
     next(err);
   }
 };
-var updateProject2 = async (req, res, next) => {
+var getProjectById2 = async (req, res, next) => {
+  const id = req.params.id;
   try {
-    const { id } = req.params;
-    const payload = { ...req.body };
-    if (req.file) {
-      payload.thumbnail = req.file.path;
+    const result = await ProjectService.getProjectById(id);
+    if (!result) {
+      throw new AppError_default(status9.NOT_FOUND, "Project not found");
     }
-    const result = await ProjectService.updateProject(id, payload);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved project successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateProject2 = async (req, res, next) => {
+  const id = req.params.id;
+  try {
+    const result = await ProjectService.updateProject(
+      id,
+      parseProjectPayload(req)
+    );
     res.status(200).json({
       success: true,
       message: "Project updated successfully",
@@ -10810,13 +11933,12 @@ var updateProject2 = async (req, res, next) => {
   }
 };
 var deleteProject2 = async (req, res, next) => {
+  const id = req.params.id;
   try {
-    const { id } = req.params;
-    const result = await ProjectService.deleteProject(id);
+    await ProjectService.deleteProject(id);
     res.status(200).json({
       success: true,
-      message: "Project deleted successfully",
-      data: result
+      message: "Project deleted successfully"
     });
   } catch (err) {
     next(err);
@@ -10825,63 +11947,127 @@ var deleteProject2 = async (req, res, next) => {
 var ProjectController = {
   createProject: createProject2,
   getProjects: getProjects2,
+  getProjectById: getProjectById2,
   updateProject: updateProject2,
   deleteProject: deleteProject2
 };
 
 // src/app/modules/project/project.validation.ts
 init_esm_shims();
-import { z as z7 } from "zod";
-var createProjectZodSchema = z7.object({
-  title: z7.string("title is required"),
-  description: z7.string("description is required"),
-  thumbnail: z7.string().optional(),
-  liveUrl: z7.string().optional(),
-  behanceUrl: z7.string().optional(),
-  tags: z7.array(z7.string(), "tags is required"),
-  isFeatured: z7.boolean().optional(),
-  isPublished: z7.boolean().optional(),
-  categoryId: z7.string("categoryId is required")
+import { z as z5 } from "zod";
+var booleanFromString = z5.union([z5.boolean(), z5.string()]).transform((val) => {
+  if (typeof val === "boolean") return val;
+  return val === "true" || val === "on";
 });
-var updateProjectZodSchema = z7.object({
-  title: z7.string().optional(),
-  description: z7.string().optional(),
-  thumbnail: z7.string().optional(),
-  liveUrl: z7.string().optional(),
-  behanceUrl: z7.string().optional(),
-  tags: z7.array(z7.string()).optional(),
-  isFeatured: z7.boolean().optional(),
-  isPublished: z7.boolean().optional(),
-  categoryId: z7.string().optional()
+var numberFromString = z5.union([z5.number(), z5.string()]).transform((val) => {
+  if (typeof val === "number") return val;
+  return Number(val);
+}).pipe(z5.number());
+var tagsField = z5.union([z5.array(z5.string()), z5.string()]).transform((val) => {
+  if (Array.isArray(val)) return val;
+  try {
+    const parsed = JSON.parse(val);
+    if (Array.isArray(parsed)) return parsed;
+  } catch {
+    return val.split(",").map((t) => t.trim()).filter(Boolean);
+  }
+  return [val];
+}).pipe(z5.array(z5.string()).nonempty("At least one tag is required"));
+var createProjectZodSchema = z5.object({
+  title: z5.string().min(1, "title is required"),
+  description: z5.string().min(1, "description is required"),
+  tags: tagsField,
+  categoryId: z5.string().min(1, "categoryId is required"),
+  thumbnail: z5.string().optional(),
+  liveUrl: z5.string().optional(),
+  githubUrl: z5.string().optional(),
+  isFeatured: booleanFromString.optional(),
+  isPublished: booleanFromString.optional(),
+  sortOrder: numberFromString.optional()
 });
+var updateProjectZodSchema = createProjectZodSchema.partial();
 var ProjectValidation = {
   createProjectZodSchema,
   updateProjectZodSchema
 };
 
+// src/app/config/multer.config.ts
+init_esm_shims();
+import multer from "multer";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+var fileSizeLimitBytes = 5 * 1024 * 1024;
+var fileFilter = (_req, file, cb) => {
+  const allowedMimeTypes = [
+    "image/jpeg",
+    "image/png",
+    "image/gif",
+    "image/webp",
+    "image/svg+xml",
+    "application/pdf"
+  ];
+  if (allowedMimeTypes.includes(file.mimetype)) {
+    cb(null, true);
+  } else {
+    cb(
+      new Error(
+        "Invalid file type. Only images (JPEG, PNG, GIF, WebP, SVG) and PDFs are allowed."
+      )
+    );
+  }
+};
+var createMulterUpload = (folder) => {
+  const storage = new CloudinaryStorage({
+    cloudinary: cloudinaryUpload,
+    params: async (_req, file) => {
+      const originalName = file.originalname;
+      const nameWithoutExt = originalName.split(".").slice(0, -1).join(".").toLowerCase().replace(/\s+/g, "-").replace(/[^a-zA-Z0-9\-]/g, "");
+      const uniqueName = Math.random().toString(36).substring(2) + "-" + Date.now() + "-" + nameWithoutExt;
+      return {
+        folder: `ishtiaq-robin/${folder}`,
+        // ✅ সঠিক folder
+        public_id: uniqueName,
+        resource_type: "auto"
+      };
+    }
+  });
+  return multer({
+    storage,
+    limits: { fileSize: fileSizeLimitBytes },
+    fileFilter
+  });
+};
+
 // src/app/modules/project/project.route.ts
-var router11 = express10.Router();
-router11.get("/", ProjectController.getProjects);
-router11.post(
+var projectUpload = createMulterUpload("projects");
+var router10 = express9.Router();
+router10.get("/", ProjectController.getProjects);
+router10.get("/:id", ProjectController.getProjectById);
+router10.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
-  multerUpload.single("thumbnail"),
+  projectUpload.fields([
+    { name: "thumbnail", maxCount: 1 },
+    { name: "images", maxCount: 10 }
+  ]),
   validateRequest(ProjectValidation.createProjectZodSchema),
   ProjectController.createProject
 );
-router11.put(
+router10.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
-  multerUpload.single("thumbnail"),
+  projectUpload.fields([
+    { name: "thumbnail", maxCount: 1 },
+    { name: "images", maxCount: 10 }
+  ]),
   validateRequest(ProjectValidation.updateProjectZodSchema),
   ProjectController.updateProject
 );
-router11.delete("/:id", auth_default("ADMIN" /* ADMIN */), ProjectController.deleteProject);
-var ProjectRouter = router11;
+router10.delete("/:id", auth_default("ADMIN" /* ADMIN */), ProjectController.deleteProject);
+var ProjectRouter = router10;
 
 // src/app/modules/gallery/gallery.route.ts
 init_esm_shims();
-import express11 from "express";
+import express10 from "express";
 
 // src/app/modules/gallery/gallery.controller.ts
 init_esm_shims();
@@ -10894,11 +12080,31 @@ var createGallery = async (payload) => {
   });
   return result;
 };
-var getGalleries = async () => {
-  const result = await prisma.gallery.findMany();
+var getGalleries = async (isPublished) => {
+  const result = await prisma.gallery.findMany({
+    where: {
+      ...isPublished !== void 0 && { isPublished }
+    },
+    orderBy: {
+      sortOrder: "asc"
+    }
+  });
+  return result;
+};
+var getGalleryById = async (id) => {
+  const result = await prisma.gallery.findUnique({
+    where: { id }
+  });
   return result;
 };
 var updateGallery = async (id, payload) => {
+  const current = await prisma.gallery.findUnique({ where: { id } });
+  if (!current) {
+    throw new Error("Gallery not found");
+  }
+  if (payload.image && current.image && payload.image !== current.image) {
+    await deleteFileFromCloudinary(current.image);
+  }
   const result = await prisma.gallery.update({
     where: { id },
     data: payload
@@ -10906,6 +12112,13 @@ var updateGallery = async (id, payload) => {
   return result;
 };
 var deleteGallery = async (id) => {
+  const current = await prisma.gallery.findUnique({ where: { id } });
+  if (!current) {
+    throw new Error("Gallery not found");
+  }
+  if (current.image) {
+    await deleteFileFromCloudinary(current.image);
+  }
   const result = await prisma.gallery.delete({
     where: { id }
   });
@@ -10914,6 +12127,7 @@ var deleteGallery = async (id) => {
 var GalleryService = {
   createGallery,
   getGalleries,
+  getGalleryById,
   updateGallery,
   deleteGallery
 };
@@ -10937,10 +12151,25 @@ var createGallery2 = async (req, res, next) => {
 };
 var getGalleries2 = async (req, res, next) => {
   try {
-    const result = await GalleryService.getGalleries();
+    const { isPublished } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const result = await GalleryService.getGalleries(publishedFilter);
     res.status(200).json({
       success: true,
       message: "Retrieved all galleries successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getGalleryById2 = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await GalleryService.getGalleryById(id);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved gallery successfully",
       data: result
     });
   } catch (err) {
@@ -10970,8 +12199,8 @@ var deleteGallery2 = async (req, res, next) => {
     const result = await GalleryService.deleteGallery(id);
     res.status(200).json({
       success: true,
-      message: "Gallery deleted successfully",
-      data: result
+      message: "Gallery deleted successfully"
+      // data: result,
     });
   } catch (err) {
     next(err);
@@ -10980,53 +12209,54 @@ var deleteGallery2 = async (req, res, next) => {
 var GalleryController = {
   createGallery: createGallery2,
   getGalleries: getGalleries2,
+  getGalleryById: getGalleryById2,
   updateGallery: updateGallery2,
   deleteGallery: deleteGallery2
 };
 
 // src/app/modules/gallery/gallery.validation.ts
 init_esm_shims();
-import { z as z8 } from "zod";
-var createGalleryZodSchema = z8.object({
-  image: z8.string().optional(),
-  title: z8.string().optional(),
-  description: z8.string().optional(),
-  isPublish: z8.boolean().optional()
+import { z as z6 } from "zod";
+var createGalleryZodSchema = z6.object({
+  image: z6.string().optional(),
+  title: z6.string().optional(),
+  description: z6.string().optional(),
+  // isPublish: z.boolean().optional(),
+  // sortOrder: z.number().optional(),
+  isPublished: z6.coerce.boolean().optional(),
+  sortOrder: z6.coerce.number().optional()
 });
-var updateGalleryZodSchema = z8.object({
-  image: z8.string().optional(),
-  title: z8.string().optional(),
-  description: z8.string().optional(),
-  isPublish: z8.boolean().optional()
-});
+var updateGalleryZodSchema = createGalleryZodSchema.partial();
 var GalleryValidation = {
   createGalleryZodSchema,
   updateGalleryZodSchema
 };
 
 // src/app/modules/gallery/gallery.route.ts
-var router12 = express11.Router();
-router12.get("/", GalleryController.getGalleries);
-router12.post(
+var galleryImageUpload = createMulterUpload("galleries");
+var router11 = express10.Router();
+router11.get("/", GalleryController.getGalleries);
+router11.get("/:id", GalleryController.getGalleryById);
+router11.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
-  multerUpload.single("image"),
+  galleryImageUpload.single("image"),
   validateRequest(GalleryValidation.createGalleryZodSchema),
   GalleryController.createGallery
 );
-router12.put(
+router11.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
-  multerUpload.single("image"),
+  galleryImageUpload.single("image"),
   validateRequest(GalleryValidation.updateGalleryZodSchema),
   GalleryController.updateGallery
 );
-router12.delete("/:id", auth_default("ADMIN" /* ADMIN */), GalleryController.deleteGallery);
-var GalleryRouter = router12;
+router11.delete("/:id", auth_default("ADMIN" /* ADMIN */), GalleryController.deleteGallery);
+var GalleryRouter = router11;
 
 // src/app/modules/experience/experience.route.ts
 init_esm_shims();
-import express12 from "express";
+import express11 from "express";
 
 // src/app/modules/experience/experience.controller.ts
 init_esm_shims();
@@ -11046,8 +12276,15 @@ var createExperience = async (payload) => {
   });
   return result;
 };
-var getExperiences = async () => {
-  const result = await prisma.experience.findMany();
+var getExperiences = async (isPublished) => {
+  const result = await prisma.experience.findMany({
+    where: {
+      ...isPublished !== void 0 && { isPublished }
+    },
+    orderBy: {
+      sortOrder: "asc"
+    }
+  });
   return result;
 };
 var updateExperience = async (id, payload) => {
@@ -11092,7 +12329,9 @@ var createExperience2 = async (req, res, next) => {
 };
 var getExperiences2 = async (req, res, next) => {
   try {
-    const result = await ExperienceService.getExperiences();
+    const { isPublished } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const result = await ExperienceService.getExperiences(publishedFilter);
     res.status(200).json({
       success: true,
       message: "Retrieved all experiences successfully",
@@ -11105,7 +12344,10 @@ var getExperiences2 = async (req, res, next) => {
 var updateExperience2 = async (req, res, next) => {
   try {
     const { id } = req.params;
-    const result = await ExperienceService.updateExperience(id, req.body);
+    const result = await ExperienceService.updateExperience(
+      id,
+      req.body
+    );
     res.status(200).json({
       success: true,
       message: "Experience updated successfully",
@@ -11137,53 +12379,50 @@ var ExperienceController = {
 
 // src/app/modules/experience/experience.validation.ts
 init_esm_shims();
-import { z as z9 } from "zod";
-var createExperienceZodSchema = z9.object({
-  company: z9.string("company is required"),
-  title: z9.string("title is required"),
-  startDate: z9.string("startDate is required"),
-  endDate: z9.string().optional().nullable(),
-  location: z9.string().optional().nullable(),
-  description: z9.string("description is required")
+import { z as z7 } from "zod";
+var createExperienceZodSchema = z7.object({
+  company: z7.string("company is required"),
+  title: z7.string("title is required"),
+  startDate: z7.string("startDate is required"),
+  endDate: z7.string().optional().nullable(),
+  location: z7.string().optional().nullable(),
+  description: z7.string("description is required"),
+  companyUrl: z7.string().optional().nullable(),
+  companyLogo: z7.string().optional().nullable(),
+  isPublished: z7.boolean().default(true),
+  sortOrder: z7.number().default(0)
 });
-var updateExperienceZodSchema = z9.object({
-  company: z9.string().optional().nullable(),
-  title: z9.string().optional().nullable(),
-  startDate: z9.string().optional().nullable(),
-  endDate: z9.string().optional().nullable(),
-  location: z9.string().optional().nullable(),
-  description: z9.string().optional().nullable()
-});
+var updateExperienceZodSchema = createExperienceZodSchema.partial();
 var ExperienceValidation = {
   createExperienceZodSchema,
   updateExperienceZodSchema
 };
 
 // src/app/modules/experience/experience.route.ts
-var router13 = express12.Router();
-router13.get("/", ExperienceController.getExperiences);
-router13.post(
+var router12 = express11.Router();
+router12.get("/", ExperienceController.getExperiences);
+router12.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(ExperienceValidation.createExperienceZodSchema),
   ExperienceController.createExperience
 );
-router13.put(
+router12.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(ExperienceValidation.updateExperienceZodSchema),
   ExperienceController.updateExperience
 );
-router13.delete(
+router12.delete(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   ExperienceController.deleteExperience
 );
-var ExperienceRouter = router13;
+var ExperienceRouter = router12;
 
 // src/app/modules/education/education.route.ts
 init_esm_shims();
-import express13 from "express";
+import express12 from "express";
 
 // src/app/modules/education/education.controller.ts
 init_esm_shims();
@@ -11203,8 +12442,15 @@ var createEducation = async (payload) => {
   });
   return result;
 };
-var getEducations = async () => {
-  const result = await prisma.education.findMany();
+var getEducations = async (isPublished) => {
+  const result = await prisma.education.findMany({
+    where: {
+      ...isPublished !== void 0 && { isPublished }
+    },
+    orderBy: {
+      sortOrder: "asc"
+    }
+  });
   return result;
 };
 var updateEducation = async (id, payload) => {
@@ -11249,7 +12495,9 @@ var createEducation2 = async (req, res, next) => {
 };
 var getEducations2 = async (req, res, next) => {
   try {
-    const result = await EducationService.getEducations();
+    const { isPublished } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const result = await EducationService.getEducations(publishedFilter);
     res.status(200).json({
       success: true,
       message: "Retrieved all educations successfully",
@@ -11297,55 +12545,50 @@ var EducationController = {
 
 // src/app/modules/education/education.validation.ts
 init_esm_shims();
-import { z as z10 } from "zod";
-var createEducationZodSchema = z10.object({
-  degree: z10.string("degree is required"),
-  institution: z10.string("institution is required"),
-  startDate: z10.string("startDate is required"),
-  result: z10.string("result is required"),
-  board: z10.string().optional().nullable(),
-  endDate: z10.string().optional().nullable(),
-  group: z10.string().optional().nullable()
+import { z as z8 } from "zod";
+var createEducationZodSchema = z8.object({
+  degree: z8.string("degree is required"),
+  institution: z8.string("institution is required"),
+  startDate: z8.string("startDate is required"),
+  result: z8.string("result is required"),
+  board: z8.string().optional().nullable(),
+  endDate: z8.string().optional().nullable(),
+  group: z8.string().optional().nullable(),
+  // description: z.string().optional().nullable(),
+  isPublished: z8.boolean().default(true),
+  sortOrder: z8.number().default(0)
 });
-var updateEducationZodSchema = z10.object({
-  degree: z10.string().optional().nullable(),
-  institution: z10.string().optional().nullable(),
-  board: z10.string().optional().nullable(),
-  startDate: z10.string().optional().nullable(),
-  endDate: z10.string().optional().nullable(),
-  result: z10.string().optional().nullable(),
-  group: z10.string().optional().nullable()
-});
+var updateEducationZodSchema = createEducationZodSchema.partial();
 var EducationValidation = {
   createEducationZodSchema,
   updateEducationZodSchema
 };
 
 // src/app/modules/education/education.route.ts
-var router14 = express13.Router();
-router14.get("/", EducationController.getEducations);
-router14.post(
+var router13 = express12.Router();
+router13.get("/", EducationController.getEducations);
+router13.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(EducationValidation.createEducationZodSchema),
   EducationController.createEducation
 );
-router14.put(
+router13.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(EducationValidation.updateEducationZodSchema),
   EducationController.updateEducation
 );
-router14.delete(
+router13.delete(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   EducationController.deleteEducation
 );
-var EducationRouter = router14;
+var EducationRouter = router13;
 
 // src/app/modules/video/video.route.ts
 init_esm_shims();
-import express14 from "express";
+import express13 from "express";
 
 // src/app/modules/video/video.controller.ts
 init_esm_shims();
@@ -11358,8 +12601,15 @@ var createVideo = async (payload) => {
   });
   return result;
 };
-var getVideos = async () => {
-  const result = await prisma.video.findMany();
+var getVideos = async (isPublished) => {
+  const result = await prisma.video.findMany({
+    where: {
+      ...isPublished !== void 0 && { isPublished }
+    },
+    orderBy: {
+      sortOrder: "asc"
+    }
+  });
   return result;
 };
 var updateVideo = async (id, payload) => {
@@ -11397,7 +12647,9 @@ var createVideo2 = async (req, res, next) => {
 };
 var getVideos2 = async (req, res, next) => {
   try {
-    const result = await VideoService.getVideos();
+    const { isPublished } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const result = await VideoService.getVideos(publishedFilter);
     res.status(200).json({
       success: true,
       message: "Retrieved all videos successfully",
@@ -11442,53 +12694,60 @@ var VideoController = {
 
 // src/app/modules/video/video.validation.ts
 init_esm_shims();
-import { z as z11 } from "zod";
-var createVideoZodSchema = z11.object({
-  videoUrl: z11.string().optional(),
-  isPublish: z11.boolean().optional()
+import { z as z9 } from "zod";
+var createVideoZodSchema = z9.object({
+  title: z9.string().optional(),
+  description: z9.string().optional(),
+  videoUrl: z9.string("Video URL is required").url("Invalid video URL"),
+  isPublished: z9.boolean().default(true),
+  sortOrder: z9.number().default(0)
 });
-var updateVideoZodSchema = z11.object({
-  videoUrl: z11.string().optional(),
-  isPublish: z11.boolean().optional()
-});
+var updateVideoZodSchema = createVideoZodSchema.partial();
 var VideoValidation = {
   createVideoZodSchema,
   updateVideoZodSchema
 };
 
 // src/app/modules/video/video.route.ts
-var router15 = express14.Router();
-router15.get("/", VideoController.getVideos);
-router15.post(
+var router14 = express13.Router();
+router14.get("/", VideoController.getVideos);
+router14.post(
   "/",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(VideoValidation.createVideoZodSchema),
   VideoController.createVideo
 );
-router15.put(
+router14.put(
   "/:id",
   auth_default("ADMIN" /* ADMIN */),
   validateRequest(VideoValidation.updateVideoZodSchema),
   VideoController.updateVideo
 );
-router15.delete("/:id", auth_default("ADMIN" /* ADMIN */), VideoController.deleteVideo);
-var VideoRouter = router15;
+router14.delete("/:id", auth_default("ADMIN" /* ADMIN */), VideoController.deleteVideo);
+var VideoRouter = router14;
 
 // src/app/modules/contact/contact.route.ts
 init_esm_shims();
-import express15 from "express";
+import express14 from "express";
 
 // src/app/modules/contact/contact.validation.ts
 init_esm_shims();
-import { z as z12 } from "zod";
-var createContactZodSchema = z12.object({
-  name: z12.string("Name is required"),
-  email: z12.string("Email is required").email("Invalid email format"),
-  subject: z12.string("Subject is required"),
-  message: z12.string().optional()
+var import_prisma20 = __toESM(require_prisma(), 1);
+import { z as z10 } from "zod";
+var createContactZodSchema = z10.object({
+  name: z10.string("Name is required"),
+  email: z10.string("Email is required").email("Invalid email format"),
+  subject: z10.string("Subject is required"),
+  message: z10.string().optional(),
+  ipAddress: z10.string().optional()
+});
+var updateContactZodSchema = z10.object({
+  status: z10.nativeEnum(import_prisma20.ContactStatus).optional(),
+  adminNote: z10.string().optional()
 });
 var ContactValidation = {
-  createContactZodSchema
+  createContactZodSchema,
+  updateContactZodSchema
 };
 
 // src/app/modules/contact/contact.controller.ts
@@ -11536,8 +12795,71 @@ var createContact = async (payload) => {
   });
   return result;
 };
+var getAllContacts = async (query) => {
+  const { status: status19, startDate, endDate } = query;
+  const result = await prisma.contact.findMany({
+    where: {
+      ...status19 && { status: status19 },
+      ...startDate || endDate ? {
+        createdAt: {
+          ...startDate && { gte: new Date(startDate) },
+          ...endDate && { lte: new Date(endDate) }
+        }
+      } : {}
+    },
+    orderBy: {
+      createdAt: "desc"
+    }
+  });
+  return result;
+};
+var getContactById = async (id) => {
+  const result = await prisma.contact.findUnique({
+    where: { id }
+  });
+  if (!result) {
+    throw new AppError_default(httpStatus.NOT_FOUND, "Contact not found");
+  }
+  return result;
+};
+var getContactStats = async () => {
+  const result = await prisma.contact.groupBy({
+    by: ["status"],
+    _count: {
+      id: true
+    },
+    orderBy: {
+      _count: {
+        id: "desc"
+      }
+    }
+  });
+  return result.map((item) => ({
+    status: item.status,
+    total: item._count.id
+  }));
+};
+var updateContact = async (id, payload) => {
+  await getContactById(id);
+  const result = await prisma.contact.update({
+    where: { id },
+    data: payload
+  });
+  return result;
+};
+var deleteContact = async (id) => {
+  await getContactById(id);
+  await prisma.contact.delete({
+    where: { id }
+  });
+};
 var ContactService = {
-  createContact
+  createContact,
+  getAllContacts,
+  getContactById,
+  getContactStats,
+  updateContact,
+  deleteContact
 };
 
 // src/app/modules/contact/contact.controller.ts
@@ -11553,42 +12875,4582 @@ var createContact2 = async (req, res, next) => {
     next(err);
   }
 };
+var getAllContacts2 = async (req, res, next) => {
+  try {
+    const result = await ContactService.getAllContacts(req.query);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all contacts successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getContactById2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await ContactService.getContactById(id);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved contact successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getContactStats2 = async (req, res, next) => {
+  try {
+    const result = await ContactService.getContactStats();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved contact stats successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateContact2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await ContactService.updateContact(id, req.body);
+    res.status(200).json({
+      success: true,
+      message: "Contact updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteContact2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    await ContactService.deleteContact(id);
+    res.status(200).json({
+      success: true,
+      message: "Contact deleted successfully",
+      data: null
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 var ContactController = {
-  createContact: createContact2
+  createContact: createContact2,
+  getAllContacts: getAllContacts2,
+  getContactById: getContactById2,
+  getContactStats: getContactStats2,
+  updateContact: updateContact2,
+  deleteContact: deleteContact2
 };
 
+// src/app/middlewares/rateLimiter.ts
+init_esm_shims();
+import rateLimit from "express-rate-limit";
+import status10 from "http-status";
+var buildLimitMessage = (message) => ({
+  success: false,
+  statusCode: status10.TOO_MANY_REQUESTS,
+  message,
+  errorSources: [
+    {
+      path: "",
+      message
+    }
+  ]
+});
+var globalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1e3,
+  // 15 minutes
+  max: 1e4,
+  // 100 requests
+  standardHeaders: true,
+  // `RateLimit-*` headers
+  legacyHeaders: false,
+  // disable `X-RateLimit-*`
+  message: buildLimitMessage(
+    "Too many requests from this IP. Please try again after 15 minutes."
+  )
+});
+var authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1e3,
+  // 15 minutes
+  max: 2e3,
+  // 20 requests
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: buildLimitMessage(
+    "Too many authentication attempts. Please try again after 15 minutes."
+  )
+});
+var strictLimiter = rateLimit({
+  windowMs: 60 * 1e3,
+  // 1 minute
+  max: 1e3,
+  // 10 requests
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: buildLimitMessage(
+    "Too many requests. Please slow down and try again shortly."
+  )
+});
+
 // src/app/modules/contact/contact.route.ts
-var router16 = express15.Router();
-router16.post(
+var router15 = express14.Router();
+router15.post(
   "/",
+  strictLimiter,
   validateRequest(ContactValidation.createContactZodSchema),
   ContactController.createContact
 );
-var ContactRouter = router16;
+router15.get("/", auth_default("ADMIN" /* ADMIN */), ContactController.getAllContacts);
+router15.get("/stats", auth_default("ADMIN" /* ADMIN */), ContactController.getContactStats);
+router15.get("/:id", auth_default("ADMIN" /* ADMIN */), ContactController.getContactById);
+router15.patch(
+  "/:id",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(ContactValidation.updateContactZodSchema),
+  ContactController.updateContact
+);
+router15.delete("/:id", auth_default("ADMIN" /* ADMIN */), ContactController.deleteContact);
+var ContactRouter = router15;
+
+// src/app/modules/about/about.route.ts
+init_esm_shims();
+import express15 from "express";
+
+// src/app/modules/about/about.controller.ts
+init_esm_shims();
+
+// src/app/modules/about/about.service.ts
+init_esm_shims();
+var createAbout = async (payload) => {
+  const result = await prisma.about.upsert({
+    where: { id: "singleton" },
+    update: payload,
+    create: { id: "singleton", ...payload }
+  });
+  return result;
+};
+var getAbout = async () => {
+  const result = await prisma.about.findUnique({
+    where: { id: "singleton" }
+  });
+  return result;
+};
+var updateAbout = async (payload) => {
+  const current = await prisma.about.findUnique({
+    where: { id: "singleton" }
+  });
+  if (payload.heroImg && current?.heroImg && payload.heroImg !== current.heroImg) {
+    await deleteFileFromCloudinary(current.heroImg);
+  }
+  if (payload.aboutMeImg && current?.aboutMeImg && payload.aboutMeImg !== current.aboutMeImg) {
+    await deleteFileFromCloudinary(current.aboutMeImg);
+  }
+  const result = await prisma.about.update({
+    where: { id: "singleton" },
+    data: payload
+  });
+  return result;
+};
+var downloadResume = async () => {
+  const result = await prisma.about.update({
+    where: { id: "singleton" },
+    data: {
+      resumeDownloadCount: { increment: 1 }
+    }
+  });
+  return result;
+};
+var AboutService = {
+  createAbout,
+  getAbout,
+  updateAbout,
+  downloadResume
+};
+
+// src/app/modules/about/about.controller.ts
+import status11 from "http-status";
+var createAbout2 = async (req, res, next) => {
+  try {
+    const payload = { ...req.body };
+    const files = req.files;
+    if (files?.heroImg?.[0]) payload.heroImg = files.heroImg[0].path;
+    if (files?.aboutMeImg?.[0]) payload.aboutMeImg = files.aboutMeImg[0].path;
+    if (files?.resume?.[0]) payload.resumeUrl = files.resume[0].path;
+    const result = await AboutService.createAbout(payload);
+    res.status(201).json({
+      success: true,
+      message: "About created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAbout2 = async (req, res, next) => {
+  try {
+    const result = await AboutService.getAbout();
+    if (!result) {
+      throw new AppError_default(status11.NOT_FOUND, "About not found");
+    }
+    res.status(200).json({
+      success: true,
+      message: "Retrieved about successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateAbout2 = async (req, res, next) => {
+  try {
+    const payload = { ...req.body };
+    const files = req.files;
+    if (files?.heroImg?.[0]) payload.heroImg = files.heroImg[0].path;
+    if (files?.aboutMeImg?.[0]) payload.aboutMeImg = files.aboutMeImg[0].path;
+    if (files?.resume?.[0]) payload.resumeUrl = files.resume[0].path;
+    const result = await AboutService.updateAbout(payload);
+    res.status(200).json({
+      success: true,
+      message: "About updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var downloadResume2 = async (req, res, next) => {
+  try {
+    const result = await AboutService.downloadResume();
+    if (!result?.resumeUrl) {
+      throw new AppError_default(status11.NOT_FOUND, "Resume not found");
+    }
+    res.status(200).json({
+      success: true,
+      message: "Resume download link retrieved",
+      data: {
+        resumeUrl: result.resumeUrl,
+        downloadCount: result.resumeDownloadCount
+      }
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var AboutController = {
+  createAbout: createAbout2,
+  getAbout: getAbout2,
+  updateAbout: updateAbout2,
+  downloadResume: downloadResume2
+};
+
+// src/app/modules/about/about.validation.ts
+init_esm_shims();
+import { z as z11 } from "zod";
+var createAboutZodSchema = z11.object({
+  title: z11.string().optional(),
+  subtitle: z11.string().optional(),
+  description: z11.string().optional(),
+  heroImg: z11.string().optional(),
+  aboutMeImg: z11.string().optional(),
+  resumeUrl: z11.string().optional()
+});
+var updateAboutZodSchema = createAboutZodSchema.partial();
+var AboutValidation = {
+  createAboutZodSchema,
+  updateAboutZodSchema
+};
+
+// src/app/modules/about/about.route.ts
+var aboutImageUpload = createMulterUpload("about");
+var router16 = express15.Router();
+router16.get("/", AboutController.getAbout);
+router16.post("/download-resume", AboutController.downloadResume);
+router16.post(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  aboutImageUpload.fields([
+    { name: "heroImg", maxCount: 1 },
+    { name: "aboutMeImg", maxCount: 1 },
+    { name: "resume", maxCount: 1 }
+  ]),
+  validateRequest(AboutValidation.createAboutZodSchema),
+  AboutController.createAbout
+);
+router16.put(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  aboutImageUpload.fields([
+    { name: "heroImg", maxCount: 1 },
+    { name: "aboutMeImg", maxCount: 1 },
+    { name: "resume", maxCount: 1 }
+  ]),
+  validateRequest(AboutValidation.updateAboutZodSchema),
+  AboutController.updateAbout
+);
+var AboutRouter = router16;
+
+// src/app/modules/certificate/certificate.route.ts
+init_esm_shims();
+import express16 from "express";
+
+// src/app/modules/certificate/certificate.controller.ts
+init_esm_shims();
+
+// src/app/modules/certificate/certificate.service.ts
+init_esm_shims();
+var createCertificate = async (payload) => {
+  const result = await prisma.certificate.create({
+    data: payload
+  });
+  return result;
+};
+var getCertificates = async (isPublished) => {
+  const result = await prisma.certificate.findMany({
+    where: isPublished !== void 0 ? { isPublished } : {},
+    orderBy: {
+      sortOrder: "asc"
+    }
+  });
+  return result;
+};
+var getCertificateById = async (id) => {
+  const result = await prisma.certificate.findUnique({
+    where: { id }
+  });
+  return result;
+};
+var updateCertificate = async (id, payload) => {
+  const current = await prisma.certificate.findUnique({ where: { id } });
+  if (!current) {
+    throw new Error("Certificate not found");
+  }
+  if (payload.imageUrl && current.imageUrl && payload.imageUrl !== current.imageUrl) {
+    await deleteFileFromCloudinary(current.imageUrl);
+  }
+  const result = await prisma.certificate.update({
+    where: { id },
+    data: payload
+  });
+  return result;
+};
+var deleteCertificate = async (id) => {
+  const current = await prisma.certificate.findUnique({ where: { id } });
+  if (!current) {
+    throw new Error("Certificate not found");
+  }
+  if (current.imageUrl) {
+    await deleteFileFromCloudinary(current.imageUrl);
+  }
+  const result = await prisma.certificate.delete({ where: { id } });
+  return result;
+};
+var CertificateService = {
+  createCertificate,
+  getCertificates,
+  getCertificateById,
+  updateCertificate,
+  deleteCertificate
+};
+
+// src/app/modules/certificate/certificate.controller.ts
+import status12 from "http-status";
+var toISODateTime = (value) => {
+  if (!value || typeof value !== "string") return void 0;
+  if (value.includes("T")) return new Date(value).toISOString();
+  return (/* @__PURE__ */ new Date(`${value}T00:00:00.000Z`)).toISOString();
+};
+var createCertificate2 = async (req, res, next) => {
+  try {
+    const payload = { ...req.body };
+    if (payload.issuedDate)
+      payload.issuedDate = toISODateTime(payload.issuedDate);
+    if (payload.expiryDate)
+      payload.expiryDate = toISODateTime(payload.expiryDate);
+    if (req.file) {
+      payload.imageUrl = req.file.path;
+    }
+    const result = await CertificateService.createCertificate(payload);
+    res.status(201).json({
+      success: true,
+      message: "Certificate created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getCertificates2 = async (req, res, next) => {
+  try {
+    const { isPublished } = req.query;
+    const publishedFilter = isPublished === "true" ? true : isPublished === "false" ? false : void 0;
+    const result = await CertificateService.getCertificates(publishedFilter);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved certificates successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getCertificateById2 = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await CertificateService.getCertificateById(id);
+    if (!result) {
+      throw new AppError_default(status12.NOT_FOUND, "Certificate not found");
+    }
+    res.status(200).json({
+      success: true,
+      message: "Retrieved certificate successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateCertificate2 = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const payload = { ...req.body };
+    if (payload.issuedDate)
+      payload.issuedDate = toISODateTime(payload.issuedDate);
+    if (payload.expiryDate)
+      payload.expiryDate = toISODateTime(payload.expiryDate);
+    if (req.file) {
+      payload.imageUrl = req.file.path;
+    }
+    const result = await CertificateService.updateCertificate(
+      id,
+      payload
+    );
+    res.status(200).json({
+      success: true,
+      message: "Certificate updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteCertificate2 = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const result = await CertificateService.deleteCertificate(id);
+    res.status(200).json({
+      success: true,
+      message: "Certificate deleted successfully"
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var CertificateController = {
+  createCertificate: createCertificate2,
+  getCertificates: getCertificates2,
+  getCertificateById: getCertificateById2,
+  updateCertificate: updateCertificate2,
+  deleteCertificate: deleteCertificate2
+};
+
+// src/app/modules/certificate/certificate.validation.ts
+init_esm_shims();
+import { z as z12 } from "zod";
+var createCertificateZodSchema = z12.object({
+  title: z12.string("title is required"),
+  issuer: z12.string("issuer is required"),
+  issuedDate: z12.string("issuedDate is required"),
+  expiryDate: z12.string().optional(),
+  credentialId: z12.string().optional(),
+  credentialUrl: z12.string().optional(),
+  imageUrl: z12.string().optional(),
+  // z.coerce handles FormData strings ("true"/"false", "0"/"1") AND native types
+  isPublished: z12.coerce.boolean().optional(),
+  sortOrder: z12.coerce.number().optional()
+});
+var updateCertificateZodSchema = createCertificateZodSchema.partial();
+var CertificateValidation = {
+  createCertificateZodSchema,
+  updateCertificateZodSchema
+};
+
+// src/app/modules/certificate/certificate.route.ts
+var certificateImageUpload = createMulterUpload("certificates");
+var router17 = express16.Router();
+router17.get("/", CertificateController.getCertificates);
+router17.get("/:id", CertificateController.getCertificateById);
+router17.post(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  certificateImageUpload.single("imageUrl"),
+  validateRequest(CertificateValidation.createCertificateZodSchema),
+  CertificateController.createCertificate
+);
+router17.put(
+  "/:id",
+  auth_default("ADMIN" /* ADMIN */),
+  certificateImageUpload.single("imageUrl"),
+  validateRequest(CertificateValidation.updateCertificateZodSchema),
+  CertificateController.updateCertificate
+);
+router17.delete(
+  "/:id",
+  auth_default("ADMIN" /* ADMIN */),
+  CertificateController.deleteCertificate
+);
+var CertificateRouter = router17;
+
+// src/app/modules/blog/blog.route.ts
+init_esm_shims();
+import express17 from "express";
+
+// src/app/modules/blog/blog.controller.ts
+init_esm_shims();
+
+// src/app/modules/blog/blog.service.ts
+init_esm_shims();
+import status13 from "http-status";
+var blogInclude = {
+  tags: true,
+  comments: {
+    where: { isApproved: true, parentId: null },
+    include: {
+      replies: { where: { isApproved: true } }
+    },
+    orderBy: { createdAt: "desc" }
+  }
+};
+var createBlog = async (payload) => {
+  const { tagIds, publishedAt, ...blogData } = payload;
+  const result = await prisma.blog.create({
+    data: {
+      ...blogData,
+      ...publishedAt && { publishedAt: new Date(publishedAt) },
+      ...tagIds?.length && {
+        tags: { connect: tagIds.map((id) => ({ id })) }
+      }
+    },
+    include: blogInclude
+  });
+  return result;
+};
+var getBlogs = async (filters) => {
+  const result = await prisma.blog.findMany({
+    where: {
+      ...filters?.status && { status: filters.status },
+      ...filters?.isFeatured !== void 0 && {
+        isFeatured: filters.isFeatured
+      },
+      ...filters?.tagId && { tags: { some: { id: filters.tagId } } }
+    },
+    include: blogInclude,
+    orderBy: { createdAt: "desc" }
+  });
+  return result;
+};
+var getBlogById = async (id) => {
+  const result = await prisma.blog.findUnique({
+    where: { id },
+    include: blogInclude
+  });
+  if (!result) throw new AppError_default(status13.NOT_FOUND, "Blog not found");
+  return result;
+};
+var getBlogBySlug = async (slug) => {
+  const result = await prisma.blog.update({
+    where: { slug },
+    data: { viewCount: { increment: 1 } },
+    include: blogInclude
+  });
+  if (!result) throw new AppError_default(status13.NOT_FOUND, "Blog not found");
+  return result;
+};
+var updateBlog = async (id, payload) => {
+  const current = await prisma.blog.findUnique({ where: { id } });
+  if (!current) throw new AppError_default(status13.NOT_FOUND, "Blog not found");
+  if (payload.thumbnail && current.thumbnail && payload.thumbnail !== current.thumbnail) {
+    await deleteFileFromCloudinary(current.thumbnail);
+  }
+  const { tagIds, publishedAt, ...updateData } = payload;
+  const result = await prisma.blog.update({
+    where: { id },
+    data: {
+      ...updateData,
+      ...publishedAt && { publishedAt: new Date(publishedAt) },
+      // Replace all tags if new ones are provided
+      ...tagIds?.length && {
+        tags: { set: tagIds.map((id2) => ({ id: id2 })) }
+      }
+    },
+    include: blogInclude
+  });
+  return result;
+};
+var likeBlog = async (id) => {
+  const result = await prisma.blog.update({
+    where: { id },
+    data: { likeCount: { increment: 1 } }
+  });
+  return result;
+};
+var deleteBlog = async (id) => {
+  const current = await prisma.blog.findUnique({ where: { id } });
+  if (!current) throw new AppError_default(status13.NOT_FOUND, "Blog not found");
+  if (current.thumbnail) {
+    await deleteFileFromCloudinary(current.thumbnail);
+  }
+  await prisma.blog.delete({ where: { id } });
+};
+var createBlogTag = async (payload) => {
+  const result = await prisma.blogTag.create({ data: payload });
+  return result;
+};
+var getBlogTags = async () => {
+  const result = await prisma.blogTag.findMany({
+    orderBy: { name: "asc" }
+  });
+  return result;
+};
+var updateBlogTag = async (id, payload) => {
+  const result = await prisma.blogTag.update({
+    where: { id },
+    data: payload
+  });
+  return result;
+};
+var deleteBlogTag = async (id) => {
+  await prisma.blogTag.delete({ where: { id } });
+};
+var createComment = async (payload, ipAddress) => {
+  const result = await prisma.blogComment.create({
+    data: { ...payload, ipAddress }
+  });
+  return result;
+};
+var getComments = async (blogId, isApproved) => {
+  const result = await prisma.blogComment.findMany({
+    where: {
+      ...blogId && { blogId },
+      ...isApproved !== void 0 && { isApproved },
+      parentId: null
+    },
+    include: { replies: true },
+    orderBy: { createdAt: "desc" }
+  });
+  return result;
+};
+var approveComment = async (id) => {
+  const result = await prisma.blogComment.update({
+    where: { id },
+    data: { isApproved: true },
+    include: { blog: { select: { title: true, slug: true } } }
+  });
+  if (result.email) {
+    try {
+      const blogUrl = result.blog?.slug ? `${env.FRONTEND_URL}/blogs/${result.blog.slug}` : env.FRONTEND_URL;
+      await sendEmail({
+        to: result.email,
+        subject: `Your comment is now live on Ishtiaq Robin's blog`,
+        templateName: "blog-comment-approved",
+        templateData: {
+          name: result.name,
+          comment: result.comment,
+          blogTitle: result.blog?.title || "the blog",
+          blogUrl
+        }
+      });
+    } catch (err) {
+      console.error("Failed to send comment-approved email:", err);
+    }
+  }
+  return result;
+};
+var deleteComment = async (id) => {
+  await prisma.blogComment.delete({ where: { id } });
+};
+var BlogService = {
+  // Blog
+  createBlog,
+  getBlogs,
+  getBlogById,
+  getBlogBySlug,
+  updateBlog,
+  likeBlog,
+  deleteBlog,
+  //   Tag,
+  createBlogTag,
+  getBlogTags,
+  updateBlogTag,
+  deleteBlogTag,
+  //   Comment,
+  createComment,
+  getComments,
+  approveComment,
+  deleteComment
+};
+
+// src/app/modules/blog/blog.controller.ts
+import status14 from "http-status";
+var createBlog2 = async (req, res, next) => {
+  try {
+    const payload = { ...req.body };
+    if (req.file) payload.thumbnail = req.file.path;
+    const result = await BlogService.createBlog(payload);
+    res.status(201).json({
+      success: true,
+      message: "Blog created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getBlogs2 = async (req, res, next) => {
+  try {
+    const { status: blogStatus, isFeatured, tagId } = req.query;
+    const isFeaturedFilter = isFeatured === "true" ? true : isFeatured === "false" ? false : void 0;
+    const filters = {};
+    if (blogStatus) filters.status = blogStatus;
+    if (isFeaturedFilter !== void 0) filters.isFeatured = isFeaturedFilter;
+    if (tagId) filters.tagId = tagId;
+    const result = await BlogService.getBlogs(filters);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved blogs successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getBlogById2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await BlogService.getBlogById(id);
+    if (!result) throw new AppError_default(status14.NOT_FOUND, "Blog not found");
+    res.status(200).json({
+      success: true,
+      message: "Retrieved blog successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getBlogBySlug2 = async (req, res, next) => {
+  try {
+    const id = req.params.slug;
+    const result = await BlogService.getBlogBySlug(id);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved blog successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateBlog2 = async (req, res, next) => {
+  try {
+    const payload = { ...req.body };
+    const id = req.params.id;
+    if (req.file) payload.thumbnail = req.file.path;
+    const result = await BlogService.updateBlog(id, payload);
+    res.status(200).json({
+      success: true,
+      message: "Blog updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var likeBlog2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await BlogService.likeBlog(id);
+    res.status(200).json({
+      success: true,
+      message: "Blog liked",
+      data: { likeCount: result.likeCount }
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteBlog2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    await BlogService.deleteBlog(id);
+    res.status(200).json({
+      success: true,
+      message: "Blog deleted successfully"
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createBlogTag2 = async (req, res, next) => {
+  try {
+    const result = await BlogService.createBlogTag(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Tag created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getBlogTags2 = async (req, res, next) => {
+  try {
+    const result = await BlogService.getBlogTags();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved tags successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateBlogTag2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await BlogService.updateBlogTag(id, req.body);
+    res.status(200).json({
+      success: true,
+      message: "Tag updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteBlogTag2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    await BlogService.deleteBlogTag(id);
+    res.status(200).json({
+      success: true,
+      message: "Tag deleted successfully"
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createComment2 = async (req, res, next) => {
+  try {
+    const ipAddress = req.ip || req.socket.remoteAddress;
+    const result = await BlogService.createComment(req.body, ipAddress);
+    res.status(201).json({
+      success: true,
+      message: "Comment submitted, pending approval",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getComments2 = async (req, res, next) => {
+  try {
+    const { blogId, isApproved } = req.query;
+    const result = await BlogService.getComments(
+      blogId,
+      isApproved === "true" ? true : isApproved === "false" ? false : void 0
+    );
+    res.status(200).json({
+      success: true,
+      message: "Retrieved comments successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var approveComment2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await BlogService.approveComment(id);
+    res.status(200).json({
+      success: true,
+      message: "Comment approved",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteComment2 = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    await BlogService.deleteComment(id);
+    res.status(200).json({
+      success: true,
+      message: "Comment deleted successfully"
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var BlogController = {
+  // Blog
+  createBlog: createBlog2,
+  getBlogs: getBlogs2,
+  getBlogById: getBlogById2,
+  getBlogBySlug: getBlogBySlug2,
+  updateBlog: updateBlog2,
+  likeBlog: likeBlog2,
+  deleteBlog: deleteBlog2,
+  //   Tag,
+  createBlogTag: createBlogTag2,
+  getBlogTags: getBlogTags2,
+  updateBlogTag: updateBlogTag2,
+  deleteBlogTag: deleteBlogTag2,
+  //   Comment,
+  createComment: createComment2,
+  getComments: getComments2,
+  approveComment: approveComment2,
+  deleteComment: deleteComment2
+};
+
+// src/app/modules/blog/blog.validation.ts
+init_esm_shims();
+import { z as z13 } from "zod";
+
+// src/app/utils/sanitize.ts
+init_esm_shims();
+import sanitizeHtmlLib from "sanitize-html";
+var sanitizeText = (input) => {
+  if (!input) return "";
+  return sanitizeHtmlLib(input, {
+    allowedTags: [],
+    allowedAttributes: {},
+    // decode entities so &amp; doesn't pile up on repeated runs
+    disallowedTagsMode: "discard"
+  }).trim();
+};
+var sanitizeRichContent = (input) => {
+  if (!input) return "";
+  return sanitizeHtmlLib(input, {
+    allowedTags: [
+      // headings
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      // text blocks
+      "p",
+      "blockquote",
+      "pre",
+      "code",
+      "hr",
+      "br",
+      // inline
+      "strong",
+      "em",
+      "b",
+      "i",
+      "u",
+      "s",
+      "mark",
+      "small",
+      "sub",
+      "sup",
+      "span",
+      // lists
+      "ul",
+      "ol",
+      "li",
+      // links & media
+      "a",
+      "img",
+      "figure",
+      "figcaption",
+      // tables
+      "table",
+      "thead",
+      "tbody",
+      "tr",
+      "th",
+      "td",
+      // semantic
+      "div"
+    ],
+    allowedAttributes: {
+      a: ["href", "name", "target", "rel", "title"],
+      img: ["src", "alt", "title", "width", "height", "loading"],
+      code: ["class"],
+      // language-xxx for syntax highlight
+      pre: ["class"],
+      span: ["class"],
+      div: ["class"],
+      th: ["align", "colspan", "rowspan"],
+      td: ["align", "colspan", "rowspan"]
+    },
+    allowedSchemes: ["http", "https", "mailto"],
+    allowedSchemesByTag: {
+      img: ["http", "https", "data"]
+      // base64 images allowed
+    },
+    // Force every anchor to be safe + open externally
+    transformTags: {
+      a: sanitizeHtmlLib.simpleTransform("a", {
+        rel: "noopener noreferrer nofollow",
+        target: "_blank"
+      })
+    },
+    // strip scripts/styles entirely (don't leave their text content)
+    disallowedTagsMode: "discard",
+    nonTextTags: ["style", "script", "textarea", "option", "noscript"]
+  }).trim();
+};
+var sanitizeUrl = (input) => {
+  if (!input) return "";
+  const trimmed = input.trim();
+  if (/^(javascript|data|vbscript|file):/i.test(trimmed)) return "";
+  return trimmed;
+};
+
+// src/app/modules/blog/blog.validation.ts
+var textField = z13.string().transform((v) => sanitizeText(v));
+var richField = z13.string().transform((v) => sanitizeRichContent(v));
+var optionalText = z13.string().optional().transform((v) => v === void 0 ? void 0 : sanitizeText(v));
+var createBlogZodSchema = z13.object({
+  title: textField.refine((v) => v.length > 0, "title is required"),
+  slug: textField.refine((v) => v.length > 0, "slug is required"),
+  // Rich HTML — keep safe tags only
+  content: richField.refine((v) => v.length > 0, "content is required"),
+  excerpt: optionalText,
+  thumbnail: z13.string().optional(),
+  // URL from Cloudinary — already controlled
+  status: z13.enum(["DRAFT", "PUBLISHED", "ARCHIVED"]).optional(),
+  isFeatured: z13.boolean().optional(),
+  publishedAt: z13.string().optional(),
+  metaTitle: optionalText,
+  metaDescription: optionalText,
+  tagIds: z13.array(z13.string()).optional()
+});
+var updateBlogZodSchema = createBlogZodSchema.partial();
+var createBlogTagZodSchema = z13.object({
+  name: textField.refine((v) => v.length > 0, "name is required"),
+  slug: textField.refine((v) => v.length > 0, "slug is required")
+});
+var updateBlogTagZodSchema = createBlogTagZodSchema.partial();
+var createBlogCommentZodSchema = z13.object({
+  name: textField.refine((v) => v.length > 0, "name is required"),
+  email: z13.string("email is required").email("invalid email").transform((v) => sanitizeText(v).toLowerCase()),
+  comment: textField.refine((v) => v.length > 0, "comment is required"),
+  blogId: z13.string("blogId is required"),
+  parentId: z13.string().optional()
+});
+var BlogValidation = {
+  createBlogZodSchema,
+  updateBlogZodSchema,
+  createBlogTagZodSchema,
+  updateBlogTagZodSchema,
+  createBlogCommentZodSchema
+};
+
+// src/app/modules/blog/blog.route.ts
+var blogImageUpload = createMulterUpload("blogs");
+var router18 = express17.Router();
+router18.get("/", BlogController.getBlogs);
+router18.get("/slug/:slug", BlogController.getBlogBySlug);
+router18.get("/:id", BlogController.getBlogById);
+router18.post(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  blogImageUpload.single("thumbnail"),
+  validateRequest(BlogValidation.createBlogZodSchema),
+  BlogController.createBlog
+);
+router18.put(
+  "/:id",
+  auth_default("ADMIN" /* ADMIN */),
+  blogImageUpload.single("thumbnail"),
+  validateRequest(BlogValidation.updateBlogZodSchema),
+  BlogController.updateBlog
+);
+router18.patch("/:id/like", BlogController.likeBlog);
+router18.delete("/:id", auth_default("ADMIN" /* ADMIN */), BlogController.deleteBlog);
+router18.get("/tags/all", BlogController.getBlogTags);
+router18.post(
+  "/tags",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(BlogValidation.createBlogTagZodSchema),
+  BlogController.createBlogTag
+);
+router18.put(
+  "/tags/:id",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(BlogValidation.updateBlogTagZodSchema),
+  BlogController.updateBlogTag
+);
+router18.delete("/tags/:id", auth_default("ADMIN" /* ADMIN */), BlogController.deleteBlogTag);
+router18.post(
+  "/comments",
+  validateRequest(BlogValidation.createBlogCommentZodSchema),
+  BlogController.createComment
+);
+router18.get("/comments/all", auth_default("ADMIN" /* ADMIN */), BlogController.getComments);
+router18.patch(
+  "/comments/:id/approve",
+  auth_default("ADMIN" /* ADMIN */),
+  BlogController.approveComment
+);
+router18.delete(
+  "/comments/:id",
+  auth_default("ADMIN" /* ADMIN */),
+  BlogController.deleteComment
+);
+var BlogRouter = router18;
+
+// src/app/modules/analytics/analytics.route.ts
+init_esm_shims();
+import express18 from "express";
+
+// src/app/modules/analytics/analytics.controller.ts
+init_esm_shims();
+
+// src/app/modules/analytics/analytics.service.ts
+init_esm_shims();
+var trackPageView = async (payload) => {
+  const result = await prisma.pageView.create({
+    data: payload
+  });
+  return result;
+};
+var getPageViews = async (query) => {
+  const { page, startDate, endDate } = query;
+  const result = await prisma.pageView.findMany({
+    where: {
+      ...page && { page },
+      ...startDate || endDate ? {
+        createdAt: {
+          ...startDate && { gte: new Date(startDate) },
+          ...endDate && { lte: new Date(endDate) }
+        }
+      } : {}
+    },
+    orderBy: {
+      createdAt: "desc"
+    }
+  });
+  return result;
+};
+var getPageViewStats = async () => {
+  const result = await prisma.pageView.groupBy({
+    by: ["page"],
+    _count: {
+      id: true
+    },
+    orderBy: {
+      _count: {
+        id: "desc"
+      }
+    }
+  });
+  return result.map((item) => ({
+    page: item.page,
+    totalViews: item._count.id
+  }));
+};
+var trackResumeDownload = async (payload) => {
+  const log = await prisma.resumeDownloadLog.create({
+    data: payload
+  });
+  await prisma.about.upsert({
+    where: { id: "singleton" },
+    update: {
+      resumeDownloadCount: {
+        increment: 1
+      }
+    },
+    create: {
+      id: "singleton",
+      resumeDownloadCount: 1
+    }
+  });
+  return log;
+};
+var getResumeDownloadLogs = async () => {
+  const result = await prisma.resumeDownloadLog.findMany({
+    orderBy: {
+      createdAt: "desc"
+    }
+  });
+  return result;
+};
+var getResumeDownloadCount = async () => {
+  const about = await prisma.about.findUnique({
+    where: { id: "singleton" },
+    select: { resumeDownloadCount: true }
+  });
+  return { resumeDownloadCount: about?.resumeDownloadCount ?? 0 };
+};
+var AnalyticsService = {
+  trackPageView,
+  getPageViews,
+  getPageViewStats,
+  trackResumeDownload,
+  getResumeDownloadLogs,
+  getResumeDownloadCount
+};
+
+// src/app/modules/analytics/analytics.controller.ts
+var trackPageView2 = async (req, res, next) => {
+  try {
+    const result = await AnalyticsService.trackPageView(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Page view tracked successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getPageViews2 = async (req, res, next) => {
+  try {
+    const result = await AnalyticsService.getPageViews(req.query);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all page views successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getPageViewStats2 = async (req, res, next) => {
+  try {
+    const result = await AnalyticsService.getPageViewStats();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved page view stats successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var trackResumeDownload2 = async (req, res, next) => {
+  try {
+    const result = await AnalyticsService.trackResumeDownload(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Resume download tracked successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getResumeDownloadLogs2 = async (req, res, next) => {
+  try {
+    const result = await AnalyticsService.getResumeDownloadLogs();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved resume download logs successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getResumeDownloadCount2 = async (req, res, next) => {
+  try {
+    const result = await AnalyticsService.getResumeDownloadCount();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved resume download count successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var AnalyticsController = {
+  trackPageView: trackPageView2,
+  getPageViews: getPageViews2,
+  getPageViewStats: getPageViewStats2,
+  trackResumeDownload: trackResumeDownload2,
+  getResumeDownloadLogs: getResumeDownloadLogs2,
+  getResumeDownloadCount: getResumeDownloadCount2
+};
+
+// src/app/modules/analytics/analytics.validation.ts
+init_esm_shims();
+import { z as z14 } from "zod";
+var createPageViewZodSchema = z14.object({
+  page: z14.string("Page is required"),
+  userAgent: z14.string().optional(),
+  ipAddress: z14.string().optional(),
+  country: z14.string().optional(),
+  city: z14.string().optional(),
+  referrer: z14.string().optional()
+});
+var createResumeDownloadLogZodSchema = z14.object({
+  ipAddress: z14.string().optional(),
+  country: z14.string().optional(),
+  userAgent: z14.string().optional()
+});
+var AnalyticsValidation = {
+  createPageViewZodSchema,
+  createResumeDownloadLogZodSchema
+};
+
+// src/app/modules/analytics/analytics.route.ts
+var router19 = express18.Router();
+router19.post(
+  "/page-views",
+  validateRequest(AnalyticsValidation.createPageViewZodSchema),
+  AnalyticsController.trackPageView
+);
+router19.get(
+  "/page-views",
+  auth_default("ADMIN" /* ADMIN */),
+  AnalyticsController.getPageViews
+);
+router19.get(
+  "/page-views/stats",
+  auth_default("ADMIN" /* ADMIN */),
+  AnalyticsController.getPageViewStats
+);
+router19.post(
+  "/resume-downloads",
+  validateRequest(AnalyticsValidation.createResumeDownloadLogZodSchema),
+  AnalyticsController.trackResumeDownload
+);
+router19.get(
+  "/resume-downloads",
+  auth_default("ADMIN" /* ADMIN */),
+  AnalyticsController.getResumeDownloadLogs
+);
+router19.get(
+  "/resume-downloads/count",
+  auth_default("ADMIN" /* ADMIN */),
+  AnalyticsController.getResumeDownloadCount
+);
+var AnalyticsRouter = router19;
+
+// src/app/modules/appointment/appointment.route.ts
+init_esm_shims();
+import express19 from "express";
+
+// src/app/modules/appointment/appointment.controller.ts
+init_esm_shims();
+
+// src/app/modules/appointment/appointment.service.ts
+init_esm_shims();
+var createAppointmentSlot = async (payload) => {
+  const result = await prisma.appointmentSlot.create({
+    data: payload
+  });
+  return result;
+};
+var getAppointmentSlots = async () => {
+  const result = await prisma.appointmentSlot.findMany({
+    orderBy: [{ dayOfWeek: "asc" }, { startTime: "asc" }]
+  });
+  return result;
+};
+var getAvailableSlots = async () => {
+  const result = await prisma.appointmentSlot.findMany({
+    where: { isAvailable: true },
+    orderBy: [{ dayOfWeek: "asc" }, { startTime: "asc" }]
+  });
+  return result;
+};
+var updateAppointmentSlot = async (slotId, payload) => {
+  const result = await prisma.appointmentSlot.update({
+    where: { id: slotId },
+    data: payload
+  });
+  return result;
+};
+var deleteAppointmentSlot = async (slotId) => {
+  const result = await prisma.appointmentSlot.delete({
+    where: { id: slotId }
+  });
+  return result;
+};
+var createAppointment = async (payload) => {
+  const { date, ...rest } = payload;
+  const slot = await prisma.appointmentSlot.findFirst({
+    where: { id: rest.slotId, isAvailable: true }
+  });
+  if (!slot) {
+    throw new Error("Selected slot is not available");
+  }
+  const existing = await prisma.appointment.findFirst({
+    where: {
+      slotId: rest.slotId,
+      date: new Date(date),
+      status: { notIn: ["CANCELLED"] }
+    }
+  });
+  if (existing) {
+    throw new Error("This slot is already booked for the selected date");
+  }
+  const result = await prisma.appointment.create({
+    data: {
+      ...rest,
+      date: new Date(date)
+    },
+    include: { slot: true }
+  });
+  return result;
+};
+var getAppointments = async () => {
+  const result = await prisma.appointment.findMany({
+    include: { slot: true },
+    orderBy: { date: "asc" }
+  });
+  return result;
+};
+var getAppointmentById = async (appointmentId) => {
+  const result = await prisma.appointment.findUnique({
+    where: { id: appointmentId },
+    include: { slot: true }
+  });
+  return result;
+};
+var updateAppointment = async (appointmentId, payload) => {
+  const { date, ...rest } = payload;
+  const result = await prisma.appointment.update({
+    where: { id: appointmentId },
+    data: {
+      ...rest,
+      ...date && { date: new Date(date) }
+    },
+    include: { slot: true }
+  });
+  return result;
+};
+var updateAppointmentStatus = async (appointmentId, payload) => {
+  const result = await prisma.appointment.update({
+    where: { id: appointmentId },
+    data: payload,
+    include: { slot: true }
+  });
+  if (payload.status === "CONFIRMED" && result.email) {
+    try {
+      const dateStr = new Date(result.date).toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      });
+      const timeStr = result.slot ? `${result.slot.startTime} - ${result.slot.endTime}` : "TBA";
+      await sendEmail({
+        to: result.email,
+        subject: `Your appointment with Ishtiaq Robin is confirmed`,
+        templateName: "appointment-confirmed",
+        templateData: {
+          name: result.name,
+          topic: result.topic,
+          date: dateStr,
+          time: timeStr,
+          meetLink: result.meetLink || "",
+          adminNote: result.adminNote || ""
+        }
+      });
+    } catch (err) {
+      console.error("Failed to send appointment confirmation email:", err);
+    }
+  }
+  return result;
+};
+var deleteAppointment = async (appointmentId) => {
+  const result = await prisma.appointment.delete({
+    where: { id: appointmentId }
+  });
+  return result;
+};
+var AppointmentService = {
+  createAppointmentSlot,
+  getAppointmentSlots,
+  getAvailableSlots,
+  updateAppointmentSlot,
+  deleteAppointmentSlot,
+  createAppointment,
+  getAppointments,
+  getAppointmentById,
+  updateAppointment,
+  updateAppointmentStatus,
+  deleteAppointment
+};
+
+// src/app/modules/appointment/appointment.controller.ts
+var createAppointmentSlot2 = async (req, res, next) => {
+  try {
+    const result = await AppointmentService.createAppointmentSlot(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Appointment slot created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAppointmentSlots2 = async (req, res, next) => {
+  try {
+    const result = await AppointmentService.getAppointmentSlots();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all appointment slots successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAvailableSlots2 = async (req, res, next) => {
+  try {
+    const result = await AppointmentService.getAvailableSlots();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved available slots successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateAppointmentSlot2 = async (req, res, next) => {
+  try {
+    const { slotId } = req.params;
+    const result = await AppointmentService.updateAppointmentSlot(
+      slotId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Appointment slot updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteAppointmentSlot2 = async (req, res, next) => {
+  try {
+    const { slotId } = req.params;
+    const result = await AppointmentService.deleteAppointmentSlot(
+      slotId
+    );
+    res.status(200).json({
+      success: true,
+      message: "Appointment slot deleted successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createAppointment2 = async (req, res, next) => {
+  try {
+    const result = await AppointmentService.createAppointment(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Appointment booked successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAppointments2 = async (req, res, next) => {
+  try {
+    const result = await AppointmentService.getAppointments();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all appointments successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAppointmentById2 = async (req, res, next) => {
+  try {
+    const { appointmentId } = req.params;
+    const result = await AppointmentService.getAppointmentById(
+      appointmentId
+    );
+    res.status(200).json({
+      success: true,
+      message: "Retrieved appointment successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateAppointment2 = async (req, res, next) => {
+  try {
+    const { appointmentId } = req.params;
+    const result = await AppointmentService.updateAppointment(
+      appointmentId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Appointment updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateAppointmentStatus2 = async (req, res, next) => {
+  try {
+    const { appointmentId } = req.params;
+    const result = await AppointmentService.updateAppointmentStatus(
+      appointmentId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Appointment status updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteAppointment2 = async (req, res, next) => {
+  try {
+    const { appointmentId } = req.params;
+    const result = await AppointmentService.deleteAppointment(
+      appointmentId
+    );
+    res.status(200).json({
+      success: true,
+      message: "Appointment deleted successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var AppointmentController = {
+  createAppointmentSlot: createAppointmentSlot2,
+  getAppointmentSlots: getAppointmentSlots2,
+  getAvailableSlots: getAvailableSlots2,
+  updateAppointmentSlot: updateAppointmentSlot2,
+  deleteAppointmentSlot: deleteAppointmentSlot2,
+  createAppointment: createAppointment2,
+  getAppointments: getAppointments2,
+  getAppointmentById: getAppointmentById2,
+  updateAppointment: updateAppointment2,
+  updateAppointmentStatus: updateAppointmentStatus2,
+  deleteAppointment: deleteAppointment2
+};
+
+// src/app/modules/appointment/appointment.validation.ts
+init_esm_shims();
+var import_prisma27 = __toESM(require_prisma(), 1);
+import { z as z15 } from "zod";
+var createAppointmentSlotZodSchema = z15.object({
+  dayOfWeek: z15.number("Day of week is required").int().min(0, "Day must be between 0 (Sunday) and 6 (Saturday)").max(6, "Day must be between 0 (Sunday) and 6 (Saturday)"),
+  startTime: z15.string("Start time is required").regex(/^\d{2}:\d{2}$/, "Start time must be in HH:MM format"),
+  endTime: z15.string("End time is required").regex(/^\d{2}:\d{2}$/, "End time must be in HH:MM format"),
+  isAvailable: z15.boolean().optional().default(true)
+});
+var updateAppointmentSlotZodSchema = z15.object({
+  dayOfWeek: z15.number().int().min(0).max(6).optional(),
+  startTime: z15.string().regex(/^\d{2}:\d{2}$/, "Start time must be in HH:MM format").optional(),
+  endTime: z15.string().regex(/^\d{2}:\d{2}$/, "End time must be in HH:MM format").optional(),
+  isAvailable: z15.boolean().optional()
+});
+var createAppointmentZodSchema = z15.object({
+  name: z15.string("Name is required"),
+  email: z15.string("Email is required").email("Invalid email address"),
+  phone: z15.string().optional(),
+  topic: z15.string("Topic is required"),
+  message: z15.string().optional(),
+  date: z15.string("Date is required").datetime("Invalid date format"),
+  slotId: z15.string("Slot ID is required").uuid("Invalid slot ID")
+});
+var updateAppointmentZodSchema = z15.object({
+  name: z15.string().optional(),
+  email: z15.string().email("Invalid email address").optional(),
+  phone: z15.string().optional(),
+  topic: z15.string().optional(),
+  message: z15.string().optional(),
+  date: z15.string().datetime("Invalid date format").optional(),
+  slotId: z15.string().uuid("Invalid slot ID").optional()
+});
+var updateAppointmentStatusZodSchema = z15.object({
+  status: z15.nativeEnum(import_prisma27.AppointmentStatus).describe(
+    "Status is required and must be one of: PENDING, APPROVED, REJECTED, COMPLETED"
+  ),
+  meetLink: z15.string().url("Invalid meet link").optional(),
+  adminNote: z15.string().optional()
+});
+var AppointmentValidation = {
+  createAppointmentSlotZodSchema,
+  updateAppointmentSlotZodSchema,
+  createAppointmentZodSchema,
+  updateAppointmentZodSchema,
+  updateAppointmentStatusZodSchema
+};
+
+// src/app/modules/appointment/appointment.route.ts
+var router20 = express19.Router();
+router20.get("/slots", AppointmentController.getAppointmentSlots);
+router20.get("/slots/available", AppointmentController.getAvailableSlots);
+router20.post(
+  "/slots",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(AppointmentValidation.createAppointmentSlotZodSchema),
+  AppointmentController.createAppointmentSlot
+);
+router20.put(
+  "/slots/:slotId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(AppointmentValidation.updateAppointmentSlotZodSchema),
+  AppointmentController.updateAppointmentSlot
+);
+router20.delete(
+  "/slots/:slotId",
+  auth_default("ADMIN" /* ADMIN */),
+  AppointmentController.deleteAppointmentSlot
+);
+router20.post(
+  "/",
+  validateRequest(AppointmentValidation.createAppointmentZodSchema),
+  AppointmentController.createAppointment
+);
+router20.get("/", auth_default("ADMIN" /* ADMIN */), AppointmentController.getAppointments);
+router20.get(
+  "/:appointmentId",
+  auth_default("ADMIN" /* ADMIN */),
+  AppointmentController.getAppointmentById
+);
+router20.put(
+  "/:appointmentId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(AppointmentValidation.updateAppointmentZodSchema),
+  AppointmentController.updateAppointment
+);
+router20.patch(
+  "/:appointmentId/status",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(AppointmentValidation.updateAppointmentStatusZodSchema),
+  AppointmentController.updateAppointmentStatus
+);
+router20.delete(
+  "/:appointmentId",
+  auth_default("ADMIN" /* ADMIN */),
+  AppointmentController.deleteAppointment
+);
+var AppointmentRouter = router20;
+
+// src/app/modules/github/github.route.ts
+init_esm_shims();
+import express20 from "express";
+
+// src/app/modules/github/github.controller.ts
+init_esm_shims();
+
+// src/app/modules/github/github.service.ts
+init_esm_shims();
+import httpStatus2 from "http-status";
+var GITHUB_API_BASE = "https://api.github.com";
+var getGithubStats = async () => {
+  const result = await prisma.gitHubStatsCache.findUnique({
+    where: { id: "singleton" }
+  });
+  return result;
+};
+var syncGithubStats = async (username) => {
+  const headers = {
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    ...process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}
+  };
+  const userRes = await fetch(`${GITHUB_API_BASE}/users/${username}`, {
+    headers
+  });
+  if (!userRes.ok) {
+    throw new AppError_default(
+      httpStatus2.BAD_GATEWAY,
+      `Failed to fetch GitHub profile for "${username}"`
+    );
+  }
+  const user = await userRes.json();
+  const reposRes = await fetch(
+    `${GITHUB_API_BASE}/users/${username}/repos?per_page=100&type=owner`,
+    { headers }
+  );
+  const repos = reposRes.ok ? await reposRes.json() : [];
+  const totalStars = repos.reduce(
+    (sum, r) => sum + (r.stargazers_count ?? 0),
+    0
+  );
+  const totalForks = repos.reduce((sum, r) => sum + (r.forks_count ?? 0), 0);
+  const languageCounts = {};
+  await Promise.allSettled(
+    repos.map(async (repo) => {
+      const langRes = await fetch(repo.languages_url, { headers });
+      if (!langRes.ok) return;
+      const langs = await langRes.json();
+      for (const [lang, bytes] of Object.entries(langs)) {
+        languageCounts[lang] = (languageCounts[lang] ?? 0) + bytes;
+      }
+    })
+  );
+  const totalBytes = Object.values(languageCounts).reduce((a, b) => a + b, 0);
+  const topLanguages = Object.entries(languageCounts).map(([name, bytes]) => ({
+    name,
+    percentage: totalBytes > 0 ? Math.round(bytes / totalBytes * 100) : 0
+  })).sort((a, b) => b.percentage - a.percentage).slice(0, 10);
+  const result = await prisma.gitHubStatsCache.upsert({
+    where: { id: "singleton" },
+    update: {
+      username,
+      publicRepos: user.public_repos ?? 0,
+      followers: user.followers ?? 0,
+      following: user.following ?? 0,
+      totalStars,
+      totalForks,
+      topLanguages,
+      lastSyncedAt: /* @__PURE__ */ new Date()
+    },
+    create: {
+      id: "singleton",
+      username,
+      publicRepos: user.public_repos ?? 0,
+      followers: user.followers ?? 0,
+      following: user.following ?? 0,
+      totalStars,
+      totalForks,
+      topLanguages,
+      lastSyncedAt: /* @__PURE__ */ new Date()
+    }
+  });
+  return result;
+};
+var createContribution = async (payload) => {
+  const { mergedAt, ...rest } = payload;
+  const result = await prisma.openSourceContribution.create({
+    data: {
+      ...rest,
+      ...mergedAt ? { mergedAt: new Date(mergedAt) } : {}
+    }
+  });
+  return result;
+};
+var getAllContributions = async () => {
+  const result = await prisma.openSourceContribution.findMany({
+    where: { isPublished: true },
+    orderBy: [
+      { sortOrder: "asc" },
+      { mergedAt: "desc" },
+      { createdAt: "desc" }
+    ]
+  });
+  return result;
+};
+var getAllContributionsAdmin = async () => {
+  const result = await prisma.openSourceContribution.findMany({
+    orderBy: [
+      { sortOrder: "asc" },
+      { mergedAt: "desc" },
+      { createdAt: "desc" }
+    ]
+  });
+  return result;
+};
+var getContributionById = async (id) => {
+  const result = await prisma.openSourceContribution.findUnique({
+    where: { id }
+  });
+  if (!result) {
+    throw new AppError_default(httpStatus2.NOT_FOUND, "Contribution not found");
+  }
+  return result;
+};
+var updateContribution = async (id, payload) => {
+  await getContributionById(id);
+  const { mergedAt, ...rest } = payload;
+  const result = await prisma.openSourceContribution.update({
+    where: { id },
+    data: {
+      ...rest,
+      ...mergedAt ? { mergedAt: new Date(mergedAt) } : {}
+    }
+  });
+  return result;
+};
+var deleteContribution = async (id) => {
+  await getContributionById(id);
+  await prisma.openSourceContribution.delete({ where: { id } });
+};
+var GithubService = {
+  getGithubStats,
+  syncGithubStats,
+  createContribution,
+  getAllContributions,
+  getAllContributionsAdmin,
+  getContributionById,
+  updateContribution,
+  deleteContribution
+};
+
+// src/app/modules/github/github.controller.ts
+var getGithubStats2 = async (req, res, next) => {
+  try {
+    const result = await GithubService.getGithubStats();
+    res.status(200).json({
+      success: true,
+      message: "GitHub stats retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var syncGithubStats2 = async (req, res, next) => {
+  try {
+    const { username } = req.body;
+    const result = await GithubService.syncGithubStats(username);
+    res.status(200).json({
+      success: true,
+      message: "GitHub stats synced successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAllContributions2 = async (req, res, next) => {
+  try {
+    const result = await GithubService.getAllContributions();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all contributions successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAllContributionsAdmin2 = async (req, res, next) => {
+  try {
+    const result = await GithubService.getAllContributionsAdmin();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all contributions successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getContributionById2 = async (req, res, next) => {
+  try {
+    const { contributionId } = req.params;
+    const result = await GithubService.getContributionById(
+      contributionId
+    );
+    res.status(200).json({
+      success: true,
+      message: "Contribution retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createContribution2 = async (req, res, next) => {
+  try {
+    const result = await GithubService.createContribution(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Contribution created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateContribution2 = async (req, res, next) => {
+  try {
+    const { contributionId } = req.params;
+    const result = await GithubService.updateContribution(
+      contributionId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Contribution updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteContribution2 = async (req, res, next) => {
+  try {
+    const { contributionId } = req.params;
+    await GithubService.deleteContribution(contributionId);
+    res.status(200).json({
+      success: true,
+      message: "Contribution deleted successfully",
+      data: null
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var GithubController = {
+  getGithubStats: getGithubStats2,
+  syncGithubStats: syncGithubStats2,
+  getAllContributions: getAllContributions2,
+  getAllContributionsAdmin: getAllContributionsAdmin2,
+  getContributionById: getContributionById2,
+  createContribution: createContribution2,
+  updateContribution: updateContribution2,
+  deleteContribution: deleteContribution2
+};
+
+// src/app/modules/github/github.validation.ts
+init_esm_shims();
+import { z as z16 } from "zod";
+var createContributionZodSchema = z16.object({
+  repoName: z16.string("Repo name is required"),
+  repoUrl: z16.string("Repo URL is required").url("Invalid repo URL"),
+  description: z16.string().optional(),
+  prUrl: z16.string().url("Invalid PR URL").optional(),
+  issueUrl: z16.string().url("Invalid issue URL").optional(),
+  mergedAt: z16.string().datetime({ offset: true }).optional(),
+  isPublished: z16.boolean().optional(),
+  sortOrder: z16.number().int().optional()
+});
+var updateContributionZodSchema = z16.object({
+  repoName: z16.string().optional(),
+  repoUrl: z16.string().url("Invalid repo URL").optional(),
+  description: z16.string().optional(),
+  prUrl: z16.string().url("Invalid PR URL").optional(),
+  issueUrl: z16.string().url("Invalid issue URL").optional(),
+  mergedAt: z16.string().datetime({ offset: true }).optional(),
+  isPublished: z16.boolean().optional(),
+  sortOrder: z16.number().int().optional()
+});
+var GithubValidation = {
+  createContributionZodSchema,
+  updateContributionZodSchema
+};
+
+// src/app/modules/github/github.route.ts
+var router21 = express20.Router();
+router21.get("/stats", GithubController.getGithubStats);
+router21.post(
+  "/stats/sync",
+  auth_default("ADMIN" /* ADMIN */),
+  GithubController.syncGithubStats
+);
+router21.get("/contributions", GithubController.getAllContributions);
+router21.get(
+  "/contributions/admin",
+  auth_default("ADMIN" /* ADMIN */),
+  GithubController.getAllContributionsAdmin
+);
+router21.get(
+  "/contributions/:contributionId",
+  auth_default("ADMIN" /* ADMIN */),
+  GithubController.getContributionById
+);
+router21.post(
+  "/contributions",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(GithubValidation.createContributionZodSchema),
+  GithubController.createContribution
+);
+router21.put(
+  "/contributions/:contributionId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(GithubValidation.updateContributionZodSchema),
+  GithubController.updateContribution
+);
+router21.delete(
+  "/contributions/:contributionId",
+  auth_default("ADMIN" /* ADMIN */),
+  GithubController.deleteContribution
+);
+var GithubRouter = router21;
+
+// src/app/modules/npm/npm.route.ts
+init_esm_shims();
+import express21 from "express";
+
+// src/app/modules/npm/npm.controller.ts
+init_esm_shims();
+
+// src/app/modules/npm/npm.service.ts
+init_esm_shims();
+import httpStatus3 from "http-status";
+var NPM_API_BASE = "https://api.npmjs.org";
+var syncNpmPackage = async (name) => {
+  const pkg = await getNpmPackageByName(name);
+  const weeklyRes = await fetch(
+    `${NPM_API_BASE}/downloads/point/last-week/${encodeURIComponent(name)}`
+  );
+  if (!weeklyRes.ok) {
+    throw new AppError_default(
+      httpStatus3.BAD_GATEWAY,
+      `Failed to fetch npm download stats for "${name}"`
+    );
+  }
+  const weeklyData = await weeklyRes.json();
+  const totalRes = await fetch(
+    `${NPM_API_BASE}/downloads/point/1000-01-01:${(/* @__PURE__ */ new Date()).toISOString().split("T")[0]}/${encodeURIComponent(name)}`
+  );
+  const totalData = totalRes.ok ? await totalRes.json() : null;
+  const registryRes = await fetch(
+    `https://registry.npmjs.org/${encodeURIComponent(name)}/latest`
+  );
+  const registryData = registryRes.ok ? await registryRes.json() : null;
+  const result = await prisma.npmPackage.update({
+    where: { id: pkg.id },
+    data: {
+      weeklyDownloads: weeklyData.downloads ?? pkg.weeklyDownloads,
+      totalDownloads: totalData?.downloads ?? pkg.totalDownloads,
+      version: registryData?.version ?? pkg.version,
+      lastSyncedAt: /* @__PURE__ */ new Date()
+    }
+  });
+  return result;
+};
+var createNpmPackage = async (payload) => {
+  const result = await prisma.npmPackage.create({
+    data: payload
+  });
+  return result;
+};
+var getAllNpmPackages = async () => {
+  const result = await prisma.npmPackage.findMany({
+    where: { isPublished: true },
+    orderBy: [{ sortOrder: "asc" }, { createdAt: "desc" }]
+  });
+  return result;
+};
+var getAllNpmPackagesAdmin = async () => {
+  const result = await prisma.npmPackage.findMany({
+    orderBy: [{ sortOrder: "asc" }, { createdAt: "desc" }]
+  });
+  return result;
+};
+var getNpmPackageById = async (id) => {
+  const result = await prisma.npmPackage.findUnique({
+    where: { id }
+  });
+  if (!result) {
+    throw new AppError_default(httpStatus3.NOT_FOUND, "npm package not found");
+  }
+  return result;
+};
+var getNpmPackageByName = async (name) => {
+  const result = await prisma.npmPackage.findUnique({
+    where: { name }
+  });
+  if (!result) {
+    throw new AppError_default(httpStatus3.NOT_FOUND, `npm package "${name}" not found`);
+  }
+  return result;
+};
+var updateNpmPackage = async (id, payload) => {
+  await getNpmPackageById(id);
+  const result = await prisma.npmPackage.update({
+    where: { id },
+    data: payload
+  });
+  return result;
+};
+var deleteNpmPackage = async (id) => {
+  await getNpmPackageById(id);
+  await prisma.npmPackage.delete({ where: { id } });
+};
+var NpmService = {
+  syncNpmPackage,
+  createNpmPackage,
+  getAllNpmPackages,
+  getAllNpmPackagesAdmin,
+  getNpmPackageById,
+  updateNpmPackage,
+  deleteNpmPackage
+};
+
+// src/app/modules/npm/npm.controller.ts
+var syncNpmPackage2 = async (req, res, next) => {
+  try {
+    const { name } = req.body;
+    const result = await NpmService.syncNpmPackage(name);
+    res.status(200).json({
+      success: true,
+      message: "npm package synced successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAllNpmPackages2 = async (req, res, next) => {
+  try {
+    const result = await NpmService.getAllNpmPackages();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all npm packages successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAllNpmPackagesAdmin2 = async (req, res, next) => {
+  try {
+    const result = await NpmService.getAllNpmPackagesAdmin();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all npm packages successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getNpmPackageById2 = async (req, res, next) => {
+  try {
+    const { packageId } = req.params;
+    const result = await NpmService.getNpmPackageById(packageId);
+    res.status(200).json({
+      success: true,
+      message: "npm package retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createNpmPackage2 = async (req, res, next) => {
+  try {
+    const result = await NpmService.createNpmPackage(req.body);
+    res.status(201).json({
+      success: true,
+      message: "npm package created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateNpmPackage2 = async (req, res, next) => {
+  try {
+    const { packageId } = req.params;
+    const result = await NpmService.updateNpmPackage(
+      packageId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "npm package updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteNpmPackage2 = async (req, res, next) => {
+  try {
+    const { packageId } = req.params;
+    await NpmService.deleteNpmPackage(packageId);
+    res.status(200).json({
+      success: true,
+      message: "npm package deleted successfully",
+      data: null
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var NpmController = {
+  syncNpmPackage: syncNpmPackage2,
+  getAllNpmPackages: getAllNpmPackages2,
+  getAllNpmPackagesAdmin: getAllNpmPackagesAdmin2,
+  getNpmPackageById: getNpmPackageById2,
+  createNpmPackage: createNpmPackage2,
+  updateNpmPackage: updateNpmPackage2,
+  deleteNpmPackage: deleteNpmPackage2
+};
+
+// src/app/modules/npm/npm.validation.ts
+init_esm_shims();
+import { z as z17 } from "zod";
+var createNpmPackageZodSchema = z17.object({
+  name: z17.string("Package name is required"),
+  description: z17.string().optional(),
+  npmUrl: z17.string("npm URL is required").url("Invalid npm URL"),
+  githubUrl: z17.string().url("Invalid GitHub URL").optional(),
+  weeklyDownloads: z17.number().int().nonnegative().optional(),
+  totalDownloads: z17.number().int().nonnegative().optional(),
+  version: z17.string().optional(),
+  isPublished: z17.boolean().optional(),
+  sortOrder: z17.number().int().optional()
+});
+var updateNpmPackageZodSchema = z17.object({
+  name: z17.string().optional(),
+  description: z17.string().optional(),
+  npmUrl: z17.string().url("Invalid npm URL").optional(),
+  githubUrl: z17.string().url("Invalid GitHub URL").optional(),
+  weeklyDownloads: z17.number().int().nonnegative().optional(),
+  totalDownloads: z17.number().int().nonnegative().optional(),
+  version: z17.string().optional(),
+  isPublished: z17.boolean().optional(),
+  sortOrder: z17.number().int().optional()
+});
+var NpmValidation = {
+  createNpmPackageZodSchema,
+  updateNpmPackageZodSchema
+};
+
+// src/app/modules/npm/npm.route.ts
+var router22 = express21.Router();
+router22.get("/", NpmController.getAllNpmPackages);
+router22.get(
+  "/admin",
+  auth_default("ADMIN" /* ADMIN */),
+  NpmController.getAllNpmPackagesAdmin
+);
+router22.get(
+  "/:packageId",
+  auth_default("ADMIN" /* ADMIN */),
+  NpmController.getNpmPackageById
+);
+router22.post("/sync", auth_default("ADMIN" /* ADMIN */), NpmController.syncNpmPackage);
+router22.post(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(NpmValidation.createNpmPackageZodSchema),
+  NpmController.createNpmPackage
+);
+router22.put(
+  "/:packageId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(NpmValidation.updateNpmPackageZodSchema),
+  NpmController.updateNpmPackage
+);
+router22.delete(
+  "/:packageId",
+  auth_default("ADMIN" /* ADMIN */),
+  NpmController.deleteNpmPackage
+);
+var NpmRouter = router22;
+
+// src/app/modules/store/store.route.ts
+init_esm_shims();
+import express22 from "express";
+
+// src/app/modules/store/store.controller.ts
+init_esm_shims();
+
+// src/app/modules/store/store.service.ts
+init_esm_shims();
+var createProduct = async (payload) => {
+  const result = await prisma.product.create({
+    data: payload,
+    include: { images: true }
+  });
+  return result;
+};
+var getProducts = async () => {
+  const result = await prisma.product.findMany({
+    include: { images: true },
+    orderBy: { sortOrder: "asc" }
+  });
+  return result;
+};
+var getProduct = async (productId) => {
+  const result = await prisma.product.findFirst({
+    where: {
+      OR: [{ id: productId }, { slug: productId }]
+    },
+    include: { images: true }
+  });
+  return result;
+};
+var updateProduct = async (productId, payload) => {
+  const result = await prisma.product.update({
+    where: { id: productId },
+    data: payload,
+    include: { images: true }
+  });
+  return result;
+};
+var deleteProduct = async (productId) => {
+  const result = await prisma.product.delete({
+    where: { id: productId }
+  });
+  return result;
+};
+var addProductImage = async (payload) => {
+  const result = await prisma.productImage.create({
+    data: payload
+  });
+  return result;
+};
+var deleteProductImage = async (imageId) => {
+  const result = await prisma.productImage.delete({
+    where: { id: imageId }
+  });
+  return result;
+};
+var createOrder = async (payload) => {
+  const result = await prisma.order.create({
+    data: payload,
+    include: { product: true }
+  });
+  return result;
+};
+var getOrders = async () => {
+  const result = await prisma.order.findMany({
+    include: { product: true },
+    orderBy: { createdAt: "desc" }
+  });
+  return result;
+};
+var getOrder = async (orderId) => {
+  const result = await prisma.order.findUnique({
+    where: { id: orderId },
+    include: { product: true }
+  });
+  return result;
+};
+var updateOrder = async (orderId, payload) => {
+  const result = await prisma.order.update({
+    where: { id: orderId },
+    data: payload,
+    include: { product: true }
+  });
+  return result;
+};
+var StoreService = {
+  createProduct,
+  getProducts,
+  getProduct,
+  updateProduct,
+  deleteProduct,
+  addProductImage,
+  deleteProductImage,
+  createOrder,
+  getOrders,
+  getOrder,
+  updateOrder
+};
+
+// src/app/modules/store/store.controller.ts
+var createProduct2 = async (req, res, next) => {
+  try {
+    const result = await StoreService.createProduct(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Product created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getProducts2 = async (req, res, next) => {
+  try {
+    const result = await StoreService.getProducts();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all products successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getProduct2 = async (req, res, next) => {
+  try {
+    const { productId } = req.params;
+    const result = await StoreService.getProduct(productId);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved product successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateProduct2 = async (req, res, next) => {
+  try {
+    const { productId } = req.params;
+    const result = await StoreService.updateProduct(
+      productId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Product updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteProduct2 = async (req, res, next) => {
+  try {
+    const { productId } = req.params;
+    const result = await StoreService.deleteProduct(productId);
+    res.status(200).json({
+      success: true,
+      message: "Product deleted successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var addProductImage2 = async (req, res, next) => {
+  try {
+    const { productId } = req.params;
+    const result = await StoreService.addProductImage({
+      ...req.body,
+      productId
+    });
+    res.status(201).json({
+      success: true,
+      message: "Product image added successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteProductImage2 = async (req, res, next) => {
+  try {
+    const { imageId } = req.params;
+    const result = await StoreService.deleteProductImage(imageId);
+    res.status(200).json({
+      success: true,
+      message: "Product image deleted successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createOrder2 = async (req, res, next) => {
+  try {
+    const result = await StoreService.createOrder(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Order created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getOrders2 = async (req, res, next) => {
+  try {
+    const result = await StoreService.getOrders();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all orders successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getOrder2 = async (req, res, next) => {
+  try {
+    const { orderId } = req.params;
+    const result = await StoreService.getOrder(orderId);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved order successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateOrder2 = async (req, res, next) => {
+  try {
+    const { orderId } = req.params;
+    const result = await StoreService.updateOrder(orderId, req.body);
+    res.status(200).json({
+      success: true,
+      message: "Order updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var StoreController = {
+  createProduct: createProduct2,
+  getProducts: getProducts2,
+  getProduct: getProduct2,
+  updateProduct: updateProduct2,
+  deleteProduct: deleteProduct2,
+  addProductImage: addProductImage2,
+  deleteProductImage: deleteProductImage2,
+  createOrder: createOrder2,
+  getOrders: getOrders2,
+  getOrder: getOrder2,
+  updateOrder: updateOrder2
+};
+
+// src/app/modules/store/store.validation.ts
+init_esm_shims();
+var import_prisma31 = __toESM(require_prisma(), 1);
+import { z as z18 } from "zod";
+var createProductZodSchema = z18.object({
+  title: z18.string("Title is required"),
+  slug: z18.string("Slug is required"),
+  description: z18.string("Description is required"),
+  thumbnail: z18.string("Thumbnail is required"),
+  previewUrl: z18.string().url().optional(),
+  price: z18.number("Price is required").nonnegative(),
+  discountPrice: z18.number("Discount price is required").nonnegative().optional(),
+  currency: z18.string().optional().default("USD"),
+  status: z18.nativeEnum(import_prisma31.ProductStatus).optional().default(import_prisma31.ProductStatus.DRAFT),
+  isFeatured: z18.boolean().optional().default(false),
+  sortOrder: z18.number().int().optional().default(0),
+  techStack: z18.array(z18.string()).optional().default([]),
+  includes: z18.array(z18.string()).optional().default([])
+});
+var updateProductZodSchema = z18.object({
+  title: z18.string().optional(),
+  slug: z18.string().optional(),
+  description: z18.string().optional(),
+  thumbnail: z18.string().optional(),
+  previewUrl: z18.string().url().optional(),
+  price: z18.number().nonnegative().optional(),
+  discountPrice: z18.number().nonnegative().optional(),
+  currency: z18.string().optional(),
+  status: z18.nativeEnum(import_prisma31.ProductStatus).optional(),
+  isFeatured: z18.boolean().optional(),
+  sortOrder: z18.number().int().optional(),
+  techStack: z18.array(z18.string()).optional(),
+  includes: z18.array(z18.string()).optional()
+});
+var addProductImageZodSchema = z18.object({
+  url: z18.string("Image URL is required"),
+  alt: z18.string().optional(),
+  sortOrder: z18.number().int().optional().default(0)
+});
+var createOrderZodSchema = z18.object({
+  buyerName: z18.string("Buyer name is required"),
+  buyerEmail: z18.string("Buyer email is required").email(),
+  amount: z18.number("Amount is required").nonnegative(),
+  currency: z18.string().optional().default("USD"),
+  paymentMethod: z18.string().optional(),
+  transactionId: z18.string().optional(),
+  productId: z18.string("Product ID is required")
+});
+var updateOrderZodSchema = z18.object({
+  status: z18.nativeEnum(import_prisma31.OrderStatus).optional(),
+  paymentMethod: z18.string().optional(),
+  transactionId: z18.string().optional(),
+  paidAt: z18.coerce.date().optional(),
+  downloadToken: z18.string().optional(),
+  downloadCount: z18.number().int().optional(),
+  downloadExpiry: z18.coerce.date().optional()
+});
+var StoreValidation = {
+  createProductZodSchema,
+  updateProductZodSchema,
+  addProductImageZodSchema,
+  createOrderZodSchema,
+  updateOrderZodSchema
+};
+
+// src/app/modules/store/store.route.ts
+var router23 = express22.Router();
+router23.get("/products", StoreController.getProducts);
+router23.get("/products/:productId", StoreController.getProduct);
+router23.post(
+  "/products",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(StoreValidation.createProductZodSchema),
+  StoreController.createProduct
+);
+router23.put(
+  "/products/:productId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(StoreValidation.updateProductZodSchema),
+  StoreController.updateProduct
+);
+router23.delete(
+  "/products/:productId",
+  auth_default("ADMIN" /* ADMIN */),
+  StoreController.deleteProduct
+);
+router23.post(
+  "/products/:productId/images",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(StoreValidation.addProductImageZodSchema),
+  StoreController.addProductImage
+);
+router23.delete(
+  "/images/:imageId",
+  auth_default("ADMIN" /* ADMIN */),
+  StoreController.deleteProductImage
+);
+router23.post(
+  "/orders",
+  validateRequest(StoreValidation.createOrderZodSchema),
+  StoreController.createOrder
+);
+router23.get("/orders", auth_default("ADMIN" /* ADMIN */), StoreController.getOrders);
+router23.get("/orders/:orderId", auth_default("ADMIN" /* ADMIN */), StoreController.getOrder);
+router23.patch(
+  "/orders/:orderId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(StoreValidation.updateOrderZodSchema),
+  StoreController.updateOrder
+);
+var StoreRouter = router23;
+
+// src/app/modules/timeline/timeline.route.ts
+init_esm_shims();
+import express23 from "express";
+
+// src/app/modules/timeline/timeline.controller.ts
+init_esm_shims();
+
+// src/app/modules/timeline/timeline.service.ts
+init_esm_shims();
+var createTimeline = async (payload) => {
+  const result = await prisma.timeline.create({
+    data: payload
+  });
+  return result;
+};
+var getTimelines = async () => {
+  const result = await prisma.timeline.findMany({
+    orderBy: { sortOrder: "asc" }
+  });
+  return result;
+};
+var getTimeline = async (timelineId) => {
+  const result = await prisma.timeline.findUnique({
+    where: { id: timelineId }
+  });
+  return result;
+};
+var updateTimeline = async (timelineId, payload) => {
+  const result = await prisma.timeline.update({
+    where: { id: timelineId },
+    data: payload
+  });
+  return result;
+};
+var deleteTimeline = async (timelineId) => {
+  const result = await prisma.timeline.delete({
+    where: { id: timelineId }
+  });
+  return result;
+};
+var TimelineService = {
+  createTimeline,
+  getTimelines,
+  getTimeline,
+  updateTimeline,
+  deleteTimeline
+};
+
+// src/app/modules/timeline/timeline.controller.ts
+var createTimeline2 = async (req, res, next) => {
+  try {
+    const result = await TimelineService.createTimeline(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Timeline entry created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getTimelines2 = async (req, res, next) => {
+  try {
+    const result = await TimelineService.getTimelines();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all timeline entries successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getTimeline2 = async (req, res, next) => {
+  try {
+    const { timelineId } = req.params;
+    const result = await TimelineService.getTimeline(timelineId);
+    res.status(200).json({
+      success: true,
+      message: "Retrieved timeline entry successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateTimeline2 = async (req, res, next) => {
+  try {
+    const { timelineId } = req.params;
+    const result = await TimelineService.updateTimeline(
+      timelineId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Timeline entry updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteTimeline2 = async (req, res, next) => {
+  try {
+    const { timelineId } = req.params;
+    const result = await TimelineService.deleteTimeline(timelineId);
+    res.status(200).json({
+      success: true,
+      message: "Timeline entry deleted successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var TimelineController = {
+  createTimeline: createTimeline2,
+  getTimelines: getTimelines2,
+  getTimeline: getTimeline2,
+  updateTimeline: updateTimeline2,
+  deleteTimeline: deleteTimeline2
+};
+
+// src/app/modules/timeline/timeline.validation.ts
+init_esm_shims();
+import { z as z19 } from "zod";
+var createTimelineZodSchema = z19.object({
+  title: z19.string("Title is required"),
+  description: z19.string().optional(),
+  date: z19.coerce.date("Date is required"),
+  icon: z19.string().optional(),
+  color: z19.string().optional(),
+  url: z19.string().url().optional(),
+  isPublished: z19.boolean().optional().default(true),
+  sortOrder: z19.number().int().optional().default(0)
+});
+var updateTimelineZodSchema = z19.object({
+  title: z19.string().optional(),
+  description: z19.string().optional(),
+  date: z19.coerce.date().optional(),
+  icon: z19.string().optional(),
+  color: z19.string().optional(),
+  url: z19.string().url().optional(),
+  isPublished: z19.boolean().optional(),
+  sortOrder: z19.number().int().optional()
+});
+var TimelineValidation = {
+  createTimelineZodSchema,
+  updateTimelineZodSchema
+};
+
+// src/app/modules/timeline/timeline.route.ts
+var router24 = express23.Router();
+router24.get("/", TimelineController.getTimelines);
+router24.get("/:timelineId", TimelineController.getTimeline);
+router24.post(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(TimelineValidation.createTimelineZodSchema),
+  TimelineController.createTimeline
+);
+router24.put(
+  "/:timelineId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(TimelineValidation.updateTimelineZodSchema),
+  TimelineController.updateTimeline
+);
+router24.delete(
+  "/:timelineId",
+  auth_default("ADMIN" /* ADMIN */),
+  TimelineController.deleteTimeline
+);
+var TimelineRouter = router24;
+
+// src/app/modules/rss/rss.route.ts
+init_esm_shims();
+import express24 from "express";
+
+// src/app/modules/rss/rss.controller.ts
+init_esm_shims();
+
+// src/app/modules/rss/rss.service.ts
+init_esm_shims();
+import { randomUUID } from "crypto";
+var SINGLETON_ID3 = "singleton";
+var getConfig = async () => {
+  const config = await prisma.rssConfig.upsert({
+    where: { id: SINGLETON_ID3 },
+    update: {},
+    create: { id: SINGLETON_ID3 }
+  });
+  return config;
+};
+var updateConfig = async (payload) => {
+  const result = await prisma.rssConfig.upsert({
+    where: { id: SINGLETON_ID3 },
+    update: payload,
+    create: { id: SINGLETON_ID3, ...payload }
+  });
+  return result;
+};
+var subscribe = async (payload) => {
+  const verifyToken = randomUUID();
+  const result = await prisma.rssSubscriber.create({
+    data: {
+      email: payload.email,
+      verifyToken
+    }
+  });
+  try {
+    const config = await prisma.rssConfig.findUnique({
+      where: { id: SINGLETON_ID3 }
+    });
+    const verifyUrl = `${env.FRONTEND_URL}/rss/verify?token=${verifyToken}`;
+    await sendEmail({
+      to: payload.email,
+      subject: `Confirm your subscription to Ishtiaq Robin's blog`,
+      templateName: "rss-verify",
+      templateData: {
+        blogTitle: config?.title || "Ishtiaq Robin's Blog",
+        verifyUrl
+      }
+    });
+  } catch (err) {
+    console.error("Failed to send RSS verify email:", err);
+  }
+  return result;
+};
+var verifySubscriber = async (verifyToken) => {
+  const result = await prisma.rssSubscriber.update({
+    where: { verifyToken },
+    data: {
+      isVerified: true,
+      verifyToken: null
+    }
+  });
+  return result;
+};
+var unsubscribe = async (unsubscribeToken) => {
+  const result = await prisma.rssSubscriber.update({
+    where: { unsubscribeToken },
+    data: {
+      unsubscribedAt: /* @__PURE__ */ new Date()
+    }
+  });
+  return result;
+};
+var getSubscribers = async () => {
+  const result = await prisma.rssSubscriber.findMany({
+    orderBy: { subscribedAt: "desc" }
+  });
+  return result;
+};
+var deleteSubscriber = async (subscriberId) => {
+  const result = await prisma.rssSubscriber.delete({
+    where: { id: subscriberId }
+  });
+  return result;
+};
+var RssService = {
+  getConfig,
+  updateConfig,
+  subscribe,
+  verifySubscriber,
+  unsubscribe,
+  getSubscribers,
+  deleteSubscriber
+};
+
+// src/app/modules/rss/rss.controller.ts
+var getConfig2 = async (req, res, next) => {
+  try {
+    const result = await RssService.getConfig();
+    res.status(200).json({
+      success: true,
+      message: "RSS config retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateConfig2 = async (req, res, next) => {
+  try {
+    const result = await RssService.updateConfig(req.body);
+    res.status(200).json({
+      success: true,
+      message: "RSS config updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var subscribe2 = async (req, res, next) => {
+  try {
+    const result = await RssService.subscribe(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Subscribed successfully. Please verify your email.",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var verifySubscriber2 = async (req, res, next) => {
+  try {
+    const { token } = req.params;
+    const result = await RssService.verifySubscriber(token);
+    res.status(200).json({
+      success: true,
+      message: "Email verified successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var unsubscribe2 = async (req, res, next) => {
+  try {
+    const { token } = req.params;
+    const result = await RssService.unsubscribe(token);
+    res.status(200).json({
+      success: true,
+      message: "Unsubscribed successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getSubscribers2 = async (req, res, next) => {
+  try {
+    const result = await RssService.getSubscribers();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved all subscribers successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteSubscriber2 = async (req, res, next) => {
+  try {
+    const { subscriberId } = req.params;
+    const result = await RssService.deleteSubscriber(subscriberId);
+    res.status(200).json({
+      success: true,
+      message: "Subscriber deleted successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var RssController = {
+  getConfig: getConfig2,
+  updateConfig: updateConfig2,
+  subscribe: subscribe2,
+  verifySubscriber: verifySubscriber2,
+  unsubscribe: unsubscribe2,
+  getSubscribers: getSubscribers2,
+  deleteSubscriber: deleteSubscriber2
+};
+
+// src/app/modules/rss/rss.validation.ts
+init_esm_shims();
+import { z as z20 } from "zod";
+var updateConfigZodSchema = z20.object({
+  isEnabled: z20.boolean().optional(),
+  title: z20.string().optional(),
+  description: z20.string().optional(),
+  feedUrl: z20.string().url().optional(),
+  language: z20.string().optional()
+});
+var subscribeZodSchema = z20.object({
+  email: z20.string("Email is required").email("Invalid email address")
+});
+var RssValidation = {
+  updateConfigZodSchema,
+  subscribeZodSchema
+};
+
+// src/app/modules/rss/rss.route.ts
+var router25 = express24.Router();
+router25.get("/config", RssController.getConfig);
+router25.patch(
+  "/config",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(RssValidation.updateConfigZodSchema),
+  RssController.updateConfig
+);
+router25.post(
+  "/subscribe",
+  validateRequest(RssValidation.subscribeZodSchema),
+  RssController.subscribe
+);
+router25.get("/verify/:token", RssController.verifySubscriber);
+router25.get("/unsubscribe/:token", RssController.unsubscribe);
+router25.get("/subscribers", auth_default("ADMIN" /* ADMIN */), RssController.getSubscribers);
+router25.delete(
+  "/subscribers/:subscriberId",
+  auth_default("ADMIN" /* ADMIN */),
+  RssController.deleteSubscriber
+);
+var RssRouter = router25;
+
+// src/app/modules/chatbot/chatbot.route.ts
+init_esm_shims();
+import express25 from "express";
+
+// src/app/modules/chatbot/chatbot.controller.ts
+init_esm_shims();
+
+// src/app/modules/chatbot/chatbot.service.ts
+init_esm_shims();
+import status15 from "http-status";
+var rateLimitStore = /* @__PURE__ */ new Map();
+var checkRateLimit = (ip, rateLimit2, rateLimitWindow) => {
+  const now = Date.now();
+  const windowMs = rateLimitWindow * 1e3;
+  const record = rateLimitStore.get(ip);
+  if (!record || now - record.windowStart > windowMs) {
+    rateLimitStore.set(ip, { count: 1, windowStart: now });
+    return;
+  }
+  if (record.count >= rateLimit2) {
+    const retryAfter = Math.ceil(
+      (windowMs - (now - record.windowStart)) / 1e3
+    );
+    throw new AppError_default(
+      status15.TOO_MANY_REQUESTS,
+      `Too many requests. Please wait ${retryAfter} seconds.`
+    );
+  }
+  record.count += 1;
+};
+var buildContextFromDB = async () => {
+  const [about, skills, experiences, projects, services, settings] = await Promise.all([
+    prisma.about.findUnique({ where: { id: "singleton" } }),
+    prisma.skill.findMany({
+      where: { category: { isPublished: true } },
+      include: { category: true },
+      orderBy: { sortOrder: "asc" }
+    }),
+    prisma.experience.findMany({
+      where: { isPublished: true },
+      orderBy: { startDate: "desc" }
+    }),
+    prisma.project.findMany({
+      where: { isPublished: true, isFeatured: true },
+      include: { category: true },
+      orderBy: { sortOrder: "asc" }
+    }),
+    prisma.service.findMany({
+      where: { isPublished: true },
+      orderBy: { sortOrder: "asc" }
+    }),
+    prisma.settings.findUnique({ where: { id: "singleton" } })
+  ]);
+  const lines = [];
+  if (about) {
+    if (about.title) lines.push(`Name: ${about.title}`);
+    if (about.subtitle) lines.push(`Role: ${about.subtitle}`);
+    if (about.description) lines.push(`About: ${about.description}`);
+  }
+  if (settings) {
+    if (settings.contactEmail) lines.push(`Email: ${settings.contactEmail}`);
+    if (settings.contactPhone) lines.push(`Phone: ${settings.contactPhone}`);
+    if (settings.githubUrl) lines.push(`GitHub: ${settings.githubUrl}`);
+    if (settings.linkedinUrl) lines.push(`LinkedIn: ${settings.linkedinUrl}`);
+    if (settings.availability)
+      lines.push(`Availability: ${settings.availability}`);
+  }
+  if (skills.length) {
+    const grouped = skills.reduce((acc, skill) => {
+      const cat = skill.category.name;
+      if (!acc[cat]) acc[cat] = [];
+      acc[cat].push(`${skill.name} (${skill.level})`);
+      return acc;
+    }, {});
+    lines.push("\nSkills:");
+    Object.entries(grouped).forEach(([cat, list]) => {
+      lines.push(`  ${cat}: ${list.join(", ")}`);
+    });
+  }
+  if (experiences.length) {
+    lines.push("\nWork Experience:");
+    experiences.forEach((exp) => {
+      const end = exp.endDate ? exp.endDate.getFullYear() : "Present";
+      lines.push(
+        `  - ${exp.title} at ${exp.company} (${exp.startDate.getFullYear()}\u2013${end})`
+      );
+      if (exp.description) lines.push(`    ${exp.description}`);
+    });
+  }
+  if (projects.length) {
+    lines.push("\nFeatured Projects:");
+    projects.forEach((proj) => {
+      lines.push(`  - ${proj.title} [${proj.category.name}]`);
+      lines.push(`    ${proj.description}`);
+      if (proj.liveUrl) lines.push(`    Live: ${proj.liveUrl}`);
+      if (proj.githubUrl) lines.push(`    GitHub: ${proj.githubUrl}`);
+    });
+  }
+  if (services.length) {
+    lines.push("\nServices Offered:");
+    services.forEach((svc) => {
+      lines.push(
+        `  - ${svc.name}${svc.description ? `: ${svc.description}` : ""}`
+      );
+    });
+  }
+  return lines.join("\n");
+};
+var callAiApi = async (providerConfig, systemPrompt, history, userMessage) => {
+  const { provider, apiKey, model, endpoint, maxTokens, temperature } = providerConfig;
+  if (provider === "gemini") {
+    const geminiBase = (endpoint || "https://generativelanguage.googleapis.com/v1beta/models").replace(/\/$/, "");
+    const geminiRoot = geminiBase.replace(new RegExp(`/${model}.*$`), "");
+    const url = `${geminiRoot}/${model}:generateContent?key=${apiKey}`;
+    const body = {
+      system_instruction: { parts: [{ text: systemPrompt }] },
+      contents: [...history, { role: "user", parts: [{ text: userMessage }] }],
+      generationConfig: {
+        maxOutputTokens: maxTokens,
+        temperature
+      }
+    };
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new AppError_default(
+        status15.BAD_GATEWAY,
+        err?.error?.message || "Gemini API error"
+      );
+    }
+    const data = await res.json();
+    return data.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't generate a response.";
+  }
+  if (provider === "openai" || provider === "custom") {
+    const url = endpoint || "https://api.openai.com/v1/chat/completions";
+    const messages = [
+      { role: "system", content: systemPrompt },
+      ...history.map((h) => ({
+        role: h.role === "model" ? "assistant" : "user",
+        content: h.parts[0].text
+      })),
+      { role: "user", content: userMessage }
+    ];
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`
+      },
+      body: JSON.stringify({
+        model,
+        messages,
+        max_tokens: maxTokens,
+        temperature
+      })
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      throw new AppError_default(
+        status15.BAD_GATEWAY,
+        err?.error?.message || "OpenAI API error"
+      );
+    }
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content || "Sorry, I couldn't generate a response.";
+  }
+  throw new AppError_default(status15.BAD_REQUEST, `Unsupported provider: ${provider}`);
+};
+var sendMessage = async (payload, ipAddress) => {
+  const { message, sessionId } = payload;
+  const [chatbotConfig, aiConfig] = await Promise.all([
+    prisma.chatbotConfig.findUnique({ where: { id: "singleton" } }),
+    prisma.aiProviderConfig.findUnique({ where: { id: "singleton" } })
+  ]);
+  if (!chatbotConfig?.isEnabled) {
+    throw new AppError_default(
+      status15.SERVICE_UNAVAILABLE,
+      "Chatbot is currently disabled."
+    );
+  }
+  if (!aiConfig?.isEnabled || !aiConfig?.apiKey) {
+    throw new AppError_default(
+      status15.SERVICE_UNAVAILABLE,
+      "AI provider is not configured."
+    );
+  }
+  checkRateLimit(
+    ipAddress,
+    env.CHATBOT.RATE_LIMIT,
+    env.CHATBOT.RATE_LIMIT_WINDOW
+    // chatbotConfig.rateLimit,
+    // chatbotConfig.rateLimitWindow,
+  );
+  const dbContext = await buildContextFromDB();
+  const systemPrompt = [
+    "You are a helpful assistant on a personal portfolio website.",
+    "Answer questions about the portfolio owner using the context below.",
+    "Be concise, friendly, and professional.",
+    "If asked something not in the context, say you don't have that information.",
+    "\n--- CONTEXT ---\n",
+    dbContext,
+    chatbotConfig.systemPrompt ? `
+--- ADDITIONAL INFO ---
+${chatbotConfig.systemPrompt}` : ""
+  ].join("\n");
+  const history = [];
+  const aiResponse = await callAiApi(aiConfig, systemPrompt, history, message);
+  void ipAddress;
+  return {
+    reply: aiResponse,
+    sessionId,
+    botName: chatbotConfig.botName
+  };
+};
+var upsertAiProviderConfig = async (payload) => {
+  const result = await prisma.aiProviderConfig.upsert({
+    where: { id: "singleton" },
+    update: payload,
+    create: { id: "singleton", ...payload }
+  });
+  return result;
+};
+var getAiProviderConfig = async () => {
+  const result = await prisma.aiProviderConfig.findUnique({
+    where: { id: "singleton" }
+  });
+  return result;
+};
+var upsertChatbotConfig = async (payload) => {
+  const result = await prisma.chatbotConfig.upsert({
+    where: { id: "singleton" },
+    update: payload,
+    create: { id: "singleton", ...payload }
+  });
+  return result;
+};
+var getChatbotConfig = async () => {
+  const result = await prisma.chatbotConfig.findUnique({
+    where: { id: "singleton" }
+  });
+  return result;
+};
+var ChatbotService = {
+  sendMessage,
+  upsertAiProviderConfig,
+  getAiProviderConfig,
+  upsertChatbotConfig,
+  getChatbotConfig
+  // getChatbotLogs,
+  // deleteChatbotLogs,
+};
+
+// src/app/modules/chatbot/chatbot.controller.ts
+var sendMessage2 = async (req, res, next) => {
+  try {
+    const ipAddress = req.ip || req.socket.remoteAddress || "unknown";
+    const result = await ChatbotService.sendMessage(req.body, ipAddress);
+    res.status(200).json({
+      success: true,
+      message: "Message sent successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAiProviderConfig2 = async (req, res, next) => {
+  try {
+    const result = await ChatbotService.getAiProviderConfig();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved AI provider config successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var upsertAiProviderConfig2 = async (req, res, next) => {
+  try {
+    const result = await ChatbotService.upsertAiProviderConfig(req.body);
+    res.status(200).json({
+      success: true,
+      message: "AI provider config updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getChatbotConfig2 = async (req, res, next) => {
+  try {
+    const result = await ChatbotService.getChatbotConfig();
+    res.status(200).json({
+      success: true,
+      message: "Retrieved chatbot config successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var upsertChatbotConfig2 = async (req, res, next) => {
+  try {
+    const result = await ChatbotService.upsertChatbotConfig(req.body);
+    res.status(200).json({
+      success: true,
+      message: "Chatbot config updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var ChatbotController = {
+  sendMessage: sendMessage2,
+  getAiProviderConfig: getAiProviderConfig2,
+  upsertAiProviderConfig: upsertAiProviderConfig2,
+  getChatbotConfig: getChatbotConfig2,
+  upsertChatbotConfig: upsertChatbotConfig2
+  // getChatbotLogs,
+  // deleteChatbotLogs,
+};
+
+// src/app/modules/chatbot/chatbot.validation.ts
+init_esm_shims();
+import { z as z21 } from "zod";
+var optionalText2 = z21.string().optional().transform((v) => v === void 0 ? void 0 : sanitizeText(v));
+var optionalNullableUrl = z21.string().optional().nullable().transform((v) => v === void 0 || v === null ? v : sanitizeUrl(v));
+var createAiProviderConfigZodSchema = z21.object({
+  provider: z21.string("provider is required").transform((v) => sanitizeText(v)),
+  // apiKey — never rendered to UI, but still strip HTML defensively
+  apiKey: z21.string("apiKey is required").transform((v) => sanitizeText(v)),
+  model: z21.string("model is required").transform((v) => sanitizeText(v)),
+  endpoint: optionalNullableUrl,
+  maxTokens: z21.number().optional(),
+  temperature: z21.number().min(0).max(1).optional(),
+  isEnabled: z21.boolean().optional()
+});
+var updateAiProviderConfigZodSchema = createAiProviderConfigZodSchema.partial();
+var createChatbotConfigZodSchema = z21.object({
+  isEnabled: z21.boolean().optional(),
+  botName: optionalText2,
+  welcomeMsg: optionalText2,
+  // System prompt is fed to the LLM, not rendered as HTML.
+  // Still strip HTML to keep prompts clean & predictable.
+  systemPrompt: optionalText2
+  // If you need to remove rate limit and use by .env file
+  // so remove rateLimit and rateLimitWindow code
+  // rateLimit: z.number().min(1).optional(),
+  // rateLimitWindow: z.number().min(1).optional(),
+});
+var updateChatbotConfigZodSchema = createChatbotConfigZodSchema.partial();
+var sendMessageZodSchema = z21.object({
+  message: z21.string("message is required").min(1, "message cannot be empty").transform((v) => sanitizeText(v)).refine((v) => v.length > 0, "message cannot be empty after sanitization"),
+  sessionId: z21.string("sessionId is required").transform((v) => sanitizeText(v))
+});
+var ChatbotValidation = {
+  createAiProviderConfigZodSchema,
+  updateAiProviderConfigZodSchema,
+  createChatbotConfigZodSchema,
+  updateChatbotConfigZodSchema,
+  sendMessageZodSchema
+};
+
+// src/app/modules/chatbot/chatbot.route.ts
+var router26 = express25.Router();
+router26.post(
+  "/send",
+  validateRequest(ChatbotValidation.sendMessageZodSchema),
+  ChatbotController.sendMessage
+);
+router26.get(
+  "/ai-config",
+  auth_default("ADMIN" /* ADMIN */),
+  ChatbotController.getAiProviderConfig
+);
+router26.post(
+  "/ai-config",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(ChatbotValidation.createAiProviderConfigZodSchema),
+  ChatbotController.upsertAiProviderConfig
+);
+router26.put(
+  "/ai-config",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(ChatbotValidation.updateAiProviderConfigZodSchema),
+  ChatbotController.upsertAiProviderConfig
+);
+router26.get("/config", auth_default("ADMIN" /* ADMIN */), ChatbotController.getChatbotConfig);
+router26.post(
+  "/config",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(ChatbotValidation.createChatbotConfigZodSchema),
+  ChatbotController.upsertChatbotConfig
+);
+router26.put(
+  "/config",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(ChatbotValidation.updateChatbotConfigZodSchema),
+  ChatbotController.upsertChatbotConfig
+);
+var ChatbotRouter = router26;
+
+// src/app/modules/translation/translation.route.ts
+init_esm_shims();
+import express26 from "express";
+
+// src/app/modules/translation/translation.controller.ts
+init_esm_shims();
+
+// src/app/modules/translation/translation.service.ts
+init_esm_shims();
+import httpStatus4 from "http-status";
+var getTranslationsByLocale = async (locale) => {
+  const rows = await prisma.translation.findMany({
+    where: { locale },
+    select: { key: true, value: true },
+    orderBy: { key: "asc" }
+  });
+  const result = rows.reduce((acc, row) => {
+    acc[row.key] = row.value;
+    return acc;
+  }, {});
+  return result;
+};
+var getTranslationByKeyAndLocale = async (key, locale) => {
+  const result = await prisma.translation.findUnique({
+    where: { key_locale: { key, locale } }
+  });
+  if (!result) {
+    throw new AppError_default(
+      httpStatus4.NOT_FOUND,
+      `Translation not found for key "${key}" and locale "${locale}"`
+    );
+  }
+  return result;
+};
+var getAllTranslations = async () => {
+  const result = await prisma.translation.findMany({
+    orderBy: [{ key: "asc" }, { locale: "asc" }]
+  });
+  return result;
+};
+var getTranslationById = async (id) => {
+  const result = await prisma.translation.findUnique({
+    where: { id }
+  });
+  if (!result) {
+    throw new AppError_default(httpStatus4.NOT_FOUND, "Translation not found");
+  }
+  return result;
+};
+var createTranslation = async (payload) => {
+  const existing = await prisma.translation.findUnique({
+    where: { key_locale: { key: payload.key, locale: payload.locale } }
+  });
+  if (existing) {
+    throw new AppError_default(
+      httpStatus4.CONFLICT,
+      `A translation already exists for key "${payload.key}" with locale "${payload.locale}". Use update or bulk upsert instead.`
+    );
+  }
+  const result = await prisma.translation.create({
+    data: payload
+  });
+  return result;
+};
+var updateTranslation = async (id, payload) => {
+  await getTranslationById(id);
+  const result = await prisma.translation.update({
+    where: { id },
+    data: { value: payload.value }
+  });
+  return result;
+};
+var deleteTranslation = async (id) => {
+  await getTranslationById(id);
+  await prisma.translation.delete({ where: { id } });
+};
+var upsertTranslations = async (entries) => {
+  const results = await prisma.$transaction(
+    entries.map(
+      ({ key, locale, value }) => prisma.translation.upsert({
+        where: { key_locale: { key, locale } },
+        update: { value },
+        create: { key, locale, value }
+      })
+    )
+  );
+  return results;
+};
+var deleteTranslationsByLocale = async (locale) => {
+  const result = await prisma.translation.deleteMany({
+    where: { locale }
+  });
+  return result;
+};
+var TranslationService = {
+  getTranslationsByLocale,
+  getTranslationByKeyAndLocale,
+  getAllTranslations,
+  getTranslationById,
+  createTranslation,
+  updateTranslation,
+  deleteTranslation,
+  upsertTranslations,
+  deleteTranslationsByLocale
+};
+
+// src/app/modules/translation/translation.controller.ts
+var getTranslationsByLocale2 = async (req, res, next) => {
+  try {
+    const { locale } = req.params;
+    const result = await TranslationService.getTranslationsByLocale(
+      locale
+    );
+    res.status(200).json({
+      success: true,
+      message: `Translations for locale "${locale}" retrieved successfully`,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getTranslationByKeyAndLocale2 = async (req, res, next) => {
+  try {
+    const { locale, key } = req.params;
+    const result = await TranslationService.getTranslationByKeyAndLocale(
+      key,
+      locale
+    );
+    res.status(200).json({
+      success: true,
+      message: "Translation retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getAllTranslations2 = async (req, res, next) => {
+  try {
+    const result = await TranslationService.getAllTranslations();
+    res.status(200).json({
+      success: true,
+      message: "All translations retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getTranslationById2 = async (req, res, next) => {
+  try {
+    const { translationId } = req.params;
+    const result = await TranslationService.getTranslationById(
+      translationId
+    );
+    res.status(200).json({
+      success: true,
+      message: "Translation retrieved successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var createTranslation2 = async (req, res, next) => {
+  try {
+    const result = await TranslationService.createTranslation(req.body);
+    res.status(201).json({
+      success: true,
+      message: "Translation created successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var updateTranslation2 = async (req, res, next) => {
+  try {
+    const { translationId } = req.params;
+    const result = await TranslationService.updateTranslation(
+      translationId,
+      req.body
+    );
+    res.status(200).json({
+      success: true,
+      message: "Translation updated successfully",
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteTranslation2 = async (req, res, next) => {
+  try {
+    const { translationId } = req.params;
+    await TranslationService.deleteTranslation(translationId);
+    res.status(200).json({
+      success: true,
+      message: "Translation deleted successfully",
+      data: null
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var upsertTranslations2 = async (req, res, next) => {
+  try {
+    const { translations } = req.body;
+    const result = await TranslationService.upsertTranslations(translations);
+    res.status(200).json({
+      success: true,
+      message: `${result.length} translation(s) upserted successfully`,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var deleteTranslationsByLocale2 = async (req, res, next) => {
+  try {
+    const { locale } = req.params;
+    const result = await TranslationService.deleteTranslationsByLocale(
+      locale
+    );
+    res.status(200).json({
+      success: true,
+      message: `All "${locale}" translations deleted successfully`,
+      data: result
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var TranslationController = {
+  getTranslationsByLocale: getTranslationsByLocale2,
+  getTranslationByKeyAndLocale: getTranslationByKeyAndLocale2,
+  getAllTranslations: getAllTranslations2,
+  getTranslationById: getTranslationById2,
+  createTranslation: createTranslation2,
+  updateTranslation: updateTranslation2,
+  deleteTranslation: deleteTranslation2,
+  upsertTranslations: upsertTranslations2,
+  deleteTranslationsByLocale: deleteTranslationsByLocale2
+};
+
+// src/app/modules/translation/translation.validation.ts
+init_esm_shims();
+import { z as z22 } from "zod";
+var supportedLocale = z22.string().refine((val) => ["en", "bn"].includes(val), {
+  message: 'Locale must be "en" or "bn"'
+});
+var createTranslationZodSchema = z22.object({
+  key: z22.string().min(1, "Key is required"),
+  locale: supportedLocale,
+  value: z22.string().min(1, "Value is required")
+});
+var updateTranslationZodSchema = z22.object({
+  value: z22.string().min(1, "Value is required")
+});
+var upsertTranslationsZodSchema = z22.object({
+  translations: z22.array(
+    z22.object({
+      key: z22.string().min(1, "Key is required"),
+      locale: supportedLocale,
+      value: z22.string().min(1, "Value is required")
+    })
+  ).min(1, "At least one translation entry is required")
+});
+var TranslationValidation = {
+  createTranslationZodSchema,
+  updateTranslationZodSchema,
+  upsertTranslationsZodSchema
+};
+
+// src/app/modules/translation/translation.route.ts
+var router27 = express26.Router();
+router27.get("/:locale", TranslationController.getTranslationsByLocale);
+router27.get("/:locale/:key", TranslationController.getTranslationByKeyAndLocale);
+router27.get(
+  "/admin/all",
+  auth_default("ADMIN" /* ADMIN */),
+  TranslationController.getAllTranslations
+);
+router27.get(
+  "/admin/:translationId",
+  auth_default("ADMIN" /* ADMIN */),
+  TranslationController.getTranslationById
+);
+router27.post(
+  "/",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(TranslationValidation.createTranslationZodSchema),
+  TranslationController.createTranslation
+);
+router27.post(
+  "/upsert",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(TranslationValidation.upsertTranslationsZodSchema),
+  TranslationController.upsertTranslations
+);
+router27.put(
+  "/:translationId",
+  auth_default("ADMIN" /* ADMIN */),
+  validateRequest(TranslationValidation.updateTranslationZodSchema),
+  TranslationController.updateTranslation
+);
+router27.delete(
+  "/locale/:locale",
+  auth_default("ADMIN" /* ADMIN */),
+  TranslationController.deleteTranslationsByLocale
+);
+router27.delete(
+  "/:translationId",
+  auth_default("ADMIN" /* ADMIN */),
+  TranslationController.deleteTranslation
+);
+var TranslationRouter = router27;
 
 // src/app/routes/index.ts
-var router17 = Router15();
-router17.use("/auth", AuthRouter);
-router17.use("/users", UserRouter);
-router17.use("/admins", AdminRouter);
-router17.use("/reviews", ReviewRouter);
-router17.use("/categories", CategoryRouter);
-router17.use("/settings", SettingRouter);
-router17.use("/public-stats", StatsRouter);
-router17.use("/about", AboutRouter);
-router17.use("/skills", SkillRouter);
-router17.use("/services", ServiceRouter);
-router17.use("/projects", ProjectRouter);
-router17.use("/galleries", GalleryRouter);
-router17.use("/experiences", ExperienceRouter);
-router17.use("/educations", EducationRouter);
-router17.use("/videos", VideoRouter);
-router17.use("/contacts", ContactRouter);
-var IndexRoutes = router17;
+var router28 = Router26();
+router28.use("/auth", AuthRouter);
+router28.use("/users", UserRouter);
+router28.use("/admins", AdminRouter);
+router28.use("/reviews", ReviewRouter);
+router28.use("/categories", CategoryRouter);
+router28.use("/settings", SettingRouter);
+router28.use("/public-stats", StatsRouter);
+router28.use("/about", AboutRouter);
+router28.use("/certificates", CertificateRouter);
+router28.use("/blogs", BlogRouter);
+router28.use("/analytics", AnalyticsRouter);
+router28.use("/appointments", AppointmentRouter);
+router28.use("/github", GithubRouter);
+router28.use("/npm", NpmRouter);
+router28.use("/store", StoreRouter);
+router28.use("/timeline", TimelineRouter);
+router28.use("/rss", RssRouter);
+router28.use("/chatbot", ChatbotRouter);
+router28.use("/translations", TranslationRouter);
+router28.use("/skills", SkillRouter);
+router28.use("/services", ServiceRouter);
+router28.use("/projects", ProjectRouter);
+router28.use("/galleries", GalleryRouter);
+router28.use("/experiences", ExperienceRouter);
+router28.use("/educations", EducationRouter);
+router28.use("/videos", VideoRouter);
+router28.use("/contacts", ContactRouter);
+var IndexRoutes = router28;
+
+// src/app/modules/sitemap/sitemap.route.ts
+init_esm_shims();
+import express27 from "express";
+
+// src/app/modules/sitemap/sitemap.controller.ts
+init_esm_shims();
+
+// src/app/modules/sitemap/sitemap.service.ts
+init_esm_shims();
+var escapeXml = (unsafe) => unsafe.replace(/[<>&'"]/g, (c) => {
+  switch (c) {
+    case "<":
+      return "&lt;";
+    case ">":
+      return "&gt;";
+    case "&":
+      return "&amp;";
+    case "'":
+      return "&apos;";
+    case '"':
+      return "&quot;";
+    default:
+      return c;
+  }
+});
+var trimTrailingSlash = (url) => url.replace(/\/+$/, "");
+var getStaticRoutes = (baseUrl) => {
+  const now = (/* @__PURE__ */ new Date()).toISOString();
+  return [
+    { loc: `${baseUrl}/`, changefreq: "weekly", priority: 1, lastmod: now },
+    { loc: `${baseUrl}/about`, changefreq: "monthly", priority: 0.8 },
+    { loc: `${baseUrl}/projects`, changefreq: "weekly", priority: 0.9 },
+    { loc: `${baseUrl}/blogs`, changefreq: "daily", priority: 0.9 },
+    { loc: `${baseUrl}/services`, changefreq: "monthly", priority: 0.7 },
+    { loc: `${baseUrl}/certificates`, changefreq: "monthly", priority: 0.6 },
+    { loc: `${baseUrl}/gallery`, changefreq: "monthly", priority: 0.5 },
+    { loc: `${baseUrl}/contact`, changefreq: "yearly", priority: 0.5 },
+    { loc: `${baseUrl}/store`, changefreq: "weekly", priority: 0.8 }
+  ];
+};
+var getDynamicRoutes = async (baseUrl) => {
+  const [blogs, projects, services, certificates, products] = await Promise.all(
+    [
+      prisma.blog.findMany({
+        where: { status: "PUBLISHED" },
+        select: { slug: true, updatedAt: true, publishedAt: true },
+        orderBy: { updatedAt: "desc" }
+      }),
+      prisma.project.findMany({
+        where: { isPublished: true },
+        select: { id: true, updatedAt: true },
+        orderBy: { updatedAt: "desc" }
+      }),
+      prisma.service.findMany({
+        where: { isPublished: true },
+        select: { id: true, updatedAt: true },
+        orderBy: { updatedAt: "desc" }
+      }),
+      prisma.certificate.findMany({
+        where: { isPublished: true },
+        select: { id: true, updatedAt: true },
+        orderBy: { updatedAt: "desc" }
+      }),
+      prisma.product.findMany({
+        where: { status: "PUBLISHED" },
+        select: { slug: true, updatedAt: true },
+        orderBy: { updatedAt: "desc" }
+      })
+    ]
+  );
+  const blogUrls = blogs.map((b) => ({
+    loc: `${baseUrl}/blogs/${b.slug}`,
+    lastmod: (b.updatedAt ?? b.publishedAt ?? /* @__PURE__ */ new Date()).toISOString(),
+    changefreq: "weekly",
+    priority: 0.8
+  }));
+  const projectUrls = projects.map((p) => ({
+    loc: `${baseUrl}/projects/${p.id}`,
+    lastmod: p.updatedAt.toISOString(),
+    changefreq: "monthly",
+    priority: 0.7
+  }));
+  const serviceUrls = services.map((s) => ({
+    loc: `${baseUrl}/services/${s.id}`,
+    lastmod: s.updatedAt.toISOString(),
+    changefreq: "monthly",
+    priority: 0.6
+  }));
+  const certificateUrls = certificates.map((c) => ({
+    loc: `${baseUrl}/certificates/${c.id}`,
+    lastmod: c.updatedAt.toISOString(),
+    changefreq: "yearly",
+    priority: 0.4
+  }));
+  const productUrls = products.map((p) => ({
+    loc: `${baseUrl}/store/${p.slug}`,
+    lastmod: p.updatedAt.toISOString(),
+    changefreq: "weekly",
+    priority: 0.7
+  }));
+  return [
+    ...blogUrls,
+    ...projectUrls,
+    ...serviceUrls,
+    ...certificateUrls,
+    ...productUrls
+  ];
+};
+var buildSitemapXml = async () => {
+  const baseUrl = trimTrailingSlash(env.FRONTEND_URL);
+  const staticRoutes = getStaticRoutes(baseUrl);
+  const dynamicRoutes = await getDynamicRoutes(baseUrl);
+  const urls = [...staticRoutes, ...dynamicRoutes];
+  const urlEntries = urls.map((u) => {
+    const parts = [];
+    parts.push(`    <loc>${escapeXml(u.loc)}</loc>`);
+    if (u.lastmod) parts.push(`    <lastmod>${u.lastmod}</lastmod>`);
+    if (u.changefreq)
+      parts.push(`    <changefreq>${u.changefreq}</changefreq>`);
+    if (typeof u.priority === "number")
+      parts.push(`    <priority>${u.priority.toFixed(1)}</priority>`);
+    return `  <url>
+${parts.join("\n")}
+  </url>`;
+  }).join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`;
+};
+var buildSitemapJson = async () => {
+  const baseUrl = trimTrailingSlash(env.FRONTEND_URL);
+  const staticRoutes = getStaticRoutes(baseUrl);
+  const dynamicRoutes = await getDynamicRoutes(baseUrl);
+  return {
+    baseUrl,
+    total: staticRoutes.length + dynamicRoutes.length,
+    static: staticRoutes,
+    dynamic: dynamicRoutes
+  };
+};
+var buildRobotsTxt = () => {
+  const baseUrl = trimTrailingSlash(env.FRONTEND_URL);
+  return `User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /api
+
+Sitemap: ${baseUrl}/sitemap.xml
+`;
+};
+var SitemapService = {
+  buildSitemapXml,
+  buildSitemapJson,
+  buildRobotsTxt
+};
+
+// src/app/modules/sitemap/sitemap.controller.ts
+var getSitemapXml = async (_req, res, next) => {
+  try {
+    const xml = await SitemapService.buildSitemapXml();
+    res.header("Content-Type", "application/xml");
+    res.header("Cache-Control", "public, max-age=3600, s-maxage=3600");
+    res.status(200).send(xml);
+  } catch (err) {
+    next(err);
+  }
+};
+var getSitemapJson = async (_req, res, next) => {
+  try {
+    const data = await SitemapService.buildSitemapJson();
+    res.status(200).json({
+      success: true,
+      message: "Sitemap generated successfully",
+      data
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+var getRobotsTxt = async (_req, res, next) => {
+  try {
+    const txt = SitemapService.buildRobotsTxt();
+    res.header("Content-Type", "text/plain");
+    res.header("Cache-Control", "public, max-age=86400");
+    res.status(200).send(txt);
+  } catch (err) {
+    next(err);
+  }
+};
+var SitemapController = {
+  getSitemapXml,
+  getSitemapJson,
+  getRobotsTxt
+};
+
+// src/app/modules/sitemap/sitemap.route.ts
+var router29 = express27.Router();
+router29.get("/sitemap.xml", SitemapController.getSitemapXml);
+router29.get("/sitemap.json", SitemapController.getSitemapJson);
+router29.get("/robots.txt", SitemapController.getRobotsTxt);
+var SitemapRouter = router29;
+
+// src/app/middlewares/notFound.ts
+init_esm_shims();
+function notFound(req, res) {
+  res.status(404).json({
+    success: false,
+    message: "Route Not Found",
+    path: req.originalUrl,
+    date: Date()
+  });
+}
+
+// src/app/middlewares/globalErrorHandler.ts
+init_esm_shims();
+import status18 from "http-status";
+import { z as z23 } from "zod";
+import multer2 from "multer";
+var import_prisma37 = __toESM(require_prisma(), 1);
+
+// src/app/errorHelpers/handleZodError.ts
+init_esm_shims();
+import status16 from "http-status";
+var handleZodError = (err) => {
+  const statusCode = status16.BAD_REQUEST;
+  const message = "Zod Validation Error";
+  const errorSources = [];
+  err.issues.forEach((issue) => {
+    errorSources.push({
+      path: issue.path.join(" => "),
+      message: issue.message
+    });
+  });
+  return {
+    statusCode,
+    success: false,
+    message,
+    errorSources,
+    error: err
+  };
+};
+
+// src/app/errorHelpers/handlePrismaError.ts
+init_esm_shims();
+import status17 from "http-status";
+var handlePrismaKnownRequestError = (err) => {
+  let statusCode = status17.BAD_REQUEST;
+  let message = "Database Request Error";
+  let errorSources = [];
+  switch (err.code) {
+    // ── Unique constraint failed ──────────────────────────────────────────
+    case "P2002": {
+      const target = err.meta?.target;
+      const fieldName = Array.isArray(target) ? target.join(", ") : target || "field";
+      statusCode = status17.CONFLICT;
+      message = `Duplicate value for ${fieldName}. This value already exists.`;
+      errorSources = [
+        {
+          path: Array.isArray(target) ? target.join(".") : String(target || ""),
+          message: `${fieldName} already exists`
+        }
+      ];
+      break;
+    }
+    // ── Record not found (update / delete / findUniqueOrThrow) ────────────
+    case "P2025": {
+      statusCode = status17.NOT_FOUND;
+      message = "Record Not Found";
+      errorSources = [
+        {
+          path: "",
+          message: err.meta?.cause || "Record not found"
+        }
+      ];
+      break;
+    }
+    // ── Foreign key constraint failed ─────────────────────────────────────
+    case "P2003": {
+      const fieldName = err.meta?.field_name || "foreign key";
+      statusCode = status17.BAD_REQUEST;
+      message = "Foreign Key Constraint Failed";
+      errorSources = [
+        {
+          path: fieldName,
+          message: `Related record for '${fieldName}' was not found or is still connected.`
+        }
+      ];
+      break;
+    }
+    // ── Value too long for column ─────────────────────────────────────────
+    case "P2000": {
+      const column = err.meta?.column_name || "field";
+      statusCode = status17.BAD_REQUEST;
+      message = "Input Value Too Long";
+      errorSources = [
+        {
+          path: column,
+          message: `The value provided for '${column}' is too long.`
+        }
+      ];
+      break;
+    }
+    // ── Null constraint violation ─────────────────────────────────────────
+    case "P2011": {
+      const constraint = err.meta?.constraint || "field";
+      statusCode = status17.BAD_REQUEST;
+      message = "Null Constraint Violation";
+      errorSources = [
+        {
+          path: constraint,
+          message: `'${constraint}' cannot be null.`
+        }
+      ];
+      break;
+    }
+    // ── Missing required value ────────────────────────────────────────────
+    case "P2012": {
+      const path4 = err.meta?.path || "field";
+      statusCode = status17.BAD_REQUEST;
+      message = "Missing Required Value";
+      errorSources = [
+        {
+          path: path4,
+          message: `A required value is missing for '${path4}'.`
+        }
+      ];
+      break;
+    }
+    // ── Required relation violation ───────────────────────────────────────
+    case "P2014": {
+      const relation = err.meta?.relation_name || "relation";
+      statusCode = status17.BAD_REQUEST;
+      message = "Relation Constraint Violation";
+      errorSources = [
+        {
+          path: relation,
+          message: `The change would violate the required relation '${relation}'.`
+        }
+      ];
+      break;
+    }
+    // ── Invalid ID format (e.g. bad UUID / ObjectId) ──────────────────────
+    case "P2023": {
+      statusCode = status17.BAD_REQUEST;
+      message = "Invalid ID Format";
+      errorSources = [
+        {
+          path: "id",
+          message: err.meta?.message || "The provided ID is malformed."
+        }
+      ];
+      break;
+    }
+    // ── Connection pool timeout ───────────────────────────────────────────
+    case "P2024": {
+      statusCode = status17.SERVICE_UNAVAILABLE;
+      message = "Database Connection Timeout";
+      errorSources = [
+        {
+          path: "",
+          message: "The database is busy. Please try again in a moment."
+        }
+      ];
+      break;
+    }
+    // ── Transaction write conflict / deadlock ─────────────────────────────
+    case "P2034": {
+      statusCode = status17.CONFLICT;
+      message = "Transaction Conflict";
+      errorSources = [
+        {
+          path: "",
+          message: "A conflicting write occurred. Please retry the operation."
+        }
+      ];
+      break;
+    }
+    // ── Fallback for other known Prisma errors ────────────────────────────
+    default: {
+      message = `Database Error (${err.code})`;
+      errorSources = [
+        {
+          path: "",
+          message: err.message.split("\n").pop()?.trim() || err.message
+        }
+      ];
+      break;
+    }
+  }
+  return {
+    statusCode,
+    success: false,
+    message,
+    errorSources,
+    error: err
+  };
+};
+var handlePrismaValidationError = (err) => {
+  const lines = err.message.split("\n").map((l) => l.trim()).filter(Boolean);
+  const reason = lines[lines.length - 1] || err.message;
+  return {
+    statusCode: status17.BAD_REQUEST,
+    success: false,
+    message: "Invalid Data Provided",
+    errorSources: [
+      {
+        path: "",
+        message: reason
+      }
+    ],
+    error: err
+  };
+};
+var handlePrismaInitializationError = (err) => {
+  return {
+    statusCode: status17.SERVICE_UNAVAILABLE,
+    success: false,
+    message: "Database Service Unavailable",
+    errorSources: [
+      {
+        path: "",
+        message: "Unable to connect to the database. Please try again later."
+      }
+    ],
+    error: err
+  };
+};
+var handlePrismaUnknownRequestError = (err) => {
+  return {
+    statusCode: status17.INTERNAL_SERVER_ERROR,
+    success: false,
+    message: "Unexpected Database Error",
+    errorSources: [
+      {
+        path: "",
+        message: "An unknown database error occurred."
+      }
+    ],
+    error: err
+  };
+};
+var handlePrismaRustPanicError = (err) => {
+  return {
+    statusCode: status17.INTERNAL_SERVER_ERROR,
+    success: false,
+    message: "Critical Database Engine Error",
+    errorSources: [
+      {
+        path: "",
+        message: "A critical error occurred. The team has been notified."
+      }
+    ],
+    error: err
+  };
+};
+
+// src/app/middlewares/globalErrorHandler.ts
+var NETWORK_ERROR_CODES = /* @__PURE__ */ new Set([
+  "ECONNREFUSED",
+  "ECONNRESET",
+  "ETIMEDOUT",
+  "EHOSTUNREACH",
+  "ENETUNREACH",
+  "ENOTFOUND",
+  "EAI_AGAIN"
+]);
+var cleanupUploadedFiles = async (req) => {
+  try {
+    if (req.file?.path) {
+      await deleteFileFromCloudinary(req.file.path);
+    }
+    if (Array.isArray(req.files) && req.files.length > 0) {
+      await Promise.all(
+        req.files.map(
+          (file) => file?.path ? deleteFileFromCloudinary(file.path) : null
+        )
+      );
+    } else if (req.files && typeof req.files === "object") {
+      const grouped = req.files;
+      const all = Object.values(grouped).flat();
+      await Promise.all(
+        all.map(
+          (file) => file?.path ? deleteFileFromCloudinary(file.path) : null
+        )
+      );
+    }
+  } catch (cleanupErr) {
+    if (env.NODE_ENV === "development") {
+      console.error("[globalErrorHandler] cleanup failed:", cleanupErr);
+    }
+  }
+};
+var globalErrorHandler = async (err, req, res, _next) => {
+  await cleanupUploadedFiles(req);
+  let statusCode = status18.INTERNAL_SERVER_ERROR;
+  let message = "Internal Server Error";
+  let errorSources = [];
+  if (err instanceof AppError_default) {
+    statusCode = err.statusCode;
+    message = err.message;
+    errorSources = err.errorSources ?? [{ path: "", message: err.message }];
+  } else if (err instanceof z23.ZodError) {
+    const simplified = handleZodError(err);
+    statusCode = simplified.statusCode ?? status18.BAD_REQUEST;
+    message = simplified.message;
+    errorSources = simplified.errorSources ?? [];
+  } else if (err instanceof import_prisma37.Prisma.PrismaClientKnownRequestError) {
+    const simplified = handlePrismaKnownRequestError(err);
+    statusCode = simplified.statusCode ?? status18.BAD_REQUEST;
+    message = simplified.message;
+    errorSources = simplified.errorSources ?? [];
+  } else if (err instanceof import_prisma37.Prisma.PrismaClientValidationError) {
+    const simplified = handlePrismaValidationError(err);
+    statusCode = simplified.statusCode ?? status18.BAD_REQUEST;
+    message = simplified.message;
+    errorSources = simplified.errorSources ?? [];
+  } else if (err instanceof import_prisma37.Prisma.PrismaClientInitializationError) {
+    const simplified = handlePrismaInitializationError(err);
+    statusCode = simplified.statusCode ?? status18.SERVICE_UNAVAILABLE;
+    message = simplified.message;
+    errorSources = simplified.errorSources ?? [];
+  } else if (err instanceof import_prisma37.Prisma.PrismaClientUnknownRequestError) {
+    const simplified = handlePrismaUnknownRequestError(err);
+    statusCode = simplified.statusCode ?? status18.INTERNAL_SERVER_ERROR;
+    message = simplified.message;
+    errorSources = simplified.errorSources ?? [];
+  } else if (err instanceof import_prisma37.Prisma.PrismaClientRustPanicError) {
+    const simplified = handlePrismaRustPanicError(err);
+    statusCode = simplified.statusCode ?? status18.INTERNAL_SERVER_ERROR;
+    message = simplified.message;
+    errorSources = simplified.errorSources ?? [];
+  } else if (err instanceof multer2.MulterError) {
+    statusCode = status18.BAD_REQUEST;
+    switch (err.code) {
+      case "LIMIT_FILE_SIZE":
+        message = "File too large. Maximum allowed size is 5MB.";
+        break;
+      case "LIMIT_FILE_COUNT":
+        message = "Too many files uploaded.";
+        break;
+      case "LIMIT_UNEXPECTED_FILE":
+        message = `Unexpected file field: '${err.field}'.`;
+        break;
+      case "LIMIT_PART_COUNT":
+        message = "Too many parts in the form data.";
+        break;
+      default:
+        message = err.message || "File upload error";
+    }
+    errorSources = [{ path: err.field || "file", message }];
+  } else if (err instanceof SyntaxError && "body" in err) {
+    statusCode = status18.BAD_REQUEST;
+    message = "Malformed JSON in request body";
+    errorSources = [{ path: "body", message }];
+  } else if (err && typeof err.code === "string" && NETWORK_ERROR_CODES.has(err.code)) {
+    statusCode = status18.SERVICE_UNAVAILABLE;
+    message = "Upstream Service Unavailable";
+    errorSources = [
+      {
+        path: "",
+        message: "A downstream service is temporarily unreachable. Please try again."
+      }
+    ];
+  } else if (err instanceof Error) {
+    message = env.NODE_ENV === "development" ? err.message : "Internal Server Error";
+    errorSources = [{ path: "", message }];
+  } else {
+    errorSources = [{ path: "", message: "An unexpected error occurred." }];
+  }
+  const shouldLog = statusCode >= 500 || env.NODE_ENV === "development";
+  if (shouldLog) {
+    console.error(
+      `[${(/* @__PURE__ */ new Date()).toISOString()}] ${req.method} ${req.originalUrl} \u2192 ${statusCode} ${message}`
+    );
+    if (env.NODE_ENV === "development") {
+      console.error(err);
+    }
+  }
+  const errorResponse = {
+    statusCode,
+    success: false,
+    message,
+    errorSources,
+    stack: env.NODE_ENV === "development" ? err?.stack : void 0,
+    error: env.NODE_ENV === "development" ? err : void 0
+  };
+  res.status(statusCode).json(errorResponse);
+};
+var globalErrorHandler_default = globalErrorHandler;
+
+// src/app/modules/health/health.route.ts
+init_esm_shims();
+import express28 from "express";
+
+// src/app/modules/health/health.controller.ts
+init_esm_shims();
+var SERVER_START_TIME = Date.now();
+var formatUptime = (ms) => {
+  const totalSeconds = Math.floor(ms / 1e3);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor(totalSeconds % 86400 / 3600);
+  const minutes = Math.floor(totalSeconds % 3600 / 60);
+  const seconds = totalSeconds % 60;
+  const parts = [];
+  if (days > 0) parts.push(`${days}d`);
+  if (hours > 0) parts.push(`${hours}h`);
+  if (minutes > 0) parts.push(`${minutes}m`);
+  if (seconds > 0 || parts.length === 0) {
+    parts.push(`${seconds}s`);
+  }
+  return parts.join(" ");
+};
+var healthCheck = async (_req, res) => {
+  let dbStatus = "disconnected";
+  let dbLatency = null;
+  try {
+    const start = Date.now();
+    await prisma.$queryRaw`SELECT 1`;
+    dbLatency = Date.now() - start;
+    dbStatus = "connected";
+  } catch {
+    dbStatus = "disconnected";
+  }
+  const uptimeMs = Date.now() - SERVER_START_TIME;
+  const memoryUsage = process.memoryUsage();
+  const isHealthy = dbStatus === "connected";
+  res.status(isHealthy ? 200 : 503).json({
+    status: isHealthy ? "ok" : "error",
+    db: dbStatus,
+    dbLatency: dbLatency ? `${dbLatency}ms` : null,
+    uptime: formatUptime(uptimeMs),
+    uptimeMs,
+    timestamp: (/* @__PURE__ */ new Date()).toISOString(),
+    environment: env.NODE_ENV || "development",
+    memory: {
+      rss: `${Math.round(memoryUsage.rss / 1024 / 1024)}MB`,
+      heapUsed: `${Math.round(memoryUsage.heapUsed / 1024 / 1024)}MB`,
+      heapTotal: `${Math.round(memoryUsage.heapTotal / 1024 / 1024)}MB`
+    }
+  });
+};
+
+// src/app/modules/health/health.route.ts
+var router30 = express28.Router();
+router30.get("/", healthCheck);
+var HealthRoutes = router30;
 
 // src/app.ts
-import path3 from "path";
-var app = express16();
+var app = express29();
 app.set("view engine", "ejs");
 app.set("views", path3.resolve(process.cwd(), "src/app/templates"));
 app.use(
@@ -11604,16 +17466,16 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"]
   })
 );
-app.use(express16.json());
-app.all("/api/auth/*splat", toNodeHandler(auth));
-app.use(express16.urlencoded({ extended: true }));
-app.use(express16.json());
+app.use(express29.json());
+app.use(express29.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express16.urlencoded({ extended: true }));
-app.use("/api/v1", IndexRoutes);
+app.all("/api/auth/*splat", authLimiter, toNodeHandler(auth));
+app.use("/api/v1", globalLimiter, IndexRoutes);
+app.use("/", SitemapRouter);
 app.get("/", (_req, res) => {
   res.send("Ishtiaq Robin Portfolio Backend is running");
 });
+app.use("/health", HealthRoutes);
 app.use(globalErrorHandler_default);
 app.use(notFound);
 var app_default = app;

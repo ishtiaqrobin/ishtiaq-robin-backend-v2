@@ -6,7 +6,7 @@ export type CreateEducationInput = {
   endDate?: string | null;
   result: string;
   group?: string | null;
-  description?: string | null;
+  // description?: string | null;
 
   isPublished: boolean;
   sortOrder: number;
